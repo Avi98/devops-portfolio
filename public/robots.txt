@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://buchanandevops.com
+
+# Sitemaps
+Sitemap: https://buchanandevops.com/sitemap.xml

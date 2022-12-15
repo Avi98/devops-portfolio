@@ -1,0 +1,57 @@
+<svg width="852" height="938" viewBox="0 0 852 938" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="579.287" height="638" transform="translate(150 150)" fill="white"/>
+<g opacity="0.1" filter="url(#filter0_f_20_86)">
+<ellipse cx="335.5" cy="328.5" rx="185.5" ry="178.5" fill="url(#paint0_linear_20_86)"/>
+</g>
+<g opacity="0.1" filter="url(#filter1_f_20_86)">
+<ellipse cx="516.5" cy="609.5" rx="185.5" ry="178.5" fill="url(#paint1_linear_20_86)"/>
+</g>
+
+	<g opacity="0.2">
+		<line fill="none" stroke="#000000" stroke-dasharray="4,8" x1="673.7" y1="438.7" x2="575.8" y2="277.5"/>
+		<polyline fill="none" stroke="#000000" stroke-dasharray="4,8" points="578.6,500.4 578.6,398.8 578.6,281.7 480.7,443"/>
+		<polyline fill="none" stroke="#000000" stroke-dasharray="4,8" points="579,599 579.4,600.3 677.4,463.3 579.4,520.8 578.2,522.2 "/>
+		<polygon fill="none" stroke="#000000" stroke-dasharray="4,8" points="578.4,599.3 578.4,519.8 480.5,462.3"/>
+		<polyline fill="none" stroke="#000000" stroke-dasharray="4,8" points="578.4,499.9 578.4,501.4 676.3,443.9 578.4,399.7"/>
+		<path  fill="none" stroke="#000000" stroke-dasharray="4,8" d="M578.4,399.7"/>
+		<polyline fill="none" stroke="#000000" stroke-dasharray="4,8" points="578.4,399.7 480.5,443.9 578.4,501.4"/>
+		<path fill="none" stroke="#000000" stroke-dasharray="4,8" d="M582.2,521.2"/>
+	</g>
+
+<polygon opacity="0.2" fill="none" stroke="#000000" stroke-dasharray="4,8" points="698.2,433.3 696.1,429.9 578.2,237.6 458.7,428.2 443.7,453.1 580.1,646 709.5,458.7 711.9,455 "/>
+<polygon opacity="0.2" fill="none" stroke="#000000" stroke-dasharray="4,8" points="732.3,428.9 729.6,424.5 577.5,176.4 423.3,422.3 403.9,454.4 579.9,703.3 746.9,461.7 749.9,456.9 "/>
+
+	<g opacity="0.2">
+		<line fill="none" stroke="#000000" stroke-dasharray="4,8" x1="673.7" y1="438.7" x2="575.8" y2="277.5"/>
+		<polyline fill="none" stroke="#000000" stroke-dasharray="4,8" points="578.6,500.4 578.6,398.8 578.6,281.7 480.7,443"/>
+		<polyline fill="none" stroke="#000000" stroke-dasharray="4,8" points="579,599 579.4,600.3 677.4,463.3 579.4,520.8 578.2,522.2 "/>
+		<polygon fill="none" stroke="#000000" stroke-dasharray="4,8" points="578.4,599.3 578.4,519.8 480.5,462.3"/>
+		<polyline fill="none" stroke="#000000" stroke-dasharray="4,8" points="578.4,499.9 578.4,501.4 676.3,443.9 578.4,399.7"/>
+		<path fill="none" stroke="#000000" stroke-dasharray="4,8" d="M578.4,399.7"/>
+		<polyline fill="none" stroke="#000000" stroke-dasharray="4,8" points="578.4,399.7 480.5,443.9 578.4,501.4"/>
+		<path fill="none" stroke="#000000" stroke-dasharray="4,8" d="M582.2,521.2"/>
+	</g>
+
+<polygon opacity="0.2" fill="none" stroke="#000000" stroke-dasharray="4,8" points="698.2,433.3 696.1,429.9 578.2,237.6 458.7,428.2 443.7,453.1 580.1,646 709.5,458.7 711.9,455 "/>
+<polygon opacity="0.2" fill="none" stroke="#000000" stroke-dasharray="4,8" points="732.3,428.9 729.6,424.5 577.5,176.4 423.3,422.3 403.9,454.4 579.9,703.3 746.9,461.7 749.9,456.9 "/>
+<defs>
+<filter id="filter0_f_20_86" x="0" y="0" width="671" height="657" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_20_86"/>
+</filter>
+<filter id="filter1_f_20_86" x="181" y="281" width="671" height="657" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="75" result="effect1_foregroundBlur_20_86"/>
+</filter>
+<linearGradient id="paint0_linear_20_86" x1="335.5" y1="150" x2="335.5" y2="507" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4EBFFF"/>
+<stop offset="1" stop-color="#BD69FF"/>
+</linearGradient>
+<linearGradient id="paint1_linear_20_86" x1="516.5" y1="431" x2="516.5" y2="788" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4EBFFF"/>
+<stop offset="1" stop-color="#BD69FF"/>
+</linearGradient>
+</defs>
+</svg>

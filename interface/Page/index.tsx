@@ -1,0 +1,22 @@
+import dynamic from "next/dynamic"
+import { FC, PropsWithChildren } from "react"
+
+const PageHeader = dynamic(() => import("./PageHeader"))
+const PageFooter = dynamic(() => import("./PageFooter"))
+
+interface Props {
+  children: React.ReactNode
+  className?: string
+}
+
+const Page: FC<Props> = ({ children, className }: PropsWithChildren<Props>) => {
+  return (
+    <div className={className}>
+      <PageHeader />
+      {children}
+      <PageFooter />
+    </div>
+  )
+}
+
+export default Page
