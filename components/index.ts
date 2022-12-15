@@ -1,5 +1,8 @@
 export * from "./primitives"
 
+export { default as Card } from "./card"
+export * from "./card"
+
 export { default as Col } from "./col"
 export * from "./col"
 
