@@ -1,6 +1,13 @@
 import { CSS } from "@/theme/stitches.config"
 
-import { StyledSection, StyledSectionTitle } from "./section.styles"
+import Grid from "../grid"
+import {
+  StyledSection,
+  StyledSectionContent,
+  StyledSectionDescription,
+  StyledSectionImage,
+  StyledSectionTitle,
+} from "./section.styles"
 
 interface Props {
   className?: string
@@ -8,9 +15,10 @@ interface Props {
   title?: string
   subtitle?: string
   description?: string[]
-  type: "left" | "right" | "center" | "default"
+  image?: string
   css?: CSS
   as?: keyof JSX.IntrinsicElements
+  children?: React.ReactNode
 }
 
 type NativeAttrs = Omit<React.HTMLAttributes<unknown>, keyof Props>
@@ -22,15 +30,37 @@ const Section = ({
   href,
   title,
   description,
-  type,
+  subtitle,
+  image,
   css,
   as,
+  children,
   ...props
 }: ServiceSectionProps) => {
   return (
     <StyledSection css={css} {...props} className={className}>
       <StyledSectionTitle>{title}</StyledSectionTitle>
-      <p>{description}</p>
+      <Grid.Container gap={2}>
+        <Grid md={6} sm={6} xs={12}>
+          {subtitle && (
+            <StyledSectionDescription>{subtitle}</StyledSectionDescription>
+          )}
+          {description && (
+            <StyledSectionDescription>
+              {description.map(item => (
+                <p key={item}>{item}</p>
+              ))}
+            </StyledSectionDescription>
+          )}
+        </Grid>
+        <Grid md={6} sm={6} xs={12}>
+          {image ? (
+            <StyledSectionImage width={100} height={100} alt={`${title}`} src={`${image}`} />
+          ) : (
+            <StyledSectionContent>{children}</StyledSectionContent>
+          )}
+        </Grid>
+      </Grid.Container>
     </StyledSection>
   )
 }

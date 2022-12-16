@@ -1,3 +1,5 @@
+import { StyledSectionDescription } from "@/components"
+
 export default {
   serviceCards: [
     {
@@ -25,4 +27,27 @@ export default {
       image: "/bgk/code-search-dark-red.svg",
     },
   ],
+  about: {
+    title: "About Buchanan DevOps",
+    image: "/brand/johnbuchanan.avif",
+    description: [],
+  },
+  design: {
+    title: "Design.",
+    description: [
+      "We build beautiful websites that are fast, secure, and easy to use.",
+      "We build beautiful websites that are fast, secure, and easy to use.",
+    ],
+    image: "/bgk/design-dark-red.svg",
+  },
+  code: {
+    title: "Code.",
+    description: "",
+    image: "/bgk/stack-dark-red.svg",
+  },
+  optimize: {
+    title: "Optimize.",
+    description: "",
+    image: "/bgk/code-search-dark-red.svg",
+  },
 }

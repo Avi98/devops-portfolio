@@ -7,13 +7,15 @@ const ServiceCards = dynamic(
   () => import("@/interface/Sections/Landing/ServiceCards")
 )
 
+const Design = dynamic(() => import("@/interface/Sections/Landing/Design"))
+
 const Page: NextPage = () => {
   return (
     <>
       <Hero
         buttonGroup={[
           {
-            text: "Learn More",
+            text: "The Ideal Process",
             link: "/web-design",
             style: "default",
           },
@@ -23,13 +25,14 @@ const Page: NextPage = () => {
             style: "gradient",
           },
         ]}
-        description="We build full stack applications with incredible performance and love for the craft. If you've made it this far, you're ready to unlock your full potential."
+        description="We build digital things with a bunch of code and alot of coffee. Chances are you're here because you need a website, app, or seo services for your business."
         gradientBorder={true}
-        subtitle="Development."
-        title="Digital Business"
+        subtitle="Development"
+        title="Web. App. Seo."
         type="landing"
       />
       <ServiceCards />
+      <Design />
     </>
   )
 }

@@ -15,7 +15,10 @@ export const StyledSectionDescription = styled("p", {})
 
 export const StyledSectionContent = styled("div", {})
 
-export const StyledSectionImage = styled(Image, {})
+export const StyledSectionImage = styled(Image, {
+    width: "100%",
+    height: "100%",
+})
 
 export const StyledSectionButton = styled("button", {})
 
