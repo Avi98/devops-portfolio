@@ -1,11 +1,9 @@
-import { StyledSectionDescription } from "@/components"
-
 export default {
   serviceCards: [
     {
       title: "Web Design",
       description:
-        "We build beautiful websites that are fast, secure, and easy to use.",
+        "Website design and development is an essential component of any successful business in 2022. Let us create a stylish, cutting edge website that will help you stand out from the competition.",
       slug: "/web-design",
       icon: "/icons/design.svg",
       image: "/bgk/design-dark-red.svg",
@@ -24,7 +22,25 @@ export default {
         "We build beautiful websites that are fast, secure, and easy to use.",
       slug: "/search-engine-optimization",
       icon: "/icons/searchcode.svg",
-      image: "/bgk/code-search-dark-red.svg",
+      image: "/bgk/ethereum-dark-red.svg",
+    },
+  ],
+  largeServiceCards: [
+    {
+      title: "Digital Marketing",
+      description:
+        "We build beautiful websites that are fast, secure, and easy to use.",
+      slug: "/digital-marketing",
+      icon: "/icons/support.svg",
+      image: "/bgk/support-dark.svg",
+    },
+    {
+      title: "Branding",
+      description:
+        "We build beautiful websites that are fast, secure, and easy to use.",
+      slug: "/branding",
+      icon: "/icons/desktop.svg",
+      image: "/bgk/branding-dark-red.svg",
     },
   ],
   about: {

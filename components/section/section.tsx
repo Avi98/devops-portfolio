@@ -55,7 +55,12 @@ const Section = ({
         </Grid>
         <Grid md={6} sm={6} xs={12}>
           {image ? (
-            <StyledSectionImage width={100} height={100} alt={`${title}`} src={`${image}`} />
+            <StyledSectionImage
+              alt={`${title}`}
+              height={100}
+              src={`${image}`}
+              width={100}
+            />
           ) : (
             <StyledSectionContent>{children}</StyledSectionContent>
           )}

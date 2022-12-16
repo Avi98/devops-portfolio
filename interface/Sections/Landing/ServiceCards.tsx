@@ -13,6 +13,11 @@ const ServiceCards: FC = () => {
               <Card {...card} />
             </Grid>
           ))}
+          {landing.largeServiceCards.map(card => (
+            <Grid xs={12} sm={6} md={6}>
+              <Card {...card} />
+            </Grid>
+          ))}
         </Grid.Container>
       </Container>
     </StyledSection>
