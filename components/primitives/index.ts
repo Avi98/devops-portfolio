@@ -1,10 +1,5 @@
 import { styled } from "@/theme/stitches.config"
 
-export const Section = styled("section", {
-  zIndex: "$2",
-  width: "100%",
-})
-
 export const DisplayContainer = styled("div", {
   display: "flex",
   flexDirection: "column",

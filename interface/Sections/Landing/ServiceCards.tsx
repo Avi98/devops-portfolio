@@ -1,11 +1,11 @@
 import { FC } from "react"
 
-import { Card, Container, Grid, Section } from "@/components"
+import { Card, Container, Grid, StyledSection } from "@/components"
 import landing from "@/content/landing"
 
 const ServiceCards: FC = () => {
   return (
-    <Section id="services">
+    <StyledSection id="services">
       <Container>
         <Grid.Container gap={1}>
           {landing.serviceCards.map(card => (
@@ -15,7 +15,7 @@ const ServiceCards: FC = () => {
           ))}
         </Grid.Container>
       </Container>
-    </Section>
+    </StyledSection>
   )
 }
 

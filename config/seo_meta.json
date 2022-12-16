@@ -1,0 +1,55 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Buchanan DevOps Freelance Digital Development",
+  "description": "Buchanan DevOps Freelance Digital Development - https://buchanandevops.com",
+  "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su",
+  "telephone": "+13022173382",
+  "email": "john@buchanandevops.com",
+  "naics": ["541511", "541430"],
+  "image": "https://buchanandevops.com/twitter-card.png",
+  "currenciesAccepted": "USD",
+  "paymentAccepted": "Cash, Credit Card, Cryptocurrency",
+  "priceRange": "$$$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8 Osprey Lane",
+    "addressLocality": "Middletown",
+    "addressRegion": "DE",
+    "postalCode": "19709",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.44238,
+      "longitude": -75.64644
+    },
+
+    "geoRadius": "5000 mi"
+  },
+  "title": "Buchanan DevOps | Freelance Digital Development",
+  "titleTemplate": "%s - Buchanan DevOps",
+
+  "openGraph": {
+    "title": "Buchanan DevOps | Digital Business Development",
+    "description": "Buchanan DevOps Digital Business Development - https://buchanandevops.com",
+    "type": "website",
+    "url": "https://buchanandevops.com",
+    "site_name": "Buchanan DevOps Freelance Digital Development",
+    "images": [
+      {
+        "url": "https://buchanandevops.com/twitter-card.png",
+        "width": "800",
+        "height": "600",
+        "alt": "Buchanan DevOps Freelance Digital Development"
+      }
+    ]
+  },
+  "twitter": {
+    "handle": "@buchanandevops",
+    "site": "@buchanandevops",
+    "cardType": "summary_large_image"
+  }
+}

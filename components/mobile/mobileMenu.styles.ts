@@ -14,7 +14,6 @@ export const MobileHeaderWrapper = styled("div", {
 })
 
 export const MobileHeader = styled("header", {
-  padding: "0 24px",
   width: "100%",
 })
 

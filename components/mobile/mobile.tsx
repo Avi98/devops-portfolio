@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React from "react"
 
 import { CSS } from "@/theme/stitches.config"
@@ -44,12 +45,19 @@ const MobileMenu: React.FC<React.PropsWithChildren<MobileMenuProps>> = ({
       <MobileHeader>
         <MobileHeaderNavFirst>
           <div>
-            <Logo
-              css={{
-                justifyContent: "flex-start",
-              }}
-            />
-            <StyledMenuButton onClick={handleClick}>
+            <Link href="/" title="Buchanan DevOps">
+              <Logo
+                css={{
+                  justifyContent: "flex-start",
+                }}
+                title="Buchanan Devops"
+              />
+            </Link>
+            <StyledMenuButton
+              aria-label="Open Mobile Menu"
+              id="open__mobile-menu"
+              onClick={handleClick}
+            >
               {isOpen ? (
                 <StyledMenuExpanded css={{ justifyContent: "center" }} />
               ) : (

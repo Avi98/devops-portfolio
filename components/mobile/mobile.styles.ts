@@ -11,7 +11,7 @@ export const StyledMobileMenu = styled("nav", {
   bottom: "0",
   left: "0",
   right: "0",
-  top: "calc(var(64px) - 1px)",
+  top: "calc(var(76px) - 1px)",
   overflowY: "scroll",
   webkitOverflowScrolling: "touch",
 })
@@ -25,19 +25,19 @@ export const StyledMenuHeaderWrapper = styled("div", {
   width: "100%",
   maxWidth: "100%",
   backgroundColor: "rgba(0,0,0,.5)",
-  minHeight: "64px",
+  minHeight: "76px",
 })
 
 export const StyledHeaderNavFirst = styled("div", {
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-start",
-  minHeight: "64px",
+  minHeight: "76px",
   "& div": {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    minHeight: "64px",
+    minHeight: "76px",
   },
 })
 
@@ -45,7 +45,7 @@ export const StyledMenuHeader = styled("header", {
   justifyContent: "right",
   width: "100%",
   maxWidth: "100%",
-  minHeight: "64px",
+  minHeight: "76px",
 })
 
 export const StyledMobileMenuList = styled("ul", {

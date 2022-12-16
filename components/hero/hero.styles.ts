@@ -43,7 +43,7 @@ export const StyledHero = styled("section", {
   mt: "80px",
   height: "75vh",
   "@xsMax": {
-    height: "calc(100vh)",
+    height: "calc(80vh)",
   },
   alignItems: "center",
   textAlign: "-webkit-center",

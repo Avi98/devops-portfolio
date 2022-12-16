@@ -1,4 +1,5 @@
 export * from "./primitives"
+export * from "./icons"
 
 export { default as Card } from "./card"
 export * from "./card"
@@ -11,6 +12,9 @@ export * from "./container"
 
 export { default as Grid } from "./grid"
 export * from "./grid"
+
+export { default as Hero } from "./hero"
+export * from "./hero"
 
 export { default as Row } from "./row"
 export * from "./row"
@@ -33,3 +37,6 @@ export { default as useModal } from "./modal/use-modal"
 
 export { default as Link } from "./link"
 export * from "./link"
+
+export { default as Section } from "./section"
+export * from "./section"

@@ -2,7 +2,7 @@ import { FC } from "react"
 
 import clsx from "clsx"
 
-import { MobileMenu, Nav, NavLink } from "@/components"
+import { Container, MobileMenu, Nav, NavLink } from "@/components"
 import {
   MobileMenuList,
   MobileMenuListLink,
@@ -20,31 +20,38 @@ const PageHeader: FC<Props> = ({ className }) => {
 
   return (
     <>
-      {isMobile ? (
-        <MobileMenu>
-          <MobileMenuWrapper>
-            <MobileMenuList>
+      <Container>
+        {isMobile ? (
+          <MobileMenu>
+            <MobileMenuWrapper>
+              <MobileMenuList>
+                {menu.navLinks.map(item => (
+                  <MobileMenuListLink
+                    key={item.title}
+                    title={item.title}
+                    href={item.href}
+                  >
+                    <li>{item.short}</li>
+                  </MobileMenuListLink>
+                ))}
+              </MobileMenuList>
+            </MobileMenuWrapper>
+          </MobileMenu>
+        ) : (
+          <header className={clsx("page-header", className)}>
+            <Nav>
               {menu.navLinks.map(item => (
-                <MobileMenuListLink href={item.href}>
-                  <li>{item.display}</li>
-                </MobileMenuListLink>
+                <NavLink
+                  key={item.title}
+                  href={item.href}
+                  display={item.short}
+                  title={item.title}
+                />
               ))}
-            </MobileMenuList>
-          </MobileMenuWrapper>
-        </MobileMenu>
-      ) : (
-        <header className={clsx("page-header", className)}>
-          <Nav>
-            {menu.navLinks.map(item => (
-              <NavLink
-                key={item.display}
-                href={item.href}
-                display={item.display}
-              />
-            ))}
-          </Nav>
-        </header>
-      )}
+            </Nav>
+          </header>
+        )}
+      </Container>
     </>
   )
 }
