@@ -41,7 +41,7 @@ export const AnimationHelper = styled("div", {
 export const StyledHero = styled("section", {
   position: "relative",
   mt: "80px",
-  height: "100vh",
+  height: "75vh",
   "@xsMax": {
     height: "calc(100vh)",
   },

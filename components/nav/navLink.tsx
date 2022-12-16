@@ -26,7 +26,9 @@ const NavLink: FC<NavLinkProps> = ({
 }) => {
   return (
     <StyledNavLink
+      aria-label={display}
       css={css}
+      id={display}
       {...props}
       as={as}
       className={className}

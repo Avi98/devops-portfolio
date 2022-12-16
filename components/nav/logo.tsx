@@ -35,7 +35,7 @@ const Logo: React.FC<LogoProps> = ({
   ...props
 }) => {
   return (
-    <Link color="text" href="/" title={title}>
+    <Link color="text" href="/" id={title} title={title}>
       <StyledLogo
         className="logo__large"
         css={css}

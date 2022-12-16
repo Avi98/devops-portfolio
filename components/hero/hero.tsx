@@ -81,6 +81,8 @@ export const Hero = ({
                     }}
                   >
                     <Button
+                      aria-label={button.text}
+                      id={button.text}
                       style={button.style}
                       title={button.text}
                       onClick={() => handleButtonClick(button.link)}
@@ -90,6 +92,8 @@ export const Hero = ({
                   </Container>
                 ) : (
                   <Button
+                    aria-label={button.text}
+                    id={button.text}
                     style={button.style}
                     title={button.text}
                     onClick={() => handleButtonClick(button.link)}

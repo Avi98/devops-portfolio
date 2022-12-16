@@ -27,7 +27,11 @@ const Nav: React.FC<React.PropsWithChildren<NavProps>> = ({
 }) => {
   return (
     <StyledNav css={css} {...props}>
-      <Logo title="Buchanan Devops" />
+      <Logo
+        aria-label="Buchanan DevOps Logo"
+        id="buchanan_devops_logo"
+        title="Buchanan Devops"
+      />
       <StyledNavList>{children}</StyledNavList>
     </StyledNav>
   )

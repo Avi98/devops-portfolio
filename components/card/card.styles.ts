@@ -1,10 +1,9 @@
 import { styled, VariantProps } from "@/theme/stitches.config"
 
 export const StyledCard = styled("div", {
-  width: "100%",
-  height: "100%",
   background: "#FFFFFF",
-  backgroundPosition: "50% -330px",
+  backgroundPosition: "61% -330px",
+  backgroundRepeat: "no-repeat",
   border: "1px solid rgba(228, 202, 255, 0.1)",
   borderRadius: "12px",
   padding: "20px",
