@@ -25,7 +25,13 @@ export type SpacerProps = Props &
   NativeAttrs &
   SpacerVariantsProps
 
-const Spacer: React.FC<SpacerProps> = ({ vertical, horizontal, inline, css, ...props }) => {
+const Spacer: React.FC<SpacerProps> = ({
+  vertical,
+  horizontal,
+  inline,
+  css,
+  ...props
+}) => {
   const marginLeft = getMargin(horizontal)
   const marginTop = getMargin(vertical)
 

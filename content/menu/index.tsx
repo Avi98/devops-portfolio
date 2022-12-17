@@ -31,7 +31,7 @@ export default {
   socialLinks: [
     {
       title: "LinkedIn: John Buchanan",
-      href: "https://www.linkedin.com/company/development-ui",
+      href: "https://www.linkedin.com/in/buchanandevops/",
       icon: <LinkedIn size={24} />,
     },
     {

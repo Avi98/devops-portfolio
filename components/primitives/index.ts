@@ -118,7 +118,7 @@ export const StyledCardBlur = styled("div", {
     bf: "saturate(180%) blur(14px)",
     bg: "rgba(255, 255, 255, 0.05)",
   },
-});
+})
 
 export const Title = styled("h1", {
   display: "inline",
@@ -164,7 +164,7 @@ export const Title = styled("h1", {
       },
     },
   },
-});
+})
 
 export const Subtitle = styled("p", {
   pl: "$1",
@@ -177,4 +177,4 @@ export const Subtitle = styled("p", {
   "@sm": {
     mw: "50%",
   },
-});
+})
