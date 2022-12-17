@@ -29,30 +29,5 @@
     },
 
     "geoRadius": "5000 mi"
-  },
-  "title": "Buchanan DevOps",
-  "titleTemplate": "%s - Buchanan DevOps",
-
-  "openGraph": {
-    "title": "Buchanan DevOps",
-    "description": "We build things. Websites and Apps with an emphasis on SEO.",
-    "type": "website",
-    "url": "https://buchanandevops.com",
-    "site_name": "Buchanan DevOps",
-    "images": [
-      {
-        "url": "https://buchanandevops.com/twitter-card.png",
-        "width": "800",
-        "height": "600",
-        "alt": "Buchanan DevOps Twitter Card Image"
-      }
-    ]
-  },
-  "twitter": {
-    "handle": "@buchanandevops",
-    "site": "@buchanandevops",
-    "cardType": "summary_large_image",
-    "altText": "Buchanan DevOps Twitter Card Image",
-    "description": "We build things. Websites and Apps with an emphasis on SEO."
   }
 }

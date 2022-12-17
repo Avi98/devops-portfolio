@@ -20,7 +20,7 @@ class Document extends NextDocument {
 
   render() {
     return (
-      <Html itemType="http://schema.org/WebPage" lang="en" >
+      <Html itemType="http://schema.org/WebPage" lang="en">
         <Head>{CssBaseline.flush()}</Head>
         <body>
           <Main />

@@ -1,7 +1,10 @@
 import Head from "next/head"
+import Script from "next/script"
 import { FC, Fragment, ReactNode } from "react"
 
+import data_schema from "@/config/data_schema.json"
 import config from "@/config/seo_meta.json"
+import { gtagUrl, renderSnippet } from "@/lib/analytics"
 import packageData from "@/package.json"
 
 const storeUrl =
@@ -78,42 +81,85 @@ const SEO: FC<Props> = ({
         name="description"
         content={description || config.description}
       />
+      <meta
+        content={keywords?.toString() || config.keywords.toString()}
+        name="keywords"
+        key="keywords"
+      />
+      <meta content={packageData.author} name="author" key="author" />
+      <meta
+        content={packageData.displayName}
+        name="application-name"
+        key="application-name"
+      />
 
-      <meta content={keywords?.toString()} name="keywords" />
-      <meta content={packageData.author} name="author" />
-      <meta content={packageData.displayName} name="application-name" />
-
-      <meta content="yes" name="mobile-web-app-capable" />
-      <meta content="default" name="apple-mobile-web-app-status-bar-style" />
+      <meta
+        content="yes"
+        name="mobile-web-app-capable"
+        key="mobile-web-app-capable"
+      />
+      <meta
+        content="default"
+        name="apple-mobile-web-app-status-bar-style"
+        key="apple-mobile-web-app-status-bar-style"
+      />
       <meta
         content={packageData.displayName}
         name="apple-mobile-web-app-title"
       />
-      <meta content="telephone=yes" name="format-detection" />
-      <meta content="/browserconfig.xml" name="msapplication-config" />
-      <meta content="yes" name="msapplication-tap-highlight" />
-      <meta content="#555" name="msapplication-TileColor" />
-      <meta content="no" name="msapplication-tap-highlight" />
-      <meta content="#000000" name="theme-color" />
+      <meta
+        content="telephone=yes"
+        name="format-detection"
+        key="format-detection"
+      />
+      <meta
+        content="/browserconfig.xml"
+        name="msapplication-config"
+        key="msapplication-config"
+      />
+      <meta
+        content="yes"
+        name="msapplication-tap-highlight"
+        key="msapplication-tap-highlight"
+      />
+      <meta
+        content="#555"
+        name="msapplication-TileColor"
+        key="msapplication-TileColor"
+      />
+      <meta
+        content="no"
+        name="msapplication-tap-highlight"
+        key="msapplication-tap-highlight"
+      />
+      <meta content="#000000" name="theme-color" key="theme-color" />
       <link
         href="/apple-touch-icon.png"
         rel="apple-touch-icon"
         sizes="180x180"
+        key="apple-touch-icon"
       />
       <link
         href="/favicon-32x32.png"
         rel="icon"
         sizes="32x32"
         type="image/png"
+        key="favicon-32x32"
       />
       <link
         href="/favicon-16x16.png"
         rel="icon"
         sizes="16x16"
         type="image/png"
+        key="favicon-16x16"
       />
-      <link href="/manifest.json" rel="manifest" />
-      <link color="#555" href="/icons/safari-pinned-tab.svg" rel="mask-icon" />
+      <link rel="manifest" href="/site.manifest.json" key="manifest" />
+      <link
+        color="#555"
+        href="/safari-pinned-tab.svg"
+        rel="mask-icon"
+        key="mask-icon"
+      />
 
       <meta
         key="og:type"
@@ -127,7 +173,11 @@ const SEO: FC<Props> = ({
           openGraph?.title ?? config.openGraph.title ?? title ?? config.title
         }
       />
-      <meta key="og:keywords" property="og:keywords" content={keywords} />
+      <meta
+        key="og:keywords"
+        property="og:keywords"
+        content={keywords || config.keywords.toString()}
+      />
       <meta
         key="og:description"
         property="og:description"
@@ -195,6 +245,14 @@ const SEO: FC<Props> = ({
         name="googlebot"
         content={robots ?? "index,follow"}
       ></meta>
+      <Script
+        type="application/ld+json"
+        key="schema-json-ld"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(data_schema) }}
+      />
+      <Script async src={gtagUrl} />
+      <Script dangerouslySetInnerHTML={{ __html: renderSnippet() as string }} />
+
       {children}
     </Head>
   )
