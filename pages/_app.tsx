@@ -3,6 +3,7 @@ import dynamic from "next/dynamic"
 
 import { Inter } from "@next/font/google"
 
+import { useAnalytics } from "@/lib/analytics"
 import { DevOpsInterface } from "@/theme"
 
 const Page = dynamic(() => import("../interface/Page"))
@@ -10,6 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 const Head = dynamic(() => import("../interface/Common/Head"))
 
 const App = ({ Component, pageProps }: AppProps) => {
+  useAnalytics()
   return (
     <>
       <Head />
