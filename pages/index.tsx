@@ -2,6 +2,7 @@ import { NextPage } from "next"
 import dynamic from "next/dynamic"
 
 import Hero from "@/components/hero"
+import SEO from "@/interface/Common/SEO"
 
 const ServiceCards = dynamic(
   () => import("@/interface/Sections/Landing/ServiceCards")
@@ -30,6 +31,11 @@ const Page: NextPage = () => {
         type="landing"
       />
       <ServiceCards />
+      <SEO
+        description={"Buchanan DevOps Index Description"}
+        keywords={""}
+        title={"Buchanan DevOps Index Title"}
+      />
     </>
   )
 }
