@@ -2,10 +2,45 @@ import Head from "next/head"
 import Script from "next/script"
 import { FC, Fragment, ReactNode } from "react"
 
-import data_schema from "@/config/data_schema.json"
 import config from "@/config/seo_meta.json"
-import { gtagUrl, renderSnippet } from "@/lib/analytics"
 import packageData from "@/package.json"
+
+import { gtagUrl, renderSnippet } from "@/lib/analytics"
+
+
+const schema =  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Buchanan DevOps",
+    "description": "We build things. Websites and Apps with an emphasis on SEO. ",
+    "keywords": "web, app, seo, search, engine, optimization, buchanan, devops, design, designed, designer, company, development, develop, website, site, professional, experienced, best, create, business, goals  ",
+    "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su",
+    "telephone": "+13024040184",
+    "email": "buchanandevops@gmail.com",
+    "naics": ["541511", "541430"],
+    "image": "https://buchanandevops.com/twitter-card.png",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Cryptocurrency",
+    "priceRange": "$$$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8 Osprey Lane",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.44238,
+        "longitude": -75.64644
+      },
+
+      "geoRadius": "5000 mi"
+}
+}
 
 const storeUrl =
   process.env.NEXT_PUBLIC_STORE_URL || process.env.NEXT_PUBLIC_VERCEL_URL
@@ -81,57 +116,21 @@ const SEO: FC<Props> = ({
         name="description"
         content={description || config.description}
       />
-      <meta
-        content={keywords?.toString() || config.keywords.toString()}
-        name="keywords"
-        key="keywords"
-      />
+      <meta content={keywords?.toString() || config.keywords.toString()} name="keywords" key="keywords" />
       <meta content={packageData.author} name="author" key="author" />
-      <meta
-        content={packageData.displayName}
-        name="application-name"
-        key="application-name"
-      />
+      <meta content={packageData.displayName} name="application-name" key="application-name" />
 
-      <meta
-        content="yes"
-        name="mobile-web-app-capable"
-        key="mobile-web-app-capable"
-      />
-      <meta
-        content="default"
-        name="apple-mobile-web-app-status-bar-style"
-        key="apple-mobile-web-app-status-bar-style"
-      />
+      <meta content="yes" name="mobile-web-app-capable" key="mobile-web-app-capable" />
+      <meta content="default" name="apple-mobile-web-app-status-bar-style" key="apple-mobile-web-app-status-bar-style" />
       <meta
         content={packageData.displayName}
         name="apple-mobile-web-app-title"
       />
-      <meta
-        content="telephone=yes"
-        name="format-detection"
-        key="format-detection"
-      />
-      <meta
-        content="/browserconfig.xml"
-        name="msapplication-config"
-        key="msapplication-config"
-      />
-      <meta
-        content="yes"
-        name="msapplication-tap-highlight"
-        key="msapplication-tap-highlight"
-      />
-      <meta
-        content="#555"
-        name="msapplication-TileColor"
-        key="msapplication-TileColor"
-      />
-      <meta
-        content="no"
-        name="msapplication-tap-highlight"
-        key="msapplication-tap-highlight"
-      />
+      <meta content="telephone=yes" name="format-detection" key="format-detection" />
+      <meta content="/browserconfig.xml" name="msapplication-config" key="msapplication-config" />
+      <meta content="yes" name="msapplication-tap-highlight" key="msapplication-tap-highlight" />
+      <meta content="#555" name="msapplication-TileColor" key="msapplication-TileColor" />
+      <meta content="no" name="msapplication-tap-highlight" key="msapplication-tap-highlight" />
       <meta content="#000000" name="theme-color" key="theme-color" />
       <link
         href="/apple-touch-icon.png"
@@ -154,12 +153,7 @@ const SEO: FC<Props> = ({
         key="favicon-16x16"
       />
       <link rel="manifest" href="/site.manifest.json" key="manifest" />
-      <link
-        color="#555"
-        href="/safari-pinned-tab.svg"
-        rel="mask-icon"
-        key="mask-icon"
-      />
+      <link color="#555" href="/safari-pinned-tab.svg" rel="mask-icon" key="mask-icon" />
 
       <meta
         key="og:type"
@@ -173,11 +167,7 @@ const SEO: FC<Props> = ({
           openGraph?.title ?? config.openGraph.title ?? title ?? config.title
         }
       />
-      <meta
-        key="og:keywords"
-        property="og:keywords"
-        content={keywords || config.keywords.toString()}
-      />
+      <meta key="og:keywords" property="og:keywords" content={keywords || config.keywords.toString()} />
       <meta
         key="og:description"
         property="og:description"
@@ -248,7 +238,7 @@ const SEO: FC<Props> = ({
       <Script
         type="application/ld+json"
         key="schema-json-ld"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data_schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <Script async src={gtagUrl} />
       <Script dangerouslySetInnerHTML={{ __html: renderSnippet() as string }} />

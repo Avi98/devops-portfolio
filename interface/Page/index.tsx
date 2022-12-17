@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic"
+import Script from "next/script"
 import { FC, PropsWithChildren } from "react"
 
 const PageHeader = dynamic(() => import("./PageHeader"))
