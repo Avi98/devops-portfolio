@@ -5,19 +5,20 @@ import { Inter } from "@next/font/google"
 
 import { DevOpsInterface } from "@/theme"
 
-import { useAnalytics } from "../lib/analytics"
-
 const Page = dynamic(() => import("../interface/Page"))
 const inter = Inter({ subsets: ["latin"] })
+const Head = dynamic(() => import("../interface/Common/Head"))
 
 const App = ({ Component, pageProps }: AppProps) => {
-  useAnalytics()
   return (
-    <DevOpsInterface>
-      <Page className={inter.className}>
-        <Component {...pageProps} />
-      </Page>
-    </DevOpsInterface>
+    <>
+      <Head />
+      <DevOpsInterface>
+        <Page className={inter.className}>
+          <Component {...pageProps} />
+        </Page>
+      </DevOpsInterface>
+    </>
   )
 }
 

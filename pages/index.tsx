@@ -7,8 +7,6 @@ const ServiceCards = dynamic(
   () => import("@/interface/Sections/Landing/ServiceCards")
 )
 
-const Design = dynamic(() => import("@/interface/Sections/Landing/Design"))
-
 const Page: NextPage = () => {
   return (
     <>
@@ -32,7 +30,6 @@ const Page: NextPage = () => {
         type="landing"
       />
       <ServiceCards />
-      <Design />
     </>
   )
 }

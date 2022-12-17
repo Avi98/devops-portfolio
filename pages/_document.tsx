@@ -7,7 +7,6 @@ import NextDocument, {
 } from "next/document"
 import React from "react"
 
-import { gtagUrl, renderSnippet } from "@/lib/analytics"
 import CssBaseline from "@/styles/css-baseline"
 
 class Document extends NextDocument {
@@ -21,14 +20,8 @@ class Document extends NextDocument {
 
   render() {
     return (
-      <Html lang="en">
-        <Head>
-          <script async src={gtagUrl} />
-          <script
-            dangerouslySetInnerHTML={{ __html: renderSnippet() as string }}
-          />
-          {CssBaseline.flush()}
-        </Head>
+      <Html itemType="http://schema.org/WebPage" lang="en" >
+        <Head>{CssBaseline.flush()}</Head>
         <body>
           <Main />
           <NextScript />

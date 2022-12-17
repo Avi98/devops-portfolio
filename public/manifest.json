@@ -1,12 +1,6 @@
 {
-  "name": "buchanan devops web app development",
+  "name": "buchanan devops",
   "short_name": "buchanan devops",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "orientation": "portrait",
-  "scope": "/",
-  "start_url": "/",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -18,5 +12,10 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "theme_color": "#000",
+  "background_color": "#000",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
 }

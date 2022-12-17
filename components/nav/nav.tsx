@@ -1,7 +1,7 @@
-import dynamic from "next/dynamic"
 import React from "react"
 
 import menu from "@/content/menu"
+import ContactButton from "@/interface/Object/ContactButton"
 import { CSS } from "@/theme/stitches.config"
 import withDefaults from "@/utils/with-defaults"
 
@@ -9,10 +9,6 @@ import Logo from "./logo"
 import StyledNav, { NavVariantsProps, StyledNavList } from "./nav.styles"
 import NavLink from "./navLink"
 import SocialLink from "./socialLink"
-
-const ContactButton = dynamic(
-  () => import("../../interface/Object/ContactButton")
-)
 
 interface Props {
   as?: keyof JSX.IntrinsicElements

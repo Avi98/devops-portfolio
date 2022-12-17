@@ -4,6 +4,7 @@ import { styled, VariantProps } from "@/theme/stitches.config"
 
 export const StyledNavLink = styled(Link, {
   textDecoration: "none",
+  position: "sticky",
   color: "$text",
   verticalAlign: "middle",
   pt: "5px",

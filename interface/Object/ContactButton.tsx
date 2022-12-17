@@ -28,7 +28,7 @@ const ContactButton: FC = () => {
         marginLeft: "6px",
 
         "& .devui-button-icon": {
-          mr: "$2",
+          mr: "0px",
         },
         "& .devui-button-icon svg": {
           transition: "$default",
@@ -41,9 +41,7 @@ const ContactButton: FC = () => {
       }}
       onClick={handleClick}
       icon={<Mail fill="var(--devui-colors-red600)" size={20} />}
-    >
-      Contact
-    </Button>
+    />
   )
 }
 

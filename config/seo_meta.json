@@ -50,6 +50,8 @@
   "twitter": {
     "handle": "@buchanandevops",
     "site": "@buchanandevops",
-    "cardType": "summary_large_image"
+    "cardType": "summary_large_image",
+    "altText": "Buchanan DevOps Twitter Card Image",
+    "description": "We build things. Websites and Apps with an emphasis on SEO."
   }
 }
