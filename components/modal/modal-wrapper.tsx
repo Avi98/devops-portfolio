@@ -37,7 +37,7 @@ export type ModalWrapperProps = Props &
   NativeAttrs &
   ModalVariantsProps & { css?: CSS }
 
-const preClass = "nextui-modal"
+const preClass = "deui-modal"
 
 const ModalWrapper: React.FC<React.PropsWithChildren<ModalWrapperProps>> = ({
   className,

@@ -110,9 +110,8 @@ Container.toString = () => ".devui-container"
 type ComponentProps = Omit<Props, keyof typeof defaultProps> &
   Partial<typeof defaultProps> &
   NativeAttrs
-
-type MemoContainerComponent<P = Record<string, never>> =
-  React.NamedExoticComponent<P>
+//@ts-ignore
+type MemoContainerComponent<P = {}> = React.NamedExoticComponent<P>
 
 Container.defaultProps = defaultProps
 

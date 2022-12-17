@@ -11,7 +11,7 @@ export default {
     {
       title: "App Development",
       description:
-        "We build beautiful websites that are fast, secure, and easy to use.",
+        "With our expertise in app design, development and maintenance, you can rest assured that your application will be up-to-date with modern standards while providing exceptional performance for customers. ",
       slug: "/app-development",
       icon: "/icons/stack.svg",
       image: "/bgk/stack-dark-red.svg",
@@ -22,7 +22,7 @@ export default {
         "We build beautiful websites that are fast, secure, and easy to use.",
       slug: "/search-engine-optimization",
       icon: "/icons/searchcode.svg",
-      image: "/bgk/ethereum-dark-red.svg",
+      image: "/bgk/code-search-dark-red.svg",
     },
   ],
   largeServiceCards: [
@@ -35,12 +35,12 @@ export default {
       image: "/bgk/support-dark.svg",
     },
     {
-      title: "Branding",
+      title: "Our Work",
       description:
-        "We build beautiful websites that are fast, secure, and easy to use.",
+        "Check out some of our past a present clients. If you happen to like the style of our designs feel free to request and estimate, seo audit or submit our contact form to get in touch if you have any addtional questions or concerns!",
       slug: "/branding",
       icon: "/icons/desktop.svg",
-      image: "/bgk/branding-dark-red.svg",
+      image: "/bgk/ethereum-dark-red.svg",
     },
   ],
   about: {

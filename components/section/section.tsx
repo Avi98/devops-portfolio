@@ -1,3 +1,5 @@
+import clsx from "clsx"
+
 import { CSS } from "@/theme/stitches.config"
 
 import Grid from "../grid"
@@ -38,7 +40,11 @@ const Section = ({
   ...props
 }: ServiceSectionProps) => {
   return (
-    <StyledSection css={css} {...props} className={className}>
+    <StyledSection
+      css={css}
+      {...props}
+      className={clsx("section__styles", className)}
+    >
       <StyledSectionTitle>{title}</StyledSectionTitle>
       <Grid.Container gap={2}>
         <Grid md={6} sm={6} xs={12}>

@@ -10,11 +10,17 @@ export * from "./col"
 export { default as Container } from "./container"
 export * from "./container"
 
+export { default as Divider } from "./divider"
+export * from "./divider"
+
 export { default as Grid } from "./grid"
 export * from "./grid"
 
 export { default as Hero } from "./hero"
 export * from "./hero"
+
+export { default as Image } from "./image"
+export * from "./image"
 
 export { default as Row } from "./row"
 export * from "./row"

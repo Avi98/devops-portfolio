@@ -7,6 +7,7 @@ export const StyledNav = styled("nav", {
   justifyContent: "space-between",
   px: "$lg",
   py: "$sm",
+  maxWidth: "1200px",
 })
 
 export const StyledNavList = styled("ul", {

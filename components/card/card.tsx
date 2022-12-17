@@ -1,57 +1,84 @@
-import { useRouter } from "next/router"
-import React from "react"
+import type { ReactNode } from "react"
+import React, { PropsWithoutRef, RefAttributes } from "react"
 
-import type { CSS } from "@/theme"
+import { CSS } from "@/theme/stitches.config"
+import { __DEV__ } from "@/utils/assertion"
+import Drip from "@/utils/drip"
 
+import { Divider, Image } from "../index"
 import {
+  StyledCardBody as CardBody,
+  StyledCardFooter as CardFooter,
+  StyledCardHeader as CardHeader,
   StyledCard,
-  StyledDescription,
-  StyledIcon,
-  StyledIconWrapper,
-  StyledTitle,
 } from "./card.styles"
-import type { CardVariantsProps } from "./card.styles"
+import type { UseCardProps } from "./use-card"
+import { useCard } from "./use-card"
 
-interface Props {
-  slug: string
-  icon?: string
-  title: string
-  description: string
-  css?: CSS
-  image: string
+interface Props extends Omit<UseCardProps, "ref"> {
+  children: ReactNode | ReactNode[]
+  as?: keyof JSX.IntrinsicElements
 }
 
-type NativeAttrs = Omit<React.HTMLAttributes<unknown>, keyof Props>
-
-export type CardProps = React.ComponentPropsWithRef<"div"> &
-  Props &
-  NativeAttrs &
-  CardVariantsProps
+export type CardProps = Props & { css?: CSS }
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ slug, icon, title, description, css, image, ...props }, ref) => {
-    const router = useRouter()
-    const handleClick = () => {
-      router.push(`/${slug}`)
-    }
+  ({ ...cardProps }, ref: React.Ref<HTMLDivElement | null>) => {
+    const { as, css, children, ...otherProps } = cardProps
+
+    const {
+      cardRef,
+      variant,
+      isFocusVisible,
+      isPressable,
+      isPressed,
+      disableAnimation,
+      disableRipple,
+      borderWeight,
+      isHovered,
+      getCardProps,
+      dripBindings,
+    } = useCard({ ...otherProps, ref })
 
     return (
       <StyledCard
-        ref={ref}
-        css={{ backgroundImage: `url(${image})`, ...css }}
-        onClick={handleClick}
-        {...props}
+        ref={cardRef}
+        as={as}
+        borderWeight={borderWeight}
+        css={css as any}
+        disableAnimation={disableAnimation}
+        isFocusVisible={isFocusVisible}
+        isHovered={isHovered}
+        isPressable={isPressable}
+        isPressed={isPressed}
+        role={isPressable ? "button" : "section"}
+        tabIndex={isPressable ? 0 : -1}
+        variant={variant}
+        {...getCardProps()}
       >
-        {icon ? (
-          <StyledIconWrapper>
-            <StyledIcon alt={`${title}`} src={icon} />
-          </StyledIconWrapper>
-        ) : null}
-        <StyledTitle>{title}</StyledTitle>
-        <StyledDescription>{description}</StyledDescription>
+        {isPressable && !disableAnimation && !disableRipple && (
+          <Drip {...dripBindings} />
+        )}
+        {children}
       </StyledCard>
     )
   }
 )
 
-export default Card
+type CardComponent<T, P = {}> = React.ForwardRefExoticComponent<
+  PropsWithoutRef<P> & RefAttributes<T>
+> & {
+  Header: typeof CardHeader
+  Body: typeof CardBody
+  Footer: typeof CardFooter
+  Image: typeof Image
+  Divider: typeof Divider
+}
+
+if (__DEV__) {
+  Card.displayName = "DevUI.Card"
+}
+
+Card.toString = () => ".devui-card"
+
+export default Card as CardComponent<HTMLDivElement, CardProps>

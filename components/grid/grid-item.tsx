@@ -105,7 +105,7 @@ const GridItem = React.forwardRef<
     return (
       <StyledGridItem
         ref={ref}
-        className={clsx("nextui-grid-item", classes, className)}
+        className={clsx("nui-grid-item", classes, className)}
         css={{
           alignItems,
           alignContent,

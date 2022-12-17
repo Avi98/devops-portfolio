@@ -20,7 +20,7 @@ const PageHeader: FC<Props> = ({ className }) => {
 
   return (
     <>
-      <Container>
+      <Container css={{ maxWidth: "1400px" }}>
         {isMobile ? (
           <MobileMenu>
             <MobileMenuWrapper>

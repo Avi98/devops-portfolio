@@ -1,60 +1,182 @@
+import { cssFocusVisible, cssNoBlurriness } from "@/theme/shared-css"
 import { styled, VariantProps } from "@/theme/stitches.config"
+import { StyledDrip } from "@/utils/drip"
 
-export const StyledCard = styled("div", {
-  width: "100%",
-  height: "100%",
-  background: "#FFFFFF",
-  backgroundPosition: "61% -330px",
-  border: "1px solid rgba(228, 202, 255, 0.1)",
-  borderRadius: "12px",
-  padding: "20px",
+export const StyledCardBody = styled("div", {
+  d: "flex",
+  w: "100%",
+  h: "auto",
+  flex: "1 1 auto",
+  fd: "column",
+  jc: "inherit",
+  ai: "inherit",
+  ac: "inherit",
+  py: "$lg",
+  px: "$sm",
+  oy: "auto",
   position: "relative",
-  flex: "1 1",
-  "&:hover": {
-    outline: "webkit-focus-ring-color auto 1px",
-    borderColor: "rgba(228, 202, 255, 0.5)",
-    cursor: "pointer",
-  },
-  "&::after": {
-    content: '""',
-    position: "absolute",
+  ta: "left",
+})
+
+export const StyledCard = styled(
+  "div",
+  {
+    $$cardColor: "$colors$backgroundContrast",
+    $$cardTextColor: "$colors$text",
+    m: 0,
+    p: 0,
+    br: "$lg",
+    bg: "$$cardColor",
+    color: "$$cardTextColor",
+    position: "relative",
+    display: "flex",
+    overflow: "hidden",
+    fd: "column",
     width: "100%",
-    height: "100%",
-    top: 0,
-    left: 0,
-    opacity: 0.25,
-    zIndex: -1,
+    height: "auto",
+    boxSizing: "border-box",
+    "@motion": {
+      transition: "none",
+    },
+    ".devui-image": {
+      width: "100%",
+    },
+    [`& ${StyledDrip}`]: {
+      zIndex: "$1",
+      ".devui-drip-filler": {
+        opacity: 0.25,
+        fill: "$accents6",
+      },
+    },
+    variants: {
+      variant: {
+        flat: {
+          bg: "$accents0",
+        },
+        shadow: {
+          dropShadow: "$lg",
+          "@safari": {
+            boxShadow: "$lg",
+            dropShadow: "none",
+          },
+        },
+        bordered: {
+          borderStyle: "solid",
+          borderColor: "$border",
+        },
+      },
+      borderWeight: {
+        light: {
+          bw: "$light",
+        },
+        normal: {
+          bw: "$normal",
+        },
+        bold: {
+          bw: "$bold",
+        },
+        extrabold: {
+          bw: "$extrabold",
+        },
+        black: {
+          bw: "$black",
+        },
+      },
+      disableAnimation: {
+        true: {
+          transition: "none",
+        },
+        false: {
+          transition: "$card",
+        },
+      },
+      isPressable: {
+        true: {
+          cursor: "pointer",
+          us: "none",
+          WebkitTapHighlightColor: "transparent",
+        },
+      },
+      isPressed: {
+        true: {},
+      },
+      isHovered: {
+        true: {
+          dropShadow: "$lg",
+          "@safari": {
+            boxShadow: "$lg",
+            dropShadow: "none",
+          },
+        },
+      },
+    },
+    compoundVariants: [
+      //  isPreseed && !disableAnimation
+      {
+        isPressed: true,
+        disableAnimation: false,
+        css: {
+          transform: "scale(0.97)",
+        },
+      },
+      // isHovered && !disableAnimation
+      {
+        isHovered: true,
+        disableAnimation: false,
+        css: {
+          transform: "translateY(-2px)",
+        },
+      },
+      // isHovered && variant === 'shadow'
+      {
+        isHovered: true,
+        variant: "shadow",
+        css: {
+          dropShadow: "$xl",
+          "@safari": {
+            boxShadow: "$xl",
+            dropShadow: "none",
+          },
+        },
+      },
+    ],
+  },
+  cssNoBlurriness,
+  cssFocusVisible
+)
+
+export const StyledCardHeader = styled("div", {
+  w: "100%",
+  display: "flex",
+  flexShrink: 0,
+  zIndex: "$1",
+  jc: "flex-start",
+  ai: "center",
+  overflow: "hidden",
+  color: "inherit",
+  p: "$sm",
+})
+
+export const StyledCardFooter = styled("div", {
+  w: "100%",
+  h: "auto",
+  p: "$sm",
+  d: "flex",
+  ai: "center",
+  overflow: "hidden",
+  color: "inherit",
+  bblr: "$lg",
+  bbrr: "$lg",
+  variants: {
+    isBlurred: {
+      true: {
+        bf: "saturate(180%) blur(10px)",
+        bg: "$$cardColor",
+      },
+    },
   },
 })
 
-export const StyledIconWrapper = styled("div", {
-  marginBottom: "20px",
-})
-
-export const StyledIcon = styled("img", {
-  width: "48px",
-  height: "48px",
-})
-
-export const StyledTitle = styled("div", {
-  fontSize: "1.25rem",
-  letterSpacing: "-0.020625rem",
-  fontWeight: 700,
-  lineHeight: "1.5rem",
-  marginBottom: "8px",
-})
-
-export const StyledDescription = styled("p", {
-  display: "block",
-  margin: "0px",
-  color: "#888888",
-  fontSize: "16px",
-  fontWeight: 400,
-  lineHeight: "1.5rem",
-  marginBlockStart: "1em",
-  marginBlockEnd: "1em",
-  marginInlineStart: "0px",
-  marginInlineEnd: "0px",
-})
-
+// types
 export type CardVariantsProps = VariantProps<typeof StyledCard>
+export type CardFooterVariantsProps = VariantProps<typeof StyledCardFooter>
