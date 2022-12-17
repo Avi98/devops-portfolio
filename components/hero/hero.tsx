@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 
 import Container from "../container"
-import { Button } from "../primitives"
+import { HeroButton } from "../primitives"
 import {
   HeroButtons,
   HeroButtonsList,
@@ -80,7 +80,7 @@ export const Hero = ({
                       pr: "0px",
                     }}
                   >
-                    <Button
+                    <HeroButton
                       aria-label={button.text}
                       id={button.text}
                       style={button.style}
@@ -88,10 +88,10 @@ export const Hero = ({
                       onClick={() => handleButtonClick(button.link)}
                     >
                       {button.text}
-                    </Button>
+                    </HeroButton>
                   </Container>
                 ) : (
-                  <Button
+                  <HeroButton
                     aria-label={button.text}
                     id={button.text}
                     style={button.style}
@@ -99,7 +99,7 @@ export const Hero = ({
                     onClick={() => handleButtonClick(button.link)}
                   >
                     {button.text}
-                  </Button>
+                  </HeroButton>
                 )}
               </HeroButtonsListItem>
             ))}

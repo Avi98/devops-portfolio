@@ -18,7 +18,7 @@ const LinkedIn: React.FC<Props> = ({ size, fill, width, height, ...props }) => {
   return (
     <svg
       height={size || height}
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       width={size || width}
       {...props}
     >

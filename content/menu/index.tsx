@@ -1,4 +1,4 @@
-import { Anecdote, Github, LinkedIn, Mail, Twitter } from "@/components"
+import { Github, LinkedIn, Mail, Twitter } from "@/components"
 
 export default {
   navLinks: [
@@ -32,22 +32,17 @@ export default {
     {
       title: "LinkedIn: John Buchanan",
       href: "https://www.linkedin.com/company/development-ui",
-      icon: <LinkedIn />,
+      icon: <LinkedIn size={24} />,
     },
     {
       title: "GitHub: Buchanan DevOps",
       href: "https://github.com/BuchananDevOps",
-      icon: <Github />,
+      icon: <Github size={24} />,
     },
     {
       title: "Twitter: @BuchananDevOps",
       href: "https://twitter.com/BuchananDevOps",
-      icon: <Twitter />,
-    },
-    {
-      title: "Anecdote: News, Reviews, and Opinions",
-      href: "https://anecdote.buchanandevops.com",
-      icon: <Anecdote />,
+      icon: <Twitter size={24} />,
     },
   ],
   buttons: [

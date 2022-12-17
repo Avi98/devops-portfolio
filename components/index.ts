@@ -1,6 +1,9 @@
 export * from "./primitives"
 export * from "./icons"
 
+export { default as Button } from "./button"
+export * from "./button"
+
 export { default as Card } from "./card"
 export * from "./card"
 
@@ -46,3 +49,6 @@ export * from "./link"
 
 export { default as Section } from "./section"
 export * from "./section"
+
+export { default as Spacer } from "./spacer"
+export * from "./spacer"

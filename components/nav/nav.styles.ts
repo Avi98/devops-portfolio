@@ -1,7 +1,7 @@
 import { styled, VariantProps } from "@/theme/stitches.config"
 
 export const StyledNav = styled("nav", {
-  verticalAlign: "middle",
+  alignItems: "center",
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "space-between",

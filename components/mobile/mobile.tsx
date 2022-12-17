@@ -1,6 +1,7 @@
 import Link from "next/link"
 import React from "react"
 
+import menu from "@/content/menu"
 import { CSS } from "@/theme/stitches.config"
 
 import { Logo } from ".."
@@ -14,6 +15,7 @@ import {
   MobileHeaderNavFirst,
   MobileHeaderWrapper,
   MobileMenuList,
+  MobileMenuListLink,
   MobileMenuWrapper,
 } from "./mobileMenu.styles"
 
@@ -66,7 +68,17 @@ const MobileMenu: React.FC<React.PropsWithChildren<MobileMenuProps>> = ({
             </StyledMenuButton>
             {isOpen ? (
               <MobileMenuWrapper>
-                <MobileMenuList>{children}</MobileMenuList>
+                <MobileMenuList>
+                  {menu.navLinks.map(item => (
+                    <MobileMenuListLink
+                      key={item.title}
+                      href={item.href}
+                      title={item.title}
+                    >
+                      <li>{item.short}</li>
+                    </MobileMenuListLink>
+                  ))}
+                </MobileMenuList>
               </MobileMenuWrapper>
             ) : null}
           </div>

@@ -1,10 +1,18 @@
+import dynamic from "next/dynamic"
 import React from "react"
 
+import menu from "@/content/menu"
 import { CSS } from "@/theme/stitches.config"
 import withDefaults from "@/utils/with-defaults"
 
 import Logo from "./logo"
 import StyledNav, { NavVariantsProps, StyledNavList } from "./nav.styles"
+import NavLink from "./navLink"
+import SocialLink from "./socialLink"
+
+const ContactButton = dynamic(
+  () => import("../../interface/Object/ContactButton")
+)
 
 interface Props {
   as?: keyof JSX.IntrinsicElements
@@ -20,11 +28,7 @@ export type NavProps = Props &
   NativeAttrs &
   typeof defaultProps
 
-const Nav: React.FC<React.PropsWithChildren<NavProps>> = ({
-  children,
-  css,
-  ...props
-}) => {
+const Nav: React.FC<NavProps> = ({ css, ...props }) => {
   return (
     <StyledNav css={css} {...props}>
       <Logo
@@ -32,7 +36,27 @@ const Nav: React.FC<React.PropsWithChildren<NavProps>> = ({
         id="buchanan_devops_logo"
         title="Buchanan Devops"
       />
-      <StyledNavList>{children}</StyledNavList>
+      <StyledNavList>
+        {menu.navLinks.map(item => (
+          <NavLink
+            key={item.title}
+            display={item.short}
+            href={item.href}
+            title={item.title}
+          />
+        ))}
+      </StyledNavList>
+      <StyledNavList>
+        {menu.socialLinks.map(item => (
+          <SocialLink
+            key={item.title}
+            href={item.href}
+            icon={item.icon}
+            title={item.title}
+          />
+        ))}
+        <ContactButton />
+      </StyledNavList>
     </StyledNav>
   )
 }
