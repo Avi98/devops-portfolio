@@ -1,5 +1,5 @@
 import commonTheme from "./common"
-import { createThemeBase, StitchesTheme } from "./stitches.config"
+import { createThemeBase, CSS, StitchesTheme } from "./stitches.config"
 
 /** Configuration Interface */
 declare namespace ConfigType {
@@ -56,3 +56,10 @@ export type DevOpsThemeContext = {
   theme?: DevOpsTheme
   isDark?: boolean
 }
+
+export type CSSFontSize = CSS["fontSize"]
+export type CSSColor = CSS["color"]
+export type CSSGapUnit = CSS["gap"]
+export type CSSFontWeight = CSS["fontWeight"]
+export type CSSLineHeight = CSS["lineHeight"]
+export type CSSLetterSpacing = CSS["letterSpacing"]

@@ -22,6 +22,9 @@ export * from "./grid"
 export { default as Hero } from "./hero"
 export * from "./hero"
 
+export { default as Heading } from "./heading"
+export * from "./heading"
+
 export { default as Image } from "./image"
 export * from "./image"
 
@@ -52,3 +55,6 @@ export * from "./section"
 
 export { default as Spacer } from "./spacer"
 export * from "./spacer"
+
+export { default as Text } from "./text"
+export * from "./text"

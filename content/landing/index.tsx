@@ -50,14 +50,11 @@ export default {
   },
   design: {
     title: "Design.",
-    description: [
-      "We build beautiful websites that are fast, secure, and easy to use.",
-      "We build beautiful websites that are fast, secure, and easy to use.",
-    ],
+    description: [""],
     image: "/bgk/design-dark-red.svg",
   },
-  code: {
-    title: "Code.",
+  develop: {
+    title: "Develop.",
     description: "",
     image: "/bgk/stack-dark-red.svg",
   },

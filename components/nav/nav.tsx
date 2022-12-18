@@ -34,12 +34,14 @@ const Nav: React.FC<NavProps> = ({ css, ...props }) => {
       />
       <StyledNavList>
         {menu.navLinks.map(item => (
-          <NavLink
-            key={item.title}
-            display={item.short}
-            href={item.href}
-            title={item.title}
-          />
+          <li key={item.title}>
+            <NavLink
+              key={item.title}
+              display={item.short}
+              href={item.href}
+              title={item.title}
+            />
+          </li>
         ))}
       </StyledNavList>
       <StyledNavList>

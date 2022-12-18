@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { styled, VariantProps } from "@/theme/stitches.config"
 
-export const StyledNavLink = styled(Link, {
+export const StyledNavLink = styled("li", Link, {
   textDecoration: "none",
   position: "sticky",
   color: "$text",

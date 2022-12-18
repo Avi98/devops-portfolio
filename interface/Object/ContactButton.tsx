@@ -14,6 +14,9 @@ const ContactButton: FC = () => {
   }
   return (
     <Button
+      title="Contact Buchanan DevOps"
+      id="contact-button"
+      aria-label="Contact Buchanan DevOps"
       auto
       as="a"
       css={{

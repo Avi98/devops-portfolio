@@ -5,9 +5,11 @@ import { StyledLinkIcon } from "./link.styles"
 export const LinkIcon: React.FC<Record<string, unknown>> = () => {
   return (
     <StyledLinkIcon
+      aria-label="Link Icon"
       className="devui-link-icon"
       fill="none"
       height="1em"
+      id="link-icon"
       shapeRendering="geometricPrecision"
       stroke="currentColor"
       strokeLinecap="round"
