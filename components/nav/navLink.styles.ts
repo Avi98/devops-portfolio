@@ -3,11 +3,13 @@ import Link from "next/link"
 import { styled, VariantProps } from "@/theme/stitches.config"
 
 export const StyledNavLink = styled("li", Link, {
+  display: "flex",
   textDecoration: "none",
   position: "sticky",
   color: "$text",
-  verticalAlign: "middle",
-  pt: "5px",
+  alignItems: "center",
+  marginBottom: "0px",
+  outline: "none",
   px: "$sm",
   "&:hover": {
     textDecoration: "none",

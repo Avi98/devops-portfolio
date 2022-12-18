@@ -66,6 +66,14 @@ export default {
     codeLight: "$cyan50",
     code: "$cyan600",
     selection: "$pink800",
+
+    design: "linear-gradient(90deg, #007CF0 0%, #00DFD8 100%)",
+    develop: "linear-gradient(90deg, #7928CA 0%, #ff0080 100%)",
+    optimize: "linear-gradient(90deg, #ff4d4d, #f9cb28)",
+
+    designPath: "linear-gradient($background, #019ae9)",
+    developPath: "linear-gradient($background, #9a1fb8)",
+    optimizePath: "linear-gradient($background, #f9cb28)",
   },
   shadows: {
     xs: "0 2px 8px 1px rgb(0 0 0 / 0.07), 0 1px 1px -1px rgb(0 0 0 / 0.04)",

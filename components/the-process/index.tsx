@@ -1,20 +1,142 @@
-import { FC } from "react"
+import dynamic from "next/dynamic"
+import { useRouter } from "next/router"
+import React from "react"
+
+import { Container, Grid } from "@/components"
+import process, { type ProcessProps } from "@/content/landing/process"
+import { CSS } from "@/theme/stitches.config"
 
 import { StyledSection } from "../section"
-import DesignSection from "./design"
-import DevelopSection from "./develop"
-import IntroHero from "./intro-hero"
-import OptimizeSection from "./optimize"
+import {
+  ExploreLabel,
+  HeroSpan,
+  HeroTitle,
+  PathLine,
+  SectionBody,
+  SectionFeature,
+  SectionFeatures,
+  SectionHeader,
+  SectionLabel,
+  SectionSubTitle,
+  SectionTitle,
+} from "./styles"
 
-const TheProcess: FC = () => {
+const SectionHero = () => {
   return (
-    <StyledSection id="the-devops-process">
-      <IntroHero />
-      <DesignSection />
-      <DevelopSection />
-      <OptimizeSection />
+    <>
+      <HeroTitle>
+        {process.map(section => (
+          <HeroSpan
+            key={section.title}
+            css={{ background: `$${section.gradient}`, backgroundClip: "text" }}
+          >
+            {section.title} &nbsp;
+          </HeroSpan>
+        ))}
+      </HeroTitle>
+      <ExploreLabel>EXPLORE THE DEVOPS PROCESS</ExploreLabel>
+    </>
+  )
+}
+
+type SectionProps = React.ComponentPropsWithRef<"div"> &
+  ProcessProps & { css?: CSS; gradient?: string }
+
+const Section = React.forwardRef<HTMLDivElement, SectionProps>(
+  ({ title, gradient, children, css, ...props }, ref) => {
+    const router = useRouter()
+    const handleClick = () => {
+      router.push(`/${props.slug}`)
+    }
+    return (
+      <>
+        {" "}
+        <SectionHeader ref={ref}>
+          <PathLine css={{ background: `$${gradient}Path` }} />
+          <SectionLabel css={{ background: `$${gradient}` }}>
+            {props.id}
+          </SectionLabel>
+          <SectionTitle
+            css={{ background: `$${gradient}`, backgroundClip: "text" }}
+          >
+            {title}
+          </SectionTitle>
+          <SectionSubTitle
+            id={`${props.slug}_button`}
+            title={`${props.subTitle} Service`}
+            onClick={handleClick}
+          >
+            {props.subTitle}
+          </SectionSubTitle>
+        </SectionHeader>
+        <SectionBody css={css} {...props}>
+          <Container>
+            <Grid.Container>
+              {props.description.map(desc => (
+                <Grid
+                  key={desc.concat()}
+                  css={{ "@xsMax": { marginBottom: "$5" } }}
+                  md={6}
+                  xs={12}
+                >
+                  <p key={desc.concat()}>{desc}</p>
+                </Grid>
+              ))}
+              {props.image && (
+                <Grid css={{ "@xsMax": { marginBottom: "$5" } }} md={6} xs={12}>
+                  <img alt={`${title}`} src={props.image} />
+                </Grid>
+              )}
+              {props.features && (
+                <Grid css={{ "@xsMax": { marginBottom: "$5" } }} md={6} xs={12}>
+                  <SectionFeatures>
+                    {props.features.map(feature => (
+                      <SectionFeature key={feature.title}>
+                        <h6 key={feature.title}>{feature.title}</h6>
+                        <p key={feature.title}>{feature.description}</p>
+                      </SectionFeature>
+                    ))}
+                  </SectionFeatures>
+                </Grid>
+              )}
+            </Grid.Container>
+          </Container>
+        </SectionBody>
+        {children}
+      </>
+    )
+  }
+)
+const Process = () => {
+  return (
+    <StyledSection
+      css={{
+        marginTop: "100px",
+        paddingTop: "100px",
+      }}
+      id="the-devops-process"
+    >
+      <SectionHero />
+      {process.map(section => (
+        <Section
+          key={section.id}
+          css={{ maxWidth: "1000px", margin: "0 auto" }}
+          description={section.description}
+          features={section.features}
+          gradient={section.gradient}
+          id={section.id}
+          image={section.image}
+          slug={section.slug}
+          subTitle={section.subTitle}
+          tag={section.tag}
+          title={section.title}
+          type={`${section.type}`}
+        />
+      ))}
     </StyledSection>
   )
 }
 
-export default TheProcess
+export default dynamic(() => Promise.resolve(Process), {
+  ssr: false,
+})

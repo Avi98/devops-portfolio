@@ -14,15 +14,13 @@ const PageHeader: FC<Props> = ({ className }) => {
 
   return (
     <>
-      <Container css={{ maxWidth: "1400px" }}>
-        {isMobile ? (
-          <MobileMenu />
-        ) : (
-          <header className={clsx("page-header", className)}>
-            <Nav />
-          </header>
-        )}
-      </Container>
+      {isMobile ? (
+        <MobileMenu />
+      ) : (
+        <header className={clsx("page-header", className)}>
+          <Nav />
+        </header>
+      )}
     </>
   )
 }

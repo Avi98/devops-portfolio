@@ -87,6 +87,7 @@ export const ServiceCard = React.forwardRef<HTMLDivElement, ServiceProps>(
     }
     return (
       <Component
+        key={`service-${slug}`}
         onClick={handleClick}
         title={title}
         id={slug}

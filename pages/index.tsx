@@ -1,13 +1,15 @@
 import { NextPage } from "next"
 import dynamic from "next/dynamic"
 
-import Hero from "@/components/hero"
-import TheProcess from "@/components/the-process"
 import SEO from "@/interface/Common/SEO"
 
 const ServiceCards = dynamic(
   () => import("@/interface/Sections/Landing/ServiceCards")
 )
+
+const Hero = dynamic(() => import("@/components/hero"))
+
+const TheProcess = dynamic(() => import("@/components/the-process"))
 
 const Page: NextPage = () => {
   return (

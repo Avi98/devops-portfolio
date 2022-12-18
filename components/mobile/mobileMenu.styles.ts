@@ -1,14 +1,14 @@
 import { styled } from "@/theme/stitches.config"
 
 export const MobileHeaderWrapper = styled("div", {
-  position: "sticky",
+  position: "fixed",
   top: 0,
   display: "flex",
   justifyContent: "space-between",
   width: "100%",
   maxWidth: "100%",
   backgroundColor: "rgba(0,0,0,.5)",
-  minHeight: "64px",
+  height: "76px",
   zIndex: 101,
   boxShadow: "none",
 })
@@ -24,6 +24,7 @@ export const MobileHeaderNavFirst = styled("div", {
   minHeight: "64px",
   "&>div": {
     marginRight: "auto",
+    px: "24px",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
@@ -44,7 +45,7 @@ export const MobileMenuWrapper = styled("nav", {
   bottom: 0,
   left: 0,
   right: 0,
-  top: "calc(var(64px) - 1px)",
+  top: "calc(var(76px) - 1px)",
   overflowY: "scroll",
   webkitOverflowScrolling: "touch",
 })

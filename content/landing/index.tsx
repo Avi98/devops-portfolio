@@ -48,19 +48,4 @@ export default {
     image: "/brand/johnbuchanan.avif",
     description: [],
   },
-  design: {
-    title: "Design.",
-    description: [""],
-    image: "/bgk/design-dark-red.svg",
-  },
-  develop: {
-    title: "Develop.",
-    description: "",
-    image: "/bgk/stack-dark-red.svg",
-  },
-  optimize: {
-    title: "Optimize.",
-    description: "",
-    image: "/bgk/code-search-dark-red.svg",
-  },
 }

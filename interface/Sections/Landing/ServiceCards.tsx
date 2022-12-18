@@ -11,7 +11,7 @@ const ServiceCards: FC = () => {
         <Grid.Container gap={1}>
           {landing.serviceCards.map(card => (
             <Grid xs={12} sm={6} md={4}>
-              <ServiceCard {...card} />
+              <ServiceCard key={card.title} {...card} />
             </Grid>
           ))}
           {landing.largeServiceCards.map(card => (

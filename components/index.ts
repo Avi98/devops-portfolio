@@ -56,5 +56,7 @@ export * from "./section"
 export { default as Spacer } from "./spacer"
 export * from "./spacer"
 
+export { default as TheProcess } from "./the-process"
+
 export { default as Text } from "./text"
 export * from "./text"
