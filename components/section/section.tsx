@@ -2,12 +2,10 @@ import clsx from "clsx"
 
 import { CSS } from "@/theme/stitches.config"
 
-import Grid from "../grid"
 import {
   StyledSection,
   StyledSectionContent,
   StyledSectionDescription,
-  StyledSectionImage,
   StyledSectionTitle,
 } from "./section.styles"
 
@@ -15,10 +13,10 @@ interface Props {
   className?: string
   href?: string
   title?: string
-  subtitle?: string
-  description?: string[]
+  description?: string
   image?: string
   border?: "top" | "bottom" | "default"
+  utility?: "center" | "left" | "right"
   css?: CSS
   as?: keyof JSX.IntrinsicElements
   children?: React.ReactNode
@@ -33,7 +31,6 @@ const Section = ({
   href,
   title,
   description,
-  subtitle,
   image,
   border,
   css,
@@ -57,33 +54,11 @@ const Section = ({
           <div className="section__styles--top-border-right" />
         </div>
       )}
-      <StyledSectionTitle>{title}</StyledSectionTitle>
-      <Grid.Container gap={2}>
-        <Grid md={6} sm={6} xs={12}>
-          {subtitle && (
-            <StyledSectionDescription>{subtitle}</StyledSectionDescription>
-          )}
-          {description && (
-            <StyledSectionDescription>
-              {description.map(item => (
-                <p key={item}>{item}</p>
-              ))}
-            </StyledSectionDescription>
-          )}
-        </Grid>
-        <Grid md={6} sm={6} xs={12}>
-          {image ? (
-            <StyledSectionImage
-              alt={`${title}`}
-              height={100}
-              src={`${image}`}
-              width={100}
-            />
-          ) : (
-            <StyledSectionContent>{children}</StyledSectionContent>
-          )}
-        </Grid>
-      </Grid.Container>
+      {title && <StyledSectionTitle>{title}</StyledSectionTitle>}
+      {description && (
+        <StyledSectionDescription>{description}</StyledSectionDescription>
+      )}
+      <StyledSectionContent>{children}</StyledSectionContent>
       {border === "bottom" && (
         <div aria-hidden="true" className="section__styles--bottom-border">
           <div className="section__styles--bottom-border-left" />

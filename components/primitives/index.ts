@@ -50,11 +50,38 @@ export const HeroButton = styled("button", {
         color: "$text",
         position: "absolute",
         cursor: "pointer",
+        border: "1px solid transparent",
         "&::before": {
           content: "''",
           display: "block",
           backgroundImage:
             "linear-gradient(165deg,#c42d01 0%,#d4542c 10%,#f2f240 20%,#67e217 30%,#00e754 40%,#4dba8b 50%,#00b4dc 60%,#00eef4 70%,#b100f2 80%,#c82f92 90%,#ed2290 95%,#c33126 100%)",
+          backgroundImageRepeat: "no-repeat",
+          position: "absolute",
+          top: "-3px",
+          left: "-3px",
+          width: "calc(100% + 6px)",
+          height: "calc(100% + 6px)",
+          borderRadius: "inherit",
+          zIndex: -1,
+        },
+        "&:hover": {
+          backgroundColor: "$foreground",
+          color: "$background",
+        },
+      },
+      seo: {
+        backgroundColor: "$background",
+        color: "$text",
+        position: "absolute",
+        cursor: "pointer",
+        border: "1px solid transparent",
+        "&::before": {
+          content: "''",
+          display: "block",
+          $$colorA: "#ff4d4d",
+          $$colorB: "#f9cb28",
+          backgroundImage: "linear-gradient(90deg, $$colorA 0%, $$colorB 100%)",
           backgroundImageRepeat: "no-repeat",
           position: "absolute",
           top: "-3px",
@@ -86,6 +113,8 @@ export const HeroButton = styled("button", {
     },
     animation: {
       gradient: {},
+      seo: {},
+      default: {},
     },
     size: {
       small: { fontSize: "$sm", padding: "$sm" },
@@ -96,8 +125,6 @@ export const HeroButton = styled("button", {
 })
 
 export const ButtonGradientSpan = styled("span", {
-  backgroundImage:
-    "linear-gradient(165deg,#c42d01 0%,#d4542c 10%,#f2f240 20%,#67e217 30%,#00e754 40%,#4dba8b 50%,#00b4dc 60%,#00eef4 70%,#b100f2 80%,#c82f92 90%,#ed2290 95%,#c33126 100%)",
   color: "$foreground",
   content: "",
   height: "100%",
@@ -111,6 +138,18 @@ export const ButtonGradientSpan = styled("span", {
     filter: "blur(36px)",
     position: "absolute",
     zIndex: "-1",
+  },
+  variants: {
+    gradient: {
+      default: {
+        backgroundImage:
+          "linear-gradient(165deg,#c42d01 0%,#d4542c 10%,#f2f240 20%,#67e217 30%,#00e754 40%,#4dba8b 50%,#00b4dc 60%,#00eef4 70%,#b100f2 80%,#c82f92 90%,#ed2290 95%,#c33126 100%)",
+      },
+
+      seo: {
+        backgroundImage: "$seoGradient",
+      },
+    },
   },
 })
 

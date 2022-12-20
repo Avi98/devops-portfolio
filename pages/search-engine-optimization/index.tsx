@@ -2,21 +2,44 @@ import { NextPage } from "next"
 import dynamic from "next/dynamic"
 
 const Hero = dynamic(() => import("@/components/hero"))
+const FormSection = dynamic(
+  () => import("@/interface/Sections/Shared/FormSection")
+)
 
 const Page: NextPage = () => {
   return (
-    <Hero
-      announcement={{
-        text: "We're hiring!",
-        status: "New",
-        href: "/careers",
-        hrefText: "Join our team",
-      }}
-      description="We help you rank higher in search engines and get more traffic to your website."
-      subtitle="Optimization"
-      title="Search Engine"
-      type={"seo"}
-    />
+    <>
+      <Hero
+        announcement={{
+          text: "We're hiring!",
+          status: "New",
+          href: "/careers",
+          hrefText: "Join our team",
+        }}
+        buttonGroup={[
+          {
+            text: "How does it work?",
+            link: "",
+            style: "default",
+          },
+          {
+            text: "SEO Audit",
+            link: "/search-engine-optimization#seo-audit",
+            style: "seo",
+          },
+        ]}
+        description="We help you rank higher in search engines and get more traffic to your website."
+        subtitle="Optimization"
+        title="Search Engine"
+        type="seo"
+      />
+      <FormSection
+        description="Do you have an exisiting website and want to know how to improve your SEO? Fill out the form below and we'll get back to you with a comprenhensive SEO audit."
+        id="seo-audit"
+        title="Want an SEO Audit?"
+        type="contact"
+      />
+    </>
   )
 }
 

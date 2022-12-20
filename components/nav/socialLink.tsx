@@ -1,14 +1,9 @@
 import Link from "next/link"
 import { FC } from "react"
 
+import { SocialLinkProps as Props } from "@/content/menu"
 import { styled } from "@/theme/stitches.config"
 import type { CSS, VariantProps } from "@/theme/stitches.config"
-
-interface Props {
-  href: string
-  title: string
-  icon: React.ReactNode
-}
 
 export const StyledSocialLink = styled(Link, {
   m: "0 6px",

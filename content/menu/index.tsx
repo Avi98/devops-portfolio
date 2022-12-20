@@ -1,5 +1,24 @@
 import { Github, LinkedIn, Mail, Twitter } from "@/components"
 
+export interface NavLinkProps {
+  title: string
+  short: string
+  href: string
+}
+
+export interface SocialLinkProps {
+  title: string
+  href: string
+  icon: React.ReactNode
+}
+
+export interface NavButtonProps {
+  title: string
+  href: string
+  style: string
+  icon: React.ReactNode
+}
+
 export default {
   navLinks: [
     {

@@ -95,7 +95,7 @@ const process = [
     type: "optimize",
     gradient: "optimize",
     title: "Optimize",
-    subTitle: "The Art of SEO Warfare",
+    subTitle: "The Art of SEO",
     tag: "Strategy",
     slug: "search-engine-optimization",
     description: [

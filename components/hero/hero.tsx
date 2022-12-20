@@ -31,7 +31,7 @@ export interface HeroProps {
   buttonGroup?: {
     text: string
     link: string
-    style: "default" | "gradient" | "ghost"
+    style: "default" | "gradient" | "ghost" | "seo"
   }[]
 }
 
@@ -61,6 +61,7 @@ export const Hero = ({
           hrefText={announcement.hrefText}
           status={announcement.status}
           text={announcement.text}
+          type={type}
         />
       ) : null}
       <StyledHeroTitle
@@ -89,6 +90,25 @@ export const Hero = ({
             {buttonGroup.map(button => (
               <HeroButtonsListItem key={button.text}>
                 {button.style === "gradient" ? (
+                  <Container
+                    css={{
+                      position: "relative",
+                      zIndex: 10,
+                      pl: "0px",
+                      pr: "0px",
+                    }}
+                  >
+                    <HeroButton
+                      aria-label={button.text}
+                      id={button.text}
+                      style={button.style}
+                      title={button.text}
+                      onClick={() => handleButtonClick(button.link)}
+                    >
+                      {button.text}
+                    </HeroButton>
+                  </Container>
+                ) : button.style === "seo" ? (
                   <Container
                     css={{
                       position: "relative",

@@ -46,6 +46,10 @@ export const StyledBadge = styled("span", {
         color: "$accents8",
         bg: "$accents0",
       },
+      seo: {
+        bg: "$seoGradient ",
+        color: "$background",
+      },
     },
     solid: {
       true: {},
@@ -107,6 +111,14 @@ export const StyledBadge = styled("span", {
       css: {
         bg: "$error",
         color: "$white",
+      },
+    },
+    {
+      type: "seo",
+      solid: true,
+      css: {
+        bg: "$seoGradient",
+        color: "$background",
       },
     },
   ],

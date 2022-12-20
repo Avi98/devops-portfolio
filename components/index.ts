@@ -31,6 +31,9 @@ export * from "./hero"
 export { default as Heading } from "./heading"
 export * from "./heading"
 
+export { default as Input } from "./input"
+export * from "./input"
+
 export { default as Image } from "./image"
 export * from "./image"
 
@@ -66,3 +69,6 @@ export { default as TheProcess } from "./the-process"
 
 export { default as Text } from "./text"
 export * from "./text"
+
+export { default as Textarea } from "./textarea"
+export * from "./textarea"

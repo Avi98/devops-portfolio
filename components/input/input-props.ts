@@ -20,7 +20,7 @@ export interface Props
   size?: NormalSizes
   color?: SimpleColors
   helperColor?: SimpleColors
-  status?: SimpleColors
+  status?: SimpleColors | string
   readOnly?: boolean
   shadow?: boolean
   animated?: boolean
@@ -70,9 +70,9 @@ export const defaultProps = {
   required: false,
   width: "initial",
   size: "md" as NormalSizes,
-  color: "default" as SimpleColors,
-  helperColor: "default" as SimpleColors,
-  status: "default" as SimpleColors,
+  color: "default" as SimpleColors | string,
+  helperColor: "default" as SimpleColors | string,
+  status: "default" as SimpleColors | string,
   borderWeight: "normal" as NormalWeights,
   autoComplete: "off",
   className: "",

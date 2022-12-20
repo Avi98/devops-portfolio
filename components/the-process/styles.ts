@@ -99,7 +99,7 @@ export const SectionTitle = styled("h3", {
 
 export const SectionSubTitle = styled("h4", Link, {
   color: "$text",
-  fontSize: "2.5rem",
+  fontSize: "3.75rem",
   fontWeight: "600",
   lineHeight: "3rem",
   letterSpacing: "-0.05em",

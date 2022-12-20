@@ -1,5 +1,7 @@
 import { FC } from "react"
 
+import clsx from "clsx"
+
 import { Badge, Link } from "@/components"
 import { CSS, styled, VariantProps } from "@/theme/stitches.config"
 
@@ -11,18 +13,22 @@ export const StyledAnnouncement = styled("div", {
   gap: "12px",
   margin: "-56px -16px 0",
   borderRadius: "5px",
-  border: "1px solid $accent3",
-  padding: "$2 cacl($2 * 1.5)",
-  fontSize: ".875rem",
+  border: "1px solid #333333",
+  padding: "8px 12px",
+
   lineHeight: "1.25rem",
   fontWeight: "400",
+  marginBottom: "32px",
   "@sm": {
     transform: "translateY(-16px)",
   },
-  "& .p": {
+  "& p": {
     margin: "0",
     color: "$text",
+    letterSpacing: "0.1px",
+    fontSize: ".875rem",
   },
+  "& a": {},
 })
 
 interface Props {
@@ -31,24 +37,29 @@ interface Props {
   href: string
   hrefText: string
   variant?: string
+  type: "web-design" | "app-development" | "seo" | "landing" | "default"
 }
 
 type StyledAnnouncementProps = VariantProps<typeof StyledAnnouncement>
 
-type AnnouncementProps = Props & StyledAnnouncementProps & { css?: CSS }
+type AnnouncementProps = Props &
+  StyledAnnouncementProps & { css?: CSS; type?: string }
 
 export const Announcement: FC<AnnouncementProps> = ({
   status,
   variant,
   text,
   href,
+  type,
   hrefText,
   css,
   ...props
 }) => {
   return (
     <StyledAnnouncement css={css} {...props}>
-      <Badge>{status}</Badge>
+      <Badge className={clsx("anouncement__badge")} type={type}>
+        {status}
+      </Badge>
       <p>
         {text} &nbsp;
         <Link href={href}>{hrefText}</Link>

@@ -10,6 +10,7 @@ export const StyledNavLink = styled("li", Link, {
   alignItems: "center",
   marginBottom: "0px",
   outline: "none",
+  cursor: "pointer",
   px: "$sm",
   "&:hover": {
     textDecoration: "none",
