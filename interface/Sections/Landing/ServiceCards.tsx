@@ -1,5 +1,7 @@
 import { FC } from "react"
 
+import clsx from "clsx"
+
 import { Container, Grid, StyledSection } from "@/components"
 import landing from "@/content/landing"
 import { ServiceCard } from "@/interface/Object/ServiceCard"
@@ -7,7 +9,7 @@ import { ServiceCard } from "@/interface/Object/ServiceCard"
 const ServiceCards: FC = () => {
   return (
     <>
-      <StyledSection id="services" className="devui__max-width__section">
+      <StyledSection id="services" className={clsx(`section__styles`)}>
         <Grid.Container gap={1}>
           {landing.serviceCards.map(card => (
             <Grid xs={12} sm={6} md={4}>

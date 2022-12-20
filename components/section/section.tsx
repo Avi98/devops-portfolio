@@ -18,6 +18,7 @@ interface Props {
   subtitle?: string
   description?: string[]
   image?: string
+  border?: "top" | "bottom" | "default"
   css?: CSS
   as?: keyof JSX.IntrinsicElements
   children?: React.ReactNode
@@ -34,6 +35,7 @@ const Section = ({
   description,
   subtitle,
   image,
+  border,
   css,
   as,
   children,
@@ -43,8 +45,18 @@ const Section = ({
     <StyledSection
       css={css}
       {...props}
-      className={clsx("section__styles", className)}
+      className={clsx(`section__styles`, {
+        "section__styles--top-border": border === "top",
+        "section__styles--bottom-border": border === "bottom",
+        className,
+      })}
     >
+      {border === "top" && (
+        <div aria-hidden="true" className="section__styles--top-border">
+          <div className="section__styles--top-border-left" />
+          <div className="section__styles--top-border-right" />
+        </div>
+      )}
       <StyledSectionTitle>{title}</StyledSectionTitle>
       <Grid.Container gap={2}>
         <Grid md={6} sm={6} xs={12}>
@@ -72,6 +84,12 @@ const Section = ({
           )}
         </Grid>
       </Grid.Container>
+      {border === "bottom" && (
+        <div aria-hidden="true" className="section__styles--bottom-border">
+          <div className="section__styles--bottom-border-left" />
+          <div className="section__styles--bottom-border-right" />
+        </div>
+      )}
     </StyledSection>
   )
 }

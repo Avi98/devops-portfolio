@@ -1,6 +1,7 @@
 import { NextPage } from "next"
+import dynamic from "next/dynamic"
 
-import { Hero } from "@/components"
+const Hero = dynamic(() => import("@/components/hero"))
 
 const Page: NextPage = () => {
   return (

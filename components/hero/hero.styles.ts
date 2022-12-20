@@ -39,11 +39,13 @@ export const AnimationHelper = styled("div", {
 })
 
 export const StyledHero = styled("section", {
+  display: "flex",
   position: "relative",
-  mt: "80px",
-  height: "75vh",
+  flexDirection: "column",
+  justifyContent: "center",
+  height: "100vh",
   "@xsMax": {
-    height: "calc(80vh)",
+    height: "calc(100vh)",
   },
   alignItems: "center",
   textAlign: "-webkit-center",

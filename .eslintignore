@@ -15,3 +15,5 @@ card.tsx
 button.tsx
 contact.ts
 text.tsx
+collapse-context.ts
+collapse.tsx

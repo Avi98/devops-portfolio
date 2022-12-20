@@ -151,7 +151,7 @@ const SEO: FC<Props> = ({
         type="image/png"
         key="favicon-16x16"
       />
-      <link rel="manifest" href="/site.manifest.json" key="manifest" />
+      <link rel="manifest" href="/manifest.json" key="manifest" />
       <link
         color="#555"
         href="/safari-pinned-tab.svg"

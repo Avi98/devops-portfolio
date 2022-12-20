@@ -2,8 +2,10 @@ import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import React from "react"
 
-import { Container, Grid } from "@/components"
+import { Box, Container, Grid, Image } from "@/components"
 import process, { type ProcessProps } from "@/content/landing/process"
+import CollapseFeature from "@/interface/Object/CollapseFeature"
+import ImageDisplay from "@/interface/Object/ImageDisplay"
 import { CSS } from "@/theme/stitches.config"
 
 import { StyledSection } from "../section"
@@ -30,7 +32,7 @@ const SectionHero = () => {
             key={section.title}
             css={{ background: `$${section.gradient}`, backgroundClip: "text" }}
           >
-            {section.title} &nbsp;
+            {section.title}. &nbsp;
           </HeroSpan>
         ))}
       </HeroTitle>
@@ -82,22 +84,93 @@ const Section = React.forwardRef<HTMLDivElement, SectionProps>(
                   <p key={desc.concat()}>{desc}</p>
                 </Grid>
               ))}
-              {props.image && (
-                <Grid css={{ "@xsMax": { marginBottom: "$5" } }} md={6} xs={12}>
-                  <img alt={`${title}`} src={props.image} />
-                </Grid>
+              {props.type === "design" && (
+                <>
+                  {props.image && (
+                    <Grid
+                      css={{ "@xsMax": { marginBottom: "$5" } }}
+                      md={6}
+                      xs={12}
+                    >
+                      <Image alt={`${title}`} src={props.image as string} />
+                      <Box
+                        css={{
+                          position: "absolute",
+                          zIndex: "-$1",
+                          right: 0,
+                          left: "0%",
+                          xsMax: {
+                            top: "15%",
+                            left: "10% !important",
+                          },
+                          "@lg": {
+                            top: "0%",
+                            left: "0% !important",
+                          },
+                        }}
+                      >
+                        <Image
+                          alt={`${title} Gradient`}
+                          src={props.gradientBg}
+                        />
+                      </Box>
+                    </Grid>
+                  )}
+                  {props.features && (
+                    <Grid
+                      css={{ "@xsMax": { marginBottom: "$5" } }}
+                      md={6}
+                      xs={12}
+                    >
+                      <SectionFeatures>
+                        {props.features.map(feature => (
+                          <SectionFeature key={feature.title}>
+                            <h5 key={feature.title}>{feature.title}</h5>
+                            <p key={feature.title}>{feature.description}</p>
+                          </SectionFeature>
+                        ))}
+                      </SectionFeatures>
+                    </Grid>
+                  )}
+                </>
               )}
-              {props.features && (
-                <Grid css={{ "@xsMax": { marginBottom: "$5" } }} md={6} xs={12}>
-                  <SectionFeatures>
-                    {props.features.map(feature => (
-                      <SectionFeature key={feature.title}>
-                        <h6 key={feature.title}>{feature.title}</h6>
-                        <p key={feature.title}>{feature.description}</p>
-                      </SectionFeature>
-                    ))}
-                  </SectionFeatures>
-                </Grid>
+              {props.type === "develop" && props.features && (
+                <>
+                  {props.features.map(feature => (
+                    <SectionFeatures
+                      key={`${title}-features-wrapper`}
+                      type="develop"
+                    >
+                      <Grid key={feature.title} md={6} xs={12}>
+                        <Image alt={`${title}`} src={feature.image as string} />
+                      </Grid>
+                      <Grid key={feature.title} md={6} xs={12}>
+                        <SectionFeature key={feature.title}>
+                          <h5 key={feature.title}>{feature.title}</h5>
+                          <p key={feature.title}>{feature.description}</p>
+                        </SectionFeature>
+                      </Grid>
+                    </SectionFeatures>
+                  ))}
+                </>
+              )}
+              {props.type === "optimize" && props.features && (
+                <>
+                  <Grid
+                    css={{ "@xsMax": { marginBottom: "$5" } }}
+                    md={6}
+                    xs={12}
+                  >
+                    <CollapseFeature items={props.features} {...props} />
+                  </Grid>
+                  <Grid
+                    css={{ "@xsMax": { marginBottom: "$5" } }}
+                    md={6}
+                    xs={12}
+                  >
+                    <ImageDisplay items={props.features} {...props} />
+                  </Grid>
+                </>
               )}
             </Grid.Container>
           </Container>
@@ -113,6 +186,7 @@ const Process = () => {
       css={{
         marginTop: "100px",
         paddingTop: "100px",
+        position: "relative",
       }}
       id="the-devops-process"
     >
@@ -122,8 +196,9 @@ const Process = () => {
           key={section.id}
           css={{ maxWidth: "1000px", margin: "0 auto" }}
           description={section.description}
-          features={section.features}
+          features={section.features as any}
           gradient={section.gradient}
+          gradientBg={section.gradientBg as string}
           id={section.id}
           image={section.image}
           slug={section.slug}

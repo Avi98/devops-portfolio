@@ -17,7 +17,7 @@ const Component = styled("div", {
   height: "100%",
   backgroundPosition: "50% -300px",
   border: "1px solid",
-  borderColor: "rgba(228, 202, 255, 0.1)",
+  borderColor: "rgba(228, 202, 255, 0.2)",
   borderRadius: "12px",
   padding: "20px",
   position: "relative",

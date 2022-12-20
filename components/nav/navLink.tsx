@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import { FC } from "react"
 
 import { CSS } from "@/theme/stitches.config"
@@ -24,6 +25,10 @@ const NavLink: FC<NavLinkProps> = ({
   as,
   ...props
 }) => {
+  const router = useRouter()
+  const handleClick = () => {
+    router.push(`/${href}`)
+  }
   return (
     <StyledNavLink
       aria-label={display}
@@ -32,7 +37,7 @@ const NavLink: FC<NavLinkProps> = ({
       {...props}
       as={as}
       className={className}
-      href={href}
+      onClick={handleClick}
     >
       {display}
     </StyledNavLink>

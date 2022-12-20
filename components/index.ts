@@ -1,6 +1,9 @@
 export * from "./primitives"
 export * from "./icons"
 
+export { default as Badge } from "./badge"
+export * from "./badge"
+
 export { default as Button } from "./button"
 export * from "./button"
 
@@ -9,6 +12,9 @@ export * from "./card"
 
 export { default as Col } from "./col"
 export * from "./col"
+
+export { default as Collapse } from "./collapse"
+export * from "./collapse"
 
 export { default as Container } from "./container"
 export * from "./container"

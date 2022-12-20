@@ -1,4 +1,7 @@
 import { styled } from "@/theme/stitches.config"
+import { pulse } from "@/utils/animations"
+
+import { StyledButton } from "../button"
 
 export const DisplayContainer = styled("div", {
   display: "flex",
@@ -8,6 +11,11 @@ export const DisplayContainer = styled("div", {
   justifyContent: "flex-start",
   minWidth: "1px",
   maxWidth: "100%",
+})
+
+export const Box = styled("div", {
+  // Reset
+  boxSizing: "border-box",
 })
 
 export const HeroButton = styled("button", {
@@ -176,5 +184,46 @@ export const Subtitle = styled("p", {
   width: "100%",
   "@sm": {
     mw: "50%",
+  },
+})
+
+export const PageNav = styled(StyledButton, {
+  display: "flex",
+  background: "none",
+  position: "absolute",
+  verticalAlign: "middle",
+  variants: {
+    selector: {
+      left: {
+        justifyContent: "flex-start",
+        top: "35%",
+        left: "0%",
+        minHeight: "25%",
+      },
+      right: {
+        justifyContent: "flex-end",
+        top: "35%",
+        right: "0%",
+        bottom: "5%",
+        minHeight: "25%",
+      },
+    },
+  },
+  "@mdMax": {},
+  "& .devui-button-icon": {
+    mr: "$2",
+  },
+  "& .devui-button-icon svg": {
+    transition: "$default",
+    fill: "#13181A",
+  },
+  "&:hover": {
+    "& .devui-button-icon svg": {
+      animation: `${pulse} 1s infinite`,
+    },
+  },
+  bg: "rgba(51, 51,51,0.1)",
+  "@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))": {
+    bf: "saturate(180%) blur(1px)",
   },
 })

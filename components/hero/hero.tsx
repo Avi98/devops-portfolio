@@ -2,6 +2,7 @@ import { useRouter } from "next/router"
 
 import Container from "../container"
 import { HeroButton } from "../primitives"
+import Announcement from "./announcement"
 import {
   HeroButtons,
   HeroButtonsList,
@@ -18,6 +19,12 @@ export interface HeroProps {
   title: string
   subtitle: string
   image?: string
+  announcement?: {
+    text: string
+    status: "New" | "Updated" | "Coming Soon" | "Popular"
+    href: string
+    hrefText: string
+  }
   description?: string
   type: "web-design" | "app-development" | "seo" | "landing"
   gradientBorder?: boolean
@@ -33,6 +40,7 @@ export const Hero = ({
   subtitle,
   description,
   image,
+  announcement,
   type,
   buttonGroup,
   gradientBorder,
@@ -45,7 +53,16 @@ export const Hero = ({
 
   return (
     <StyledHero>
-      {image ? <StyledHeroImg src={image} /> : null}
+      {image ? (
+        <StyledHeroImg alt={title} src={image} />
+      ) : announcement ? (
+        <Announcement
+          href={announcement.href}
+          hrefText={announcement.hrefText}
+          status={announcement.status}
+          text={announcement.text}
+        />
+      ) : null}
       <StyledHeroTitle
         aria-label={`${title}` + `	` + `${subtitle}`}
         gradientBorder={gradientBorder}

@@ -3,10 +3,13 @@ import { styled } from "@/theme/stitches.config"
 import Link from "../link"
 import Text from "../text"
 
-export const HeroTitle = styled("span", {
+export const HeroTitle = styled("h2", {
+  display: "flex",
+  flexDirection: "row",
   justifyContent: "center",
-  "@sm": {
+  "@smMax": {
     display: "flex",
+    flexDirection: "column",
   },
 })
 
@@ -26,14 +29,28 @@ export const SectionFeatures = styled("div", {
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-evenly",
+  variants: {
+    type: {
+      develop: {
+        flexDirection: "row",
+      },
+    },
+  },
 })
 
 export const SectionFeature = styled("div", {
-  "& h6": {
+  "& h5": {
     display: "flex",
+    fontSize: "18px",
+    fontWeight: "600",
+    letterSpacing: "-0.05em",
+    margin: "0 0 8px",
   },
   "& p": {
     display: "flex",
+    lineHeight: "28px",
+    fontWeight: "400",
+    margin: "0",
   },
 })
 
@@ -51,13 +68,13 @@ export const PathLine = styled("div", {
   width: "1px",
 })
 
-export const HeroSpan = styled("div", {
+export const HeroSpan = styled("span", {
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
   zIndex: "1",
   textAlign: "center",
-  fontSize: "4rem",
+  fontSize: "5.5rem",
   lineHeight: "1",
   fontWeight: "800",
   letterSpacing: "-0.06em",
@@ -67,7 +84,7 @@ export const HeroSpan = styled("div", {
   },
 })
 
-export const SectionTitle = styled("h5", {
+export const SectionTitle = styled("h3", {
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
@@ -80,11 +97,11 @@ export const SectionTitle = styled("h5", {
   },
 })
 
-export const SectionSubTitle = styled("h6", Link, {
+export const SectionSubTitle = styled("h4", Link, {
   color: "$text",
   fontSize: "2.5rem",
-  fontWeight: "700",
-  lineHeight: "1.5",
+  fontWeight: "600",
+  lineHeight: "3rem",
   letterSpacing: "-0.05em",
   cursor: "pointer",
   mb: "1.5rem",
