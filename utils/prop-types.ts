@@ -23,6 +23,13 @@ export const simpleColors = tuple(
   "error"
 )
 
+export const simpleGradients = tuple(
+  "seo",
+  "web-design",
+  "app-development",
+  "default"
+)
+
 export const extendedColors = tuple(
   "default",
   "primary",
@@ -258,6 +265,8 @@ export type TextTransforms = typeof textTransforms[number]
 export type NormalColors = typeof normalColors[number]
 
 export type SimpleColors = typeof simpleColors[number]
+
+export type simpleGradients = typeof simpleGradients[number]
 
 export type TooltipColors = typeof extendedColorsNoGradient[number]
 

@@ -19,4 +19,6 @@ const Badge: React.FC<React.PropsWithChildren<BadgeProps>> = ({
   return <StyledBadge {...props}>{children}</StyledBadge>
 }
 
+Badge.toString = () => ".devui-badge"
+
 export default Badge

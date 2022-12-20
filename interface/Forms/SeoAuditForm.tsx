@@ -131,10 +131,10 @@ const SeoAuditForm: FC<Props> = ({ type }) => {
               clearable
               shadow={false}
               onClearClick={reset}
-              status={helper?.color}
-              color={helper?.color}
-              helperColor={helper?.color}
-              helperText={helper?.text}
+              status={helper?.color as any}
+              color={helper?.color as any}
+              helperColor={helper?.color as any}
+              helperText={helper?.text as any}
               aria-label="Email"
               type={"email"}
               placeholder={"Email"}

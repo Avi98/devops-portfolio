@@ -21,31 +21,7 @@ export const StyledBadge = styled("span", {
         bg: "$primaryLight",
         color: "$primary",
       },
-      primary: {
-        bg: "$primaryLight",
-        color: "$primary",
-      },
-      secondary: {
-        bg: "$secondaryLight",
-        color: "$secondary",
-      },
-      warning: {
-        bg: "$warningLight",
-        color: "$warning",
-      },
-      success: {
-        bg: "$successLight",
-        color: "$success",
-      },
-      error: {
-        bg: "$errorLight",
-        color: "$error",
-      },
-      disabled: {
-        fontSize: "9px",
-        color: "$accents8",
-        bg: "$accents0",
-      },
+
       seo: {
         bg: "$seoGradient ",
         color: "$background",
@@ -56,7 +32,7 @@ export const StyledBadge = styled("span", {
     },
   },
   defaultVariants: {
-    type: "default",
+    type: "seo",
   },
   compoundVariants: [
     // solid: true && type: 'default'

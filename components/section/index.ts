@@ -3,7 +3,6 @@ import Section from "./section"
 export {
   StyledSection,
   StyledSectionTitle,
-  StyledSectionSubtitle,
   StyledSectionDescription,
   StyledSectionContent,
   StyledSectionImage,

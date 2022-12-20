@@ -223,7 +223,6 @@ const Input = React.forwardRef<FormElement, InputProps>(
         helperColor={helperColor}
         rounded={rounded}
         size={size}
-        status={status}
       >
         {inputLabel && (
           <InputBlockLabel

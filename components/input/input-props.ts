@@ -6,6 +6,7 @@ import {
   NormalSizes,
   NormalWeights,
   SimpleColors,
+  simpleGradients,
 } from "@/utils/prop-types"
 
 export type FormElement = HTMLInputElement | HTMLTextAreaElement
@@ -19,6 +20,7 @@ export interface Props
   placeholder?: string
   size?: NormalSizes
   color?: SimpleColors
+  gradient?: simpleGradients
   helperColor?: SimpleColors
   status?: SimpleColors | string
   readOnly?: boolean
@@ -70,9 +72,10 @@ export const defaultProps = {
   required: false,
   width: "initial",
   size: "md" as NormalSizes,
-  color: "default" as SimpleColors | string,
-  helperColor: "default" as SimpleColors | string,
-  status: "default" as SimpleColors | string,
+  color: "default" as SimpleColors,
+  gradient: "default" as simpleGradients,
+  helperColor: "default" as SimpleColors,
+  status: "default" as SimpleColors,
   borderWeight: "normal" as NormalWeights,
   autoComplete: "off",
   className: "",

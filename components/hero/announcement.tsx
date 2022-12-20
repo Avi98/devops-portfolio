@@ -57,7 +57,15 @@ export const Announcement: FC<AnnouncementProps> = ({
 }) => {
   return (
     <StyledAnnouncement css={css} {...props}>
-      <Badge className={clsx("anouncement__badge")} type={type}>
+      <Badge
+        className={clsx("announcement__badge", {
+          "announment__badge--seo": type === "seo",
+          "announment__badge--web-design": type === "web-design",
+          "announment__badge--app-development": type === "app-development",
+          "announment__badge--landing": type === "landing",
+          "announment__badge--default": type === "default",
+        })}
+      >
         {status}
       </Badge>
       <p>
