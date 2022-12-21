@@ -1,9 +1,11 @@
 import { useRouter } from "next/router"
 
+import clsx from "clsx"
+
 import Container from "../container"
-import { HeroButton } from "../primitives"
 import Announcement from "./announcement"
 import {
+  HeroButton,
   HeroButtons,
   HeroButtonsList,
   HeroButtonsListItem,
@@ -26,12 +28,18 @@ export interface HeroProps {
     hrefText: string
   }
   description?: string
-  type: "web-design" | "app-development" | "seo" | "landing"
+  type: "web-design" | "app-development" | "seo" | "landing" | "legal"
   gradientBorder?: boolean
   buttonGroup?: {
     text: string
     link: string
-    style: "default" | "gradient" | "ghost" | "seo"
+    style:
+      | "default"
+      | "gradient"
+      | "seo"
+      | "web-design"
+      | "app-development"
+      | "legal"
   }[]
 }
 
@@ -89,45 +97,7 @@ export const Hero = ({
           <HeroButtonsList>
             {buttonGroup.map(button => (
               <HeroButtonsListItem key={button.text}>
-                {button.style === "gradient" ? (
-                  <Container
-                    css={{
-                      position: "relative",
-                      zIndex: 10,
-                      pl: "0px",
-                      pr: "0px",
-                    }}
-                  >
-                    <HeroButton
-                      aria-label={button.text}
-                      id={button.text}
-                      style={button.style}
-                      title={button.text}
-                      onClick={() => handleButtonClick(button.link)}
-                    >
-                      {button.text}
-                    </HeroButton>
-                  </Container>
-                ) : button.style === "seo" ? (
-                  <Container
-                    css={{
-                      position: "relative",
-                      zIndex: 10,
-                      pl: "0px",
-                      pr: "0px",
-                    }}
-                  >
-                    <HeroButton
-                      aria-label={button.text}
-                      id={button.text}
-                      style={button.style}
-                      title={button.text}
-                      onClick={() => handleButtonClick(button.link)}
-                    >
-                      {button.text}
-                    </HeroButton>
-                  </Container>
-                ) : (
+                {button.style === "default" ? (
                   <HeroButton
                     aria-label={button.text}
                     id={button.text}
@@ -137,6 +107,35 @@ export const Hero = ({
                   >
                     {button.text}
                   </HeroButton>
+                ) : (
+                  <Container
+                    css={{
+                      position: "relative",
+                      zIndex: 10,
+                      pl: "0px",
+                      pr: "0px",
+                    }}
+                  >
+                    <div
+                      className={clsx("gradient__background", {
+                        "gradient__background--seo": button.style === "seo",
+                        "gradient__background--web-design":
+                          button.style === "web-design",
+                        "gradient__background--app-development":
+                          button.style === "app-development",
+                        "gradient__background--legal": button.style === "legal",
+                      })}
+                    />
+                    <HeroButton
+                      aria-label={button.text}
+                      id={button.text}
+                      style={button.style}
+                      title={button.text}
+                      onClick={() => handleButtonClick(button.link)}
+                    >
+                      {button.text}
+                    </HeroButton>
+                  </Container>
                 )}
               </HeroButtonsListItem>
             ))}

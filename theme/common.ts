@@ -153,7 +153,7 @@ export const defaultColors = {
   appColorB: "#FF0080",
 
   seoColorA: "#ff4d4d",
-  seoCOlorB: "#f9cb28",
+  seoColorB: "#f9cb28",
 
   // brand colors
   primaryLight: "$blue200",

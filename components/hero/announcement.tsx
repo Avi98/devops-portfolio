@@ -37,7 +37,13 @@ interface Props {
   href: string
   hrefText: string
   variant?: string
-  type: "web-design" | "app-development" | "seo" | "landing" | "default"
+  type:
+    | "web-design"
+    | "app-development"
+    | "seo"
+    | "landing"
+    | "default"
+    | "legal"
 }
 
 type StyledAnnouncementProps = VariantProps<typeof StyledAnnouncement>

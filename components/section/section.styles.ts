@@ -82,9 +82,23 @@ export const StyledSectionTitle = styled("h3", {
   },
 })
 
+export const StyledSectionSubtitle = styled("h4", {
+  textAlign: "center",
+  margin: "0 0 24px",
+  fontWeight: "700",
+  letterSpacing: "-0.05em",
+  fontSize: "2.75rem",
+  background: "$textGradient",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  "@xsMax": {
+    fontSize: "2.25rem",
+  },
+})
+
 export const StyledSectionDescription = styled("p", {
   maxWidth: "790px",
-  margin: "0 auto 96px",
+  margin: "0 auto 35px",
   color: "#888888",
   fontWeight: "400",
   fontSize: "1.25rem",

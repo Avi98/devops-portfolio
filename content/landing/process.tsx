@@ -27,7 +27,7 @@ const process = [
     type: "design",
     gradient: "design",
     title: "Design ",
-    subTitle: "Build rich experiences ",
+    subTitle: "Rich customer experiences.",
     tag: "Interface",
     slug: "web-design",
     description: [

@@ -23,22 +23,36 @@ export const SectionBody = styled("div", {
     color: "#888",
     fontSize: "16px",
   },
+  "& .devops-process__image": {
+    textAlign: "-webkit-left",
+  },
 })
 
 export const SectionFeatures = styled("div", {
   display: "flex",
+  width: "100%",
   flexDirection: "column",
-  justifyContent: "space-evenly",
+  justifyContent: "center",
+
+  my: "2rem",
   variants: {
     type: {
       develop: {
         flexDirection: "row",
+        "@smMax": {
+          flexDirection: "column",
+        },
+        "& .develop-image": {
+          width: "60%",
+        },
       },
     },
   },
 })
 
 export const SectionFeature = styled("div", {
+  display: "flex",
+  flexDirection: "column",
   "& h5": {
     display: "flex",
     fontSize: "18px",
@@ -92,9 +106,6 @@ export const SectionTitle = styled("h3", {
   fontSize: "2rem",
   fontWeight: "700",
   letterSpacing: "-0.05em",
-  "@xsMax": {
-    fontSize: "2.25rem",
-  },
 })
 
 export const SectionSubTitle = styled("h4", Link, {

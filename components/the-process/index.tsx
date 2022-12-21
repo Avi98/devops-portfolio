@@ -92,7 +92,11 @@ const Section = React.forwardRef<HTMLDivElement, SectionProps>(
                       md={6}
                       xs={12}
                     >
-                      <Image alt={`${title}`} src={props.image as string} />
+                      <Image
+                        alt={`${title}`}
+                        className="devops-process__image design-image"
+                        src={props.image as string}
+                      />
                       <Box
                         css={{
                           position: "absolute",
@@ -141,15 +145,15 @@ const Section = React.forwardRef<HTMLDivElement, SectionProps>(
                       key={`${title}-features-wrapper`}
                       type="develop"
                     >
-                      <Grid key={feature.title} md={6} xs={12}>
-                        <Image alt={`${title}`} src={feature.image as string} />
-                      </Grid>
-                      <Grid key={feature.title} md={6} xs={12}>
-                        <SectionFeature key={feature.title}>
-                          <h5 key={feature.title}>{feature.title}</h5>
-                          <p key={feature.title}>{feature.description}</p>
-                        </SectionFeature>
-                      </Grid>
+                      <Image
+                        alt={`${title}`}
+                        className="devops-process__image develop-image"
+                        src={feature.image as string}
+                      />
+                      <SectionFeature key={feature.title}>
+                        <h5 key={feature.title}>{feature.title}</h5>
+                        <p key={feature.title}>{feature.description}</p>
+                      </SectionFeature>
                     </SectionFeatures>
                   ))}
                 </>

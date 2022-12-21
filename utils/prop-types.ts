@@ -25,8 +25,12 @@ export const simpleColors = tuple(
 
 export const simpleGradients = tuple(
   "seo",
-  "web-design",
-  "app-development",
+  "web",
+  "app",
+  "work",
+  "landing",
+  "marketing",
+  "gradient",
   "default"
 )
 

@@ -1,22 +1,16 @@
 {
   "name": "buchanan-devops",
   "displayName": "Buchanan DevOps",
-  "description": "We build things. Websites and Apps with an emphasis on Search Engine Optimization and User Experience. We also provide DevOps services to help you get your project to production.",
+  "description": "Buchanan DevOps: Web. App. Seo.",
   "author": "Buchanan DevOps <john@buchanandevops.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BuchananDevOps/devops-portfolio.git"
   },
   "keywords": [
-    "next",
-    "nextjs",
-    "react",
-    "typescript",
-    "website design",
-    "application development",
-    "search engine optimization",
-    "devops",
-    "business development"
+    "WEB",
+    "APP",
+    "SEO"
   ],
   "license": "WTFYWPL",
   "version": "0.1.0",
@@ -31,7 +25,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "format": "yarn prettier && yarn lint:fix  "
+    "format": "yarn lint:fix  &&  yarn prettier"
   },
   "dependencies": {
     "@next/bundle-analyzer": "13.0.6",

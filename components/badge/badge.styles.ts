@@ -21,7 +21,14 @@ export const StyledBadge = styled("span", {
         bg: "$primaryLight",
         color: "$primary",
       },
-
+      web: {
+        bg: "$webGradient",
+        color: "$background",
+      },
+      app: {
+        bg: "$appGradient",
+        color: "$background",
+      },
       seo: {
         bg: "$seoGradient ",
         color: "$background",
@@ -35,58 +42,20 @@ export const StyledBadge = styled("span", {
     type: "seo",
   },
   compoundVariants: [
-    // solid: true && type: 'default'
     {
-      type: "default",
+      type: "web",
       solid: true,
       css: {
-        bg: "$primary",
-        color: "$white",
+        bg: "$webGradient",
+        color: "$background",
       },
     },
-    // solid: true && type: 'primary'
     {
-      type: "primary",
+      type: "app",
       solid: true,
       css: {
-        bg: "$primary",
-        color: "$white",
-      },
-    },
-    // solid: true && type: 'secondary'
-    {
-      type: "secondary",
-      solid: true,
-      css: {
-        bg: "$secondary",
-        color: "$white",
-      },
-    },
-    // solid: true && type: 'warning'
-    {
-      type: "warning",
-      solid: true,
-      css: {
-        bg: "$warning",
-        color: "$white",
-      },
-    },
-    // solid: true && type: 'success'
-    {
-      type: "success",
-      solid: true,
-      css: {
-        bg: "$success",
-        color: "$white",
-      },
-    },
-    // solid: true && type: 'error'
-    {
-      type: "error",
-      solid: true,
-      css: {
-        bg: "$error",
-        color: "$white",
+        bg: "$appGradient",
+        color: "$background",
       },
     },
     {

@@ -77,7 +77,7 @@ const Nav: React.FC<NavProps> = ({ css, ...props }) => {
             ))}
           </StyledNavList>
           <StyledNavList>
-            {menu.socialLinks.map(item => (
+            {menu.socialLinks.slice(0, 3).map(item => (
               <SocialLink
                 key={item.title}
                 href={item.href}
