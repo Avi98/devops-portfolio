@@ -66,6 +66,20 @@ export const StyledSection = styled("section", {
       },
     },
   },
+  // bleed through styles from ./the-process/styles.ts
+  "& .devops-process__section-header--optimize": {
+    marginTop: "-200px",
+    zIndex: "1",
+    "@smMax": {
+      marginTop: "100px",
+    },
+  },
+  "& .develop-feature-3__features--path-line": {
+    display: "none",
+  },
+  "& .develop-feature-3__feature-center .devops-process__path-line": {
+    display: "none",
+  },
 })
 
 export const StyledSectionTitle = styled("h3", {

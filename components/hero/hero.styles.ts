@@ -69,12 +69,20 @@ export const StyledHero = styled("section", {
     filter: "blur(36px)",
     userSelect: "none",
     pointerEvents: "none",
-    width: "250px",
-    height: "70px",
+    width: "226px",
+    height: "40px",
     animation: `4s ease 0s infinite normal none running ${animatedGradient}`,
   },
   "& .gradient__background--seo": {
     background: "$seoGradient",
+    opacity: 0.9,
+  },
+  "& .gradient__background--web-design": {
+    background: "$webGradient",
+    opacity: 0.9,
+  },
+  "& .gradient__background--app-development": {
+    background: "$appGradient",
     opacity: 0.9,
   },
 })
@@ -355,6 +363,7 @@ export const HeroButton = styled("button", {
           height: "calc(100% + 2px)",
           borderRadius: "inherit",
           zIndex: -1,
+          animation: `4s ease 0s infinite normal none running ${animatedGradient}`,
         },
       },
       "app-development": {

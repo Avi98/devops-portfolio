@@ -23,8 +23,33 @@ export const SectionBody = styled("div", {
     color: "#888",
     fontSize: "16px",
   },
-  "& .devops-process__image": {
-    textAlign: "-webkit-left",
+  "& .devops-process__description": {
+    maxWidth: "790px",
+    fontSize: "1.25rem",
+    lineHeight: "2rem",
+    textAlign: "-webkit-center",
+  },
+  "& .design-image": {
+    width: "100%",
+    height: "auto",
+  },
+})
+
+export const SectionFlex = styled("div", {
+  display: "flex",
+  width: "100%",
+  alignItems: "center",
+})
+
+export const SectionFlexItem = styled("div", {
+  width: "45%",
+  variants: {
+    position: {
+      left: {
+        marginRight: "10%",
+      },
+      right: {},
+    },
   },
 })
 
@@ -32,18 +57,36 @@ export const SectionFeatures = styled("div", {
   display: "flex",
   width: "100%",
   flexDirection: "column",
-  justifyContent: "center",
 
   my: "2rem",
   variants: {
     type: {
       develop: {
         flexDirection: "row",
+        justifyContent: "space-evenly",
+        marginBottom: "-31px",
+        "@smMax": {
+          flexDirection: "column-reverse",
+        },
+      },
+      design: {
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        alignItems: "center",
         "@smMax": {
           flexDirection: "column",
         },
-        "& .develop-image": {
-          width: "60%",
+      },
+      pathline: {
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        height: "100px",
+        marginBottom: "-93px",
+        "@smMax": {
+          display: "flex",
+          marginBottom: "0",
+          flexDirection: "column",
+          alignItems: "center",
         },
       },
     },
@@ -51,20 +94,113 @@ export const SectionFeatures = styled("div", {
 })
 
 export const SectionFeature = styled("div", {
-  display: "flex",
-  flexDirection: "column",
+  "@smMax": {
+    marginBottom: "50px",
+    textAlign: "-webkit-center",
+  },
+  variants: {
+    flex: {
+      right: {
+        display: "flex",
+      },
+    },
+    position: {
+      left: {
+        width: "45%",
+        alignSelf: "center",
+        "@smMax": {
+          width: "100%",
+        },
+      },
+      right: {
+        width: "45%",
+        alignSelf: "center",
+        "@smMax": {
+          width: "100%",
+          marginBottom: "50px",
+        },
+      },
+      center: {
+        display: "flex",
+        paddingTop: "60px",
+        flexDirection: "column",
+        alignItems: "center",
+        width: "10%",
+        "@smMax": {},
+      },
+    },
+  },
+
   "& h5": {
-    display: "flex",
     fontSize: "18px",
     fontWeight: "600",
     letterSpacing: "-0.05em",
     margin: "0 0 8px",
   },
+
   "& p": {
-    display: "flex",
     lineHeight: "28px",
     fontWeight: "400",
     margin: "0",
+  },
+
+  //Process Section Features - Styled for specific content types related to develop section
+
+  "& .devops-process__image": {
+    width: "80%",
+    height: "80%",
+  },
+
+  "& .design-image": {
+    width: "100%",
+    height: "100%",
+  },
+
+  "&. devops-process__feature-center": {
+    flex: "1 1",
+  },
+  //Process Section Pathline
+
+  "& .path-line--first": {
+    display: "flex",
+    height: "100%",
+    marginLeft: "-1px",
+  },
+
+  "& .path-line--last": {
+    display: "flex",
+    height: "100%",
+    marginLeft: "-1px",
+  },
+
+  "& .devops-process__path-line": {
+    width: "1px",
+    alignSelf: "center",
+    flex: "1 1",
+  },
+
+  "& .devops-process__path-stretch": {
+    flex: "1 1",
+  },
+
+  "& .devops-process__path-circle": {
+    width: "11px",
+    height: "11px",
+    boxShadow: "0 0 0 2px #444 inset",
+    borderRadius: "50%",
+    pargin: "4px 0",
+  },
+
+  "& .path-line_gradient": {
+    background: "linear-gradient(to bottom, #000000, #444)",
+  },
+
+  "& .path-line_dotted": {
+    borderRight: "1px dashed #444",
+    borderWidth: "1px",
+  },
+  "& .path-line__connection": {
+    paddingTop: "20px",
   },
 })
 
@@ -80,6 +216,18 @@ export const PathLine = styled("div", {
   height: "100px",
   minHeight: "100px",
   width: "1px",
+  variants: {
+    type: {
+      optimize: {
+        height: "350px",
+        background: "linear-gradient( #444, #f9cb28)",
+        marginLeft: "-1px",
+        "@smMax": {
+          height: "100px",
+        },
+      },
+    },
+  },
 })
 
 export const HeroSpan = styled("span", {

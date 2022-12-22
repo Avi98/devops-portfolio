@@ -81,6 +81,10 @@ export default {
     textGradient: "linear-gradient(180deg,#fff,hsla(0,0%,100%,.75))",
     gradient:
       "linear-gradient(112deg, $cyan600 -63.59%, $pink600 -20.3%, $blue600 70.46%)",
+
+    redToOrangeGradient: "linear-gradient(-70deg, #ed4e50 0%, #f06f00 100%)",
+    skyToBlueGradient:
+      "linear-gradient(260deg, #3d67ff 0%, #9773ff 50%, #efceff 80%)",
   },
   shadows: {
     xs: "0 2px 8px 1px rgb(0 0 0 / 0.07), 0 1px 1px -1px rgb(0 0 0 / 0.04)",

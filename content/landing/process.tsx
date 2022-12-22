@@ -1,7 +1,3 @@
-import React from "react"
-
-import { NextJsLogo } from "@/components"
-
 export type ProcessProps = {
   id: string
   type: "design" | "develop" | "optimize" | string
@@ -14,10 +10,10 @@ export type ProcessProps = {
     id?: string
     title: string
     description: string
-    icon?: React.ReactNode
+    icon?: string | any
     image?: string
   }[]
-  image?: string | string[]
+  image?: string[]
   gradientBg: string
 }
 
@@ -32,26 +28,31 @@ const process = [
     slug: "web-design",
     description: [
       "Buchanan DevOps approach to the design process begins with a combination of cultural philosophies, best practices and software required to achieve your vision. By mapping and building your workflow we can guage the project requirements.",
-      "After doing our initial research into your industry, we'll put together a preliminary wireframe to define the components required for the development stage. Once the project is outlined we'll begin designing the components required.",
     ],
     features: [
       {
+        id: "design-feature-1",
         title: "Discovery + Strategy",
         description:
           "Create a robust differentiated online storefront that is easy to use and maintain empowering your customers to find what they need quickly and easily.",
+        icon: "/icons/blue/code-window.svg",
       },
       {
+        id: "design-feature-2",
         title: "UI/UX Web Design + Prototyping",
         description:
           "We build beautiful websites that are fast, secure, and easy to use.",
+        icon: "/icons/blue/cicd.svg",
       },
       {
+        id: "design-feature-3",
         title: "(QA + Testing) - Bugs = Launch",
         description:
           "We build beautiful websites that are fast, secure, and easy to use.",
+        icon: "/icons/blue/status.svg",
       },
     ],
-    image: "/content/production-dark.svg",
+    image: ["/content/bassnectar-unlimited.avif"],
     gradientBg: "/bgk/gradient/highlight.svg",
   },
   {
@@ -59,33 +60,35 @@ const process = [
     type: "develop",
     gradient: "develop",
     title: "Develop",
-    subTitle: "The hard work behind web apps",
+    subTitle: "Dynamic web apps.",
     tag: "Dynamics",
     slug: "app-development",
     description: [
-      "At Buchanan DevOps, we understand the importance of delivering top-notch technical talent to build great apps and keep them running. Our team is comprised of experienced professionals with a deep understanding of coding languages and development frameworks who are dedicated to creating robust applications that will help your business succeed. ",
-      "With our expertise in app design, development and maintenance, you can rest assured that your application will be up-to-date with modern standards while providing exceptional performance for users on all platforms. We also have an extensive network of developers from around the United States, allowing us access to specialized skillsets when needed. ",
+      "The development of an app is mostly focused on dynamic data. Dynamic data bridges the gap between a static website and an app, giving a business real-time content tailored to their specific needs and business functions.",
     ],
     features: [
       {
+        id: "develop-feature-1",
         title: "Agile + Licensing + CI/CD = DevOps",
         description:
-          "We build beautiful websites that are fast, secure, and easy to use.",
-        icon: <NextJsLogo />,
-        image: "/content/people.svg",
+          "Specific tooling and technology enable the operational development of an application to evolve quickly and reliably. We’ll curate a list of required licensing during the initial project discovery process.",
+        icon: "/icons/blue/devops-blue.svg",
+        image: "/content/monitoring.avif",
       },
       {
-        title: "(Server + Database) x (API x (s)) = Backend",
+        id: "develop-feature-2",
+        title: "Server + Database + API = Backend",
         description:
-          "We build beautiful websites that are fast, secure, and easy to use.",
-        icon: <NextJsLogo />,
-        image: "/content/people.svg",
+          "We’ll construct a conceptual data model specific to the business requirements, technology in use, economics and data processing. We’ll utilize the conceptual model to develop the interactions and associations between the database, server and API.",
+        icon: "/icons/blue/backend.svg",
+        image: "/content/code.svg",
       },
       {
-        title: "(Frontend + Backend) x (DevOps) = App",
+        id: "develop-feature-3",
+        title: "Frontend + Backend + DevOps = App",
         description:
-          "We build beautiful websites that are fast, secure, and easy to use.",
-        icon: <NextJsLogo />,
+          "Designing, developing and delivering dynamic content for user consumption requires certain DevOps technologies and a backend comprised of a Database, Server, and API. We’ll integrate the frontend to consume the backend and deliver the dynamic content to the user.",
+        icon: "/icons/blue/matrix.svg",
         image: "/content/people.svg",
       },
     ],
@@ -95,12 +98,11 @@ const process = [
     type: "optimize",
     gradient: "optimize",
     title: "Optimize",
-    subTitle: "The Art of SEO",
+    subTitle: "The Art of SEO.",
     tag: "Strategy",
     slug: "search-engine-optimization",
     description: [
       "Search Engine Optimization (SEO) is an invaluable strategy for businesses to increase their visibility. SEO helps your business stand out from the competition by applying semantic logic, schemas, and structured data to optimize your website’s content for search engine algorithms. ",
-      "By utilizing SEO techniques such as keyword research, meta tags optimization and link building you can improve your website's ranking on major search engines like Google or Bing. This will help potential customers find you more easily when searching for the products or services that you offer. ",
     ],
     features: [
       {
