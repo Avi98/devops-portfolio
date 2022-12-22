@@ -1,6 +1,6 @@
 import type { FC } from "react"
 
-import schema from "@/config/seo_meta.json"
+import data_schema from "@/config/data_schema.json"
 
 import SEO from "./SEO"
 
@@ -15,7 +15,7 @@ const Head: FC = () => {
       <script
         key="structured-data"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(data_schema) }}
       />
     </SEO>
   )
