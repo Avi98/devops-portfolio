@@ -23,7 +23,7 @@ export interface HeroProps {
   image?: string
   announcement?: {
     text: string
-    status: "New" | "Updated" | "Coming Soon" | "Popular"
+    status: "New" | "Updated" | "Coming Soon" | "Popular" | "Featured" | "Sale"
     href: string
     hrefText: string
   }

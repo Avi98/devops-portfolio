@@ -1,12 +1,14 @@
 import { Github, LinkedIn, Mail, Twitter } from "@/components"
 
 export interface NavLinkProps {
+  id: string
   title: string
   short: string
   href: string
 }
 
 export interface SocialLinkProps {
+  id: string
   title: string
   href: string
   icon: React.ReactNode
@@ -38,26 +40,31 @@ export default {
   },
   navLinks: [
     {
+      id: "web-design",
       title: "Website Design",
       short: "Web",
       href: "/web-design",
     },
     {
+      id: "app-development",
       title: "App Development",
       short: "App",
       href: "/app-development",
     },
     {
+      id: "search-engine-optimization",
       title: "Search Engine Optimization",
       short: "SEO",
       href: "/search-engine-optimization",
     },
     {
+      id: "digital-marketing",
       title: "Digital Marketing",
       short: "Marketing",
       href: "/digital-marketing",
     },
     {
+      id: "work-portfolio",
       title: "Work Portfolio",
       short: "Work",
       href: "/work-portfolio",
@@ -65,28 +72,32 @@ export default {
   ],
   socialLinks: [
     {
+      id: "linkedin",
       title: "LinkedIn",
       at: "John Buchanan",
       href: "https://www.linkedin.com/in/buchanandevops/",
       icon: <LinkedIn size={24} />,
     },
     {
+      id: "github",
       title: "GitHub",
       at: "BuchananDevOps",
       href: "https://github.com/BuchananDevOps",
       icon: <Github size={24} />,
     },
     {
+      id: "twitter",
       title: "Twitter",
       at: "BuchananDevOps",
       href: "https://twitter.com/BuchananDevOps",
       icon: <Twitter size={24} />,
     },
     {
-      title: "Instagram",
-      at: "JohnBuchanan",
-      href: "https://www.instagram.com/johnbuchanan/",
-      icon: <Mail size={24} />,
+      id: "email",
+      title: "Contact Buchanan DevOps",
+      at: "John Buchanan",
+      href: "/contact",
+      icon: <Mail fill="var(--devui-colors-red600)" size={24} />,
     },
   ],
   buttons: [

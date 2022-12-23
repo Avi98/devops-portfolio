@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 
 import menu from "@/content/menu"
-import ContactButton from "@/interface/Object/ContactButton"
 import { CSS } from "@/theme/stitches.config"
 import withDefaults from "@/utils/with-defaults"
 
@@ -72,20 +71,21 @@ const Nav: React.FC<NavProps> = ({ css, ...props }) => {
                 key={item.title}
                 display={item.short}
                 href={item.href}
+                id={item.id}
                 title={item.title}
               />
             ))}
           </StyledNavList>
           <StyledNavList>
-            {menu.socialLinks.slice(0, 3).map(item => (
+            {menu.socialLinks.map(item => (
               <SocialLink
                 key={item.title}
                 href={item.href}
                 icon={item.icon}
+                id={item.id}
                 title={item.title}
               />
             ))}
-            <ContactButton />
           </StyledNavList>
         </div>
       </StyledNavContainer>

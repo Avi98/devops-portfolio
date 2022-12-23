@@ -1,7 +1,5 @@
 import React from "react"
 
-import { theme } from "@/theme"
-
 import { IconProps } from "./index"
 
 const Mail: React.FC<IconProps> = ({ fill, size, height, width, ...props }) => {
@@ -14,7 +12,7 @@ const Mail: React.FC<IconProps> = ({ fill, size, height, width, ...props }) => {
     >
       <g
         fill="none"
-        stroke={fill || theme?.colors?.text?.value}
+        stroke={fill}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={1.5}

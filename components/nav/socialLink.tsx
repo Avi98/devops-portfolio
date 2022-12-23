@@ -4,13 +4,20 @@ import { FC } from "react"
 import { SocialLinkProps as Props } from "@/content/menu"
 import { styled } from "@/theme/stitches.config"
 import type { CSS, VariantProps } from "@/theme/stitches.config"
+import clsx from "@/utils/clsx"
 
-export const StyledSocialLink = styled(Link, {
+export const StyledSocialLink = styled("li", Link, {
+  alignSelf: "baseline",
+  paddingTop: "6px",
   m: "0 6px",
-  paddingTop: "5px",
   "& svg": {
     transition: "$default",
     fill: "#697177",
+  },
+  "& .social-link__email": {
+    "& svg": {
+      fill: "var(--devui-colors-red600)",
+    },
   },
   "&:hover": {
     "& svg": {
@@ -26,18 +33,23 @@ type SocialLinkProps = SocialLinkVariants &
     css?: CSS
   }
 
-const SocialLink: FC<SocialLinkProps> = ({ href, title, icon, css }) => {
+const SocialLink: FC<SocialLinkProps> = ({ href, id, title, icon, css }) => {
+  const handleClick = () => {
+    window.open(href, "_blank")
+  }
+
   return (
     <StyledSocialLink
+      className={clsx(`social-link__${id}`)}
       css={css}
-      href={href}
-      rel="noreferrer"
-      target="_blank"
       title={title}
+      onClick={handleClick}
     >
       {icon}
     </StyledSocialLink>
   )
 }
+
+SocialLink.toString = () => ".devui-social-link"
 
 export default SocialLink

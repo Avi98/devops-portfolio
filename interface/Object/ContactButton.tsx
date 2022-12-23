@@ -20,14 +20,14 @@ const ContactButton: FC = () => {
       auto
       as="a"
       css={{
-        bg: "rgba(51, 51,51,0.7)",
+        bg: "rgba(51, 51,51,0.5)",
         "@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))":
           {
             bf: "saturate(180%) blur(14px)",
           },
         color: "$text",
         maxH: "38px",
-        px: "$8",
+        px: "$0",
         marginLeft: "6px",
 
         "& .devui-button-icon": {

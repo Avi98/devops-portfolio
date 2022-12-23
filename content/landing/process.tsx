@@ -27,28 +27,28 @@ const process = [
     tag: "Interface",
     slug: "web-design",
     description: [
-      "Buchanan DevOps approach to the design process begins with a combination of cultural philosophies, best practices and software required to achieve your vision. By mapping and building your workflow we can guage the project requirements.",
+      "Our team of experienced professionals takes time to research and understand your business, ensuring customers get the best possible experience from interacting with your brand. We use this knowledge to create engaging interfaces that not only looks great but also drive audiences to action, helping you reach and exceed your business goals.",
     ],
     features: [
       {
         id: "design-feature-1",
         title: "Discovery + Strategy",
         description:
-          "Create a robust differentiated online storefront that is easy to use and maintain empowering your customers to find what they need quickly and easily.",
+          "At the start of any project, we like to take a deep dive into understanding your business goals, technology in use, economics and objectives.",
         icon: "/icons/blue/code-window.svg",
       },
       {
         id: "design-feature-2",
-        title: "UI/UX Web Design + Prototyping",
+        title: "UI/UX Web Design ",
         description:
-          "We build beautiful websites that are fast, secure, and easy to use.",
+          "Once the business insights and requirements are identified, we will use them to design a user interface (UI) that is tailored to enhance brand recognition and user experience.",
         icon: "/icons/blue/cicd.svg",
       },
       {
         id: "design-feature-3",
-        title: "(QA + Testing) - Bugs = Launch",
+        title: "Minimal Viable Product (MVP)",
         description:
-          "We build beautiful websites that are fast, secure, and easy to use.",
+          "At this stage of the process, we will have a hosted Minimum Viable Product (MVP) for the business to collaborate with us in real time. ",
         icon: "/icons/blue/status.svg",
       },
     ],
@@ -64,30 +64,30 @@ const process = [
     tag: "Dynamics",
     slug: "app-development",
     description: [
-      "The development of an app is mostly focused on dynamic data. Dynamic data bridges the gap between a static website and an app, giving a business real-time content tailored to their specific needs and business functions.",
+      "Application development unequivocally focuses on dynamic data. Dynamic data bridges the gap between static websites and full stack applications, giving a business real-time functionality tailored to their business requirements. Using our conceptual data model we’ll create a unified architecture that will allow for effective communication among all components of the application.",
     ],
     features: [
       {
         id: "develop-feature-1",
-        title: "Agile + Licensing + CI/CD = DevOps",
+        title: "Agile Development and Operations (DevOps)",
         description:
-          "Specific tooling and technology enable the operational development of an application to evolve quickly and reliably. We’ll curate a list of required licensing during the initial project discovery process.",
+          "Agile development focuses on delivering value through rapid iterations with continuous feedback from stakeholders throughout the process. ",
         icon: "/icons/blue/devops-blue.svg",
         image: "/content/monitoring.avif",
       },
       {
         id: "develop-feature-2",
-        title: "Server + Database + API = Backend",
+        title: "Backend Development",
         description:
-          "We’ll construct a conceptual data model specific to the business requirements, technology in use, economics and data processing. We’ll utilize the conceptual model to develop the interactions and associations between the database, server and API.",
+          "Building the backend of an application requires a database to store data, a server to handle requests from users, and an API (Application Programming Interface) as the bridge between the two. ",
         icon: "/icons/blue/backend.svg",
         image: "/content/code.svg",
       },
       {
         id: "develop-feature-3",
-        title: "Frontend + Backend + DevOps = App",
+        title: "CI/CD Production Application",
         description:
-          "Designing, developing and delivering dynamic content for user consumption requires certain DevOps technologies and a backend comprised of a Database, Server, and API. We’ll integrate the frontend to consume the backend and deliver the dynamic content to the user.",
+          "The continuous integration (CI) process allows us to integrate changes asynchronously with our MVP. This enables us to continuously deliver (CD) updates and improvements, allowing for faster iteration cycle. ",
         icon: "/icons/blue/matrix.svg",
         image: "/content/people.svg",
       },

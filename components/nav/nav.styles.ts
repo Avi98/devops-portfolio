@@ -12,6 +12,8 @@ export const StyledNav = styled("nav", {
 export const StyledNavList = styled("ul", {
   display: "flex",
   flexDirection: "row",
+  alignContent: "center",
+  alignItems: "center",
   flexWrap: "wrap",
   listStyle: "none",
   margin: 0,

@@ -1,14 +1,16 @@
 import { useRouter } from "next/router"
 import { FC } from "react"
 
+import clsx from "clsx"
+
 import { CSS } from "@/theme/stitches.config"
 
 import StyledNavLink from "./navLink.styles"
 
 interface Props {
-  className?: string
   href?: string
   display?: string
+  id?: string
   css?: CSS
   as?: keyof JSX.IntrinsicElements
 }
@@ -18,9 +20,9 @@ type NativeAttrs = Omit<React.HTMLAttributes<unknown>, keyof Props>
 export type NavLinkProps = Props & NativeAttrs
 
 const NavLink: FC<NavLinkProps> = ({
-  className,
   href,
   display,
+  id,
   css,
   as,
   ...props
@@ -36,7 +38,7 @@ const NavLink: FC<NavLinkProps> = ({
       id={display}
       {...props}
       as={as}
-      className={className}
+      className={clsx(`nav-link__${id}`)}
       onClick={handleClick}
     >
       {display}

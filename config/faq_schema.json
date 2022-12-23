@@ -1,0 +1,54 @@
+{
+  "@context": "http://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Search Engine Optimization (SEO)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Search Engine Optimization (SEO) is the process of bringing together code, content and context into an effective strategy to increase visibility by integrating structured data ensuring that the site appears high on the list of results returned by a search engine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why Do I Need SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SEO is a critical component of any digital marketing strategy. It is the process of optimizing your website to get organic, or un-paid, traffic from the search engine results page. SEO is a long-term strategy that has many benefits for your business. It helps you get found online, increase your website traffic, and ultimately grow your business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Can Your SEO Do for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SEO helps you get more visibility for your website and increase traffic to it. It can improve the ranking of your website in search engines, which will make it easier for potential customers to find you online. SEO also helps build trust with users by providing them with relevant information about your business, products, services or content that is optimized for their searches. Additionally, SEO helps ensure that all of the content on a page is properly structured and formatted so that search engines can easily crawl and index it correctly. With all these benefits combined together, SEO has become an essential tool in helping businesses reach their goals faster than ever before!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What metrics do you use to measure organic SEO success?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Organic SEO success is measured by Google Analytics organic search traffic conversion rates within the analytics dashboard. We can also guage the sale for ecommerce, content popularity, along with measuring local seo and national seo success."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Organic SEO vs. Paid SEO: What do you recommend for my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Organic SEO is an essential practice for any business owner looking to increase their visibility in Google's natural search rankings. By creating content that is relevant and engaging, establishing quality backlinks, and having a well-designed website, businesses can earn higher organic rankings on the SERP. Paid SEO or PPC involves paying Google for every click you receive from their search engine; it does not require content optimization or a great website but simply requires payment of fees per click. Organic SEO takes more time to build up but offers lasting benefits while PPC provides instant results with no long-term value if payments are stopped. As a business owner, it is important to understand the benefits of both Paid & Organic SEO. Depending on your niche, resources and business goals, one may be more beneficial than the other; however there is an added advantage in running both Organic SEO & Paid SEO simultaneously. By targeting the same keywords and users with each channel you are able to gain valuable insights into user behavior that can help inform future marketing decisions while optimizing for the greatest net result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long have you been in business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We have been in business since 2010 in one form or another. Our previous DBA was<a title=\"Buchanan Computer\" target=\"_blank\" href=\"https://buchanancomputer.com\">Buchanan Computer</a> "
+      }
+    }
+  ]
+}

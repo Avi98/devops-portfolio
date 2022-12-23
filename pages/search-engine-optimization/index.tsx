@@ -5,16 +5,17 @@ const Hero = dynamic(() => import("@/components/hero"))
 const FormSection = dynamic(
   () => import("@/interface/Sections/Shared/FormSection")
 )
+const SeoFaq = dynamic(() => import("@/interface/Sections/Seo/SeoFaq"))
 
 const Page: NextPage = () => {
   return (
     <>
       <Hero
         announcement={{
-          text: "We're hiring!",
+          text: "We've updated our SEO Strategy!",
           status: "New",
-          href: "/careers",
-          hrefText: "Join our team",
+          href: "/search-engine-optimization#seo-audit",
+          hrefText: "Learn more",
         }}
         buttonGroup={[
           {
@@ -33,6 +34,7 @@ const Page: NextPage = () => {
         title="Search Engine"
         type="seo"
       />
+      <SeoFaq />
       <FormSection
         description="Do you have an exisiting website and want to know how to improve your SEO? Fill out the form below and we'll get back to you with a comprenhensive SEO audit."
         id="seo-audit"

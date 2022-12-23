@@ -22,6 +22,9 @@ export * from "./container"
 export { default as Divider } from "./divider"
 export * from "./divider"
 
+export { default as Faq } from "./faq"
+export * from "./faq"
+
 export { default as Grid } from "./grid"
 export * from "./grid"
 

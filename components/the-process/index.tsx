@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic"
 import Image from "next/image"
 import { useRouter } from "next/router"
-import React from "react"
+import React, { Suspense } from "react"
 
 import clsx from "clsx"
 
@@ -116,16 +116,18 @@ const Section = React.forwardRef<HTMLDivElement, SectionProps>(
               <SectionFlex>
                 {props.image && (
                   <SectionFlexItem position="left">
-                    {props.image.map(image => (
-                      <Image
-                        key={`${title} design-image`}
-                        alt={`${title} design image`}
-                        className="devops-process__image design-image"
-                        height={332}
-                        src={image}
-                        width={304}
-                      />
-                    ))}
+                    <Suspense>
+                      {props.image.map(image => (
+                        <Image
+                          key={`${title} design-image`}
+                          alt={`${title} design image`}
+                          className="devops-process__image design-image"
+                          height={332}
+                          src={image}
+                          width={304}
+                        />
+                      ))}
+                    </Suspense>
                     <Box
                       css={{
                         position: "absolute",

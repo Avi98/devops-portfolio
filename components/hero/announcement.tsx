@@ -32,7 +32,7 @@ export const StyledAnnouncement = styled("div", {
 })
 
 interface Props {
-  status: "New" | "Updated" | "Coming Soon" | "Popular"
+  status: "New" | "Updated" | "Coming Soon" | "Popular" | "Featured" | "Sale"
   text: string
   href: string
   hrefText: string

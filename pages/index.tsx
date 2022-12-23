@@ -27,7 +27,7 @@ const Page: NextPage = () => {
             style: "gradient",
           },
         ]}
-        description="We build digital things with a bunch of code and alot of coffee. Chances are you're here because you need a website, app, or seo services for your business."
+        description="We build websites and apps with an emphasis on search engine optimization (SEO) for clients that range from startups to enterprise companies. "
         gradientBorder={true}
         subtitle="Development"
         title="Web. App. Seo."
@@ -36,9 +36,11 @@ const Page: NextPage = () => {
       <ServiceCards />
       <TheProcess />
       <SEO
-        description={"Buchanan DevOps Index Description"}
+        description={
+          "We build websites and apps with an emphasis on search engine optimization (SEO) for clients that range from startups to enterprise companies. "
+        }
         keywords={""}
-        title={"Buchanan DevOps Index Title"}
+        title={"Web. App. Seo."}
       />
     </>
   )
