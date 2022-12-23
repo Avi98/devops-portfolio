@@ -62,7 +62,7 @@ export const Hero = ({
   return (
     <StyledHero>
       {image ? (
-        <StyledHeroImg alt={title} src={image} />
+        <StyledHeroImg alt={title} sizes={type} src={image} />
       ) : announcement ? (
         <Announcement
           href={announcement.href}

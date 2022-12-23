@@ -60,7 +60,13 @@ const SocialCard: FC<SocialCardProps> = ({ className, css, as, ...props }) => {
       <ul className="social-card__social-links">
         {menu.socialLinks.map((link, index) => (
           <li key={index}>
-            <Link href={link.href} target="_blank" rel="noopener noreferrer">
+            <Link
+              title={link.title}
+              id={`social-card__${link.id}`}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {link.icon}
             </Link>
           </li>

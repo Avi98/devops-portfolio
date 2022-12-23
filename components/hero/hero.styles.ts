@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 import { keyframes, styled, VariantProps } from "@/theme/stitches.config"
 
 export const animatedText = keyframes({
@@ -87,12 +89,28 @@ export const StyledHero = styled("section", {
   },
 })
 
-export const StyledHeroImg = styled("img", {
-  height: "70px",
-  "@xsMax": {
-    height: "40px",
-  },
+export const StyledHeroImg = styled(Image, {
   textAlign: "-webkit-center",
+  variants: {
+    ResizeObserverSize: {
+      "web-design": {
+        width: "282px",
+        height: "70px",
+        "@xsMax": {
+          width: "161px",
+          height: "40px",
+        },
+      },
+      "app-development": {
+        width: "282px",
+        height: "70px",
+        "@xsMax": {
+          width: "161px",
+          height: "40px",
+        },
+      },
+    },
+  },
 })
 
 export const StyledGradientBorder = styled("span", {

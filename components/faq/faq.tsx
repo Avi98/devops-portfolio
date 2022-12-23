@@ -2,7 +2,7 @@ import { FC } from "react"
 
 import { CSS } from "@/theme/stitches.config"
 
-import { StyledFaq, StyledFaqTitle } from "./faq.styles"
+import { StyledFaq, StyledFaqContainer, StyledFaqTitle } from "./faq.styles"
 
 interface Props {
   className?: string
@@ -14,8 +14,10 @@ interface Props {
 const Faq: FC<Props> = ({ className, children, css, title }) => {
   return (
     <StyledFaq className={className} css={css}>
-      <StyledFaqTitle>{title}</StyledFaqTitle>
-      {children}
+      <StyledFaqContainer>
+        <StyledFaqTitle>{title}</StyledFaqTitle>
+        {children}
+      </StyledFaqContainer>
     </StyledFaq>
   )
 }
