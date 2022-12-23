@@ -7,11 +7,4 @@ export interface PageSeo {
     | "digital-marketing"
     | "work-portfolio"
     | "contact"
-    | "seo-audit"
-    | "request-estimate"
-    | string
-  title: string
-  description: string
-  keywords: string
-  image: string
 }
