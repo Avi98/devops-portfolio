@@ -2,6 +2,8 @@ import { useRouter } from "next/router"
 
 import clsx from "clsx"
 
+import { useMediaQuery } from "@/hooks/use-media-query"
+
 import Container from "../container"
 import Announcement from "./announcement"
 import {
@@ -59,10 +61,17 @@ export const Hero = ({
     router.push(buttonGroup)
   }
 
+  const isSM = useMediaQuery(650)
+
   return (
     <StyledHero>
       {image ? (
-        <StyledHeroImg alt={title} sizes={type} src={image} />
+        <StyledHeroImg
+          alt={title}
+          height={isSM ? 40 : 70}
+          src={image}
+          width={isSM ? 161 : 282}
+        />
       ) : announcement ? (
         <Announcement
           href={announcement.href}

@@ -10,6 +10,7 @@ export interface IconProps {
   onClick?: () => void
   className?: string
   css?: CSS
+  type?: "web-design" | "app-development" | "seo"
 }
 
 export const Icon = styled("svg", {})

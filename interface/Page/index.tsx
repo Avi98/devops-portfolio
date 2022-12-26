@@ -14,7 +14,7 @@ const Page: FC<Props> = ({ children, className }: PropsWithChildren<Props>) => {
   return (
     <div className={className}>
       <PageHeader />
-      <Container css={{ maxWidth: "1400px" }}>{children}</Container>
+      {children}
       <PageFooter />
     </div>
   )

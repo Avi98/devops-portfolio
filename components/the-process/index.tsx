@@ -155,7 +155,7 @@ const Section = React.forwardRef<HTMLDivElement, SectionProps>(
                 )}
                 {props.features && (
                   <SectionFlexItem position="right">
-                    <SectionFeatures>
+                    <SectionFeatures type="design">
                       {props.features.map(feature => (
                         <SectionFeature
                           key={feature.title}
@@ -191,13 +191,15 @@ const Section = React.forwardRef<HTMLDivElement, SectionProps>(
                         className={clsx("devops-process__feature-left")}
                         position="left"
                       >
-                        <Image
-                          alt={`${feature.title} buchanan devops process`}
-                          className="devops-process__image develop-image"
-                          height={400}
-                          src={feature.image as string}
-                          width={300}
-                        />
+                        <Suspense>
+                          <Image
+                            alt={`${feature.title} buchanan devops process`}
+                            className="devops-process__image develop-image"
+                            height={400}
+                            src={feature.image as string}
+                            width={300}
+                          />
+                        </Suspense>
                       </SectionFeature>
                       <SectionFeature
                         className={clsx(`${feature.id}__feature-center`)}

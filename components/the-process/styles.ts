@@ -39,23 +39,34 @@ export const SectionFlex = styled("div", {
   display: "flex",
   width: "100%",
   alignItems: "center",
+  flexDirection: "row",
+  "@smMax": {
+    flexDirection: "column",
+  },
 })
 
 export const SectionFlexItem = styled("div", {
   width: "45%",
+  "@smMax": {
+    width: "100%",
+  },
   variants: {
     position: {
       left: {
         marginRight: "10%",
+        "@smMax": {
+          marginRight: "0",
+        },
       },
-      right: {},
+      right: {
+        flexWrap: "wrap",
+      },
     },
   },
 })
 
 export const SectionFeatures = styled("div", {
   display: "flex",
-  width: "100%",
   flexDirection: "column",
 
   my: "2rem",
@@ -70,7 +81,7 @@ export const SectionFeatures = styled("div", {
         },
       },
       design: {
-        flexDirection: "row",
+        flexDirection: "column",
         justifyContent: "space-evenly",
         alignItems: "center",
         "@smMax": {
@@ -126,7 +137,9 @@ export const SectionFeature = styled("div", {
         flexDirection: "column",
         alignItems: "center",
         width: "10%",
-        "@smMax": {},
+        "@smMax": {
+          display: "none",
+        },
       },
     },
   },

@@ -74,6 +74,10 @@ export const StyledHero = styled("section", {
     width: "226px",
     height: "40px",
     animation: `4s ease 0s infinite normal none running ${animatedGradient}`,
+    "@xsMax": {
+      top: "15px",
+      width: "350px",
+    },
   },
   "& .gradient__background--seo": {
     background: "$seoGradient",
@@ -91,26 +95,6 @@ export const StyledHero = styled("section", {
 
 export const StyledHeroImg = styled(Image, {
   textAlign: "-webkit-center",
-  variants: {
-    ResizeObserverSize: {
-      "web-design": {
-        width: "282px",
-        height: "70px",
-        "@xsMax": {
-          width: "161px",
-          height: "40px",
-        },
-      },
-      "app-development": {
-        width: "282px",
-        height: "70px",
-        "@xsMax": {
-          width: "161px",
-          height: "40px",
-        },
-      },
-    },
-  },
 })
 
 export const StyledGradientBorder = styled("span", {

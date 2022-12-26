@@ -8,70 +8,76 @@ export const StyledSection = styled("section", {
   overflow: "hidden",
   background: "$background",
   paddingtop: "96px",
+
   variants: {
     border: {
-      top: {
-        "& .section__styles--top-border": {
-          display: "flex",
-          position: "absolute",
-          zIndex: "1",
-          top: "-400px",
-          left: "50%",
-          transform: "translate3d(-50%,0,0)",
-          width: "100%",
-        },
-        "& .section__styles--top-border-left": {
-          background: "linear-gradient(180deg, #e52983, #8430e3)",
-          opacity: "0.35",
-          filter: "blur(68px)",
-          width: "540px",
-          height: "480px",
-          transform: "translate3d(120px,0,0)",
-        },
-        "& .section__styles--top-border-right": {
-          background: "linear-gradient(180deg, #8430e3, #e52983)",
-          opacity: "0.35",
-          filter: "blur(68px)",
-          width: "540px",
-          height: "480px",
-          transform: "translate3d(-120px,0,0)",
-        },
-      },
-      bottom: {
-        "& .section__styles--bottom-border": {
-          display: "flex",
-          position: "absolute",
-          zIndex: "-1",
-          top: "unset",
-          left: "50%",
-          transform: "translate3d(-50%,0,0)",
-          width: "100%",
-        },
-        "& .section__styles--bottom-border-left": {
-          background: "linear-gradient(180deg, #e52983, #8430e3)",
-          opacity: "0.35",
-          filter: "blur(68px)",
-          width: "540px",
-          height: "480px",
-          transform: "translate3d(120px,0,0)",
-        },
-        "& .section__styles--bottom-border-right": {
-          background: "linear-gradient(180deg, #8430e3, #e52983)",
-          opacity: "0.35",
-          filter: "blur(68px)",
-          width: "540px",
-          height: "480px",
-          transform: "translate3d(-120px,0,0)",
-        },
-      },
+      top: {},
+      bottom: {},
     },
+  },
+
+  "& .section__styles--top-border": {
+    display: "flex",
+    position: "absolute",
+    justifyContent: "center",
+    zIndex: "1",
+    top: "-400px",
+    left: "50%",
+    transform: "translate3d(-50%,0,0)",
+    width: "100%",
+  },
+
+  "& .section__styles--top-border-left": {
+    background: "linear-gradient(180deg, #007cf0, #00dfd8)",
+    opacity: "0.35",
+    filter: "blur(68px)",
+    width: "540px",
+    height: "480px",
+    transform: "translate3d(120px,0,0)",
+  },
+
+  "& .section__styles--top-border-right": {
+    background: "linear-gradient(180deg, #00dfd8, #007cf0)",
+    opacity: "0.35",
+    filter: "blur(68px)",
+    width: "540px",
+    height: "480px",
+    transform: "translate3d(-120px,0,0)",
+  },
+
+  "& .section__styles--bottom-border": {
+    display: "flex",
+    position: "absolute",
+    zIndex: "-1",
+    top: "unset",
+    left: "50%",
+    transform: "translate3d(-50%,0,0)",
+    width: "100%",
+  },
+
+  "& .section__styles--bottom-border-left": {
+    background: "linear-gradient(180deg, #007cf0, #00dfd8)",
+    opacity: "0.35",
+    filter: "blur(68px)",
+    width: "540px",
+    height: "480px",
+    transform: "translate3d(120px,0,0)",
+  },
+
+  "& .section__styles--bottom-border-right": {
+    background: "linear-gradient(180deg, #00dfd8, #007cf0)",
+    opacity: "0.35",
+    filter: "blur(68px)",
+    width: "540px",
+    height: "480px",
+    transform: "translate3d(-120px,0,0)",
   },
   // bleed through styles from ./the-process/styles.ts
   "& .devops-process__section-header--optimize": {
     marginTop: "-200px",
     zIndex: "1",
     "@smMax": {
-      marginTop: "100px",
+      marginTop: "10px",
     },
   },
   "& .develop-feature-3__features--path-line": {

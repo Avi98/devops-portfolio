@@ -1,5 +1,3 @@
-import clsx from "clsx"
-
 import { CSS } from "@/theme/stitches.config"
 
 import {
@@ -39,15 +37,7 @@ const Section = ({
   ...props
 }: ServiceSectionProps) => {
   return (
-    <StyledSection
-      css={css}
-      {...props}
-      className={clsx(`section__styles`, {
-        "section__styles--top-border": border === "top",
-        "section__styles--bottom-border": border === "bottom",
-        className,
-      })}
-    >
+    <StyledSection css={css} {...props}>
       {border === "top" && (
         <div aria-hidden="true" className="section__styles--top-border">
           <div className="section__styles--top-border-left" />
