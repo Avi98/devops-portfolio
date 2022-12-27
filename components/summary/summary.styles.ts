@@ -19,7 +19,7 @@ export const StyledSummaryItem = styled("li", {
 
 export const StyledSummaryItemIcon = styled("div", {})
 
-export const StyledSummaryItemTitle = styled("h3", {
+export const StyledSummaryItemTitle = styled("h2", {
   fontSize: "1.5rem",
   fontWeight: "600",
   lineHeight: "2rem",
