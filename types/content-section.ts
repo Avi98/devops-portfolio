@@ -3,10 +3,10 @@ import React from "react"
 export interface ContentSectionProps {
   title: string
   description: string
+  position?: "left" | "right" | "center"
   image?: {
-    src: string
-    alt: string
-    position?: "left" | "right"
+    src: string | any
+    alt: string | any
   }
   link?: {
     text: string

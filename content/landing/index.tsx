@@ -19,7 +19,7 @@ export default {
     {
       title: "Search Engine Optimization",
       description:
-        "We build beautiful websites that are fast, secure, and easy to use.",
+        "We analyze keywords, organic traffic levels, backlinks and other factors to identify areas for improvement in order to help remediate any issues with organic performance on your website.",
       slug: "/search-engine-optimization",
       icon: "/icons/searchcode.svg",
       image: "/bgk/code-search-dark.svg",

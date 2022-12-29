@@ -155,6 +155,9 @@ export const defaultColors = {
   seoColorA: "#ff4d4d",
   seoColorB: "#f9cb28",
 
+  marketingColorA: "#ff4da8",
+  marketingColorB: "#a77bf3",
+
   // brand colors
   primaryLight: "$blue200",
   primaryLightHover: "$blue300",
@@ -227,6 +230,8 @@ export const defaultColors = {
   webGradient: "linear-gradient(90deg, $webColorA 0%, $webColorB 100%)",
   appGradient: "linear-gradient(90deg, $appColorA 0%, $appColorB 100%)",
   seoGradient: "linear-gradient(90deg, $seoColorA 0%, $seoColorB 100%)",
+  marketingGradient:
+    "linear-gradient(90deg, $marketingColorA 0%, $marketingColorB 100%)",
   textGradient: "linear-gradient(180deg,#fff,hsla(0,0%,100%,.75))",
   gradient:
     "linear-gradient(112deg, $cyan600 -63.59%, $pink600 -20.3%, $blue600 70.46%)",

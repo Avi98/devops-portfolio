@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 import clsx from "clsx"
 
 import { useMediaQuery } from "@/hooks/use-media-query"
+import { HeroProps } from "@/types/hero"
 
 import Container from "../container"
 import Announcement from "./announcement"
@@ -18,32 +19,6 @@ import {
   StyledHeroSubtitle,
   StyledHeroTitle,
 } from "./hero.styles"
-
-export interface HeroProps {
-  title: string
-  subtitle: string
-  image?: string
-  announcement?: {
-    text: string
-    status: "New" | "Updated" | "Coming Soon" | "Popular" | "Featured" | "Sale"
-    href: string
-    hrefText: string
-  }
-  description?: string
-  type: "web-design" | "app-development" | "seo" | "landing" | "legal"
-  gradientBorder?: boolean
-  buttonGroup?: {
-    text: string
-    link: string
-    style:
-      | "default"
-      | "gradient"
-      | "seo"
-      | "web-design"
-      | "app-development"
-      | "legal"
-  }[]
-}
 
 export const Hero = ({
   title,
@@ -132,6 +107,8 @@ export const Hero = ({
                           button.style === "web-design",
                         "gradient__background--app-development":
                           button.style === "app-development",
+                        "gradient__background--marketing":
+                          button.style === "marketing",
                         "gradient__background--legal": button.style === "legal",
                       })}
                     />

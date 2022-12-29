@@ -91,6 +91,10 @@ export const StyledHero = styled("section", {
     background: "$appGradient",
     opacity: 0.9,
   },
+  "& .gradient__background--marketing": {
+    background: "$marketingGradient",
+    opacity: 0.9,
+  },
 })
 
 export const StyledHeroImg = styled(Image, {
@@ -180,6 +184,12 @@ export const StyledHeroSubtitle = styled("div", {
         backgroundSize: "200%",
         animation: `10s linear 0s infinite normal forwards running ${animatedText}`,
       },
+      marketing: {
+        $$colorA: "#ff4da8",
+        $$colorB: "#a77bf3",
+        $$gradient: "linear-gradient(90deg, $$colorA 0%, $$colorB 100%)",
+        backgroundImage: "$$gradient",
+      },
       default: {
         $$colorA: "#007cf0",
         $$colorB: "#00dfd8",
@@ -196,7 +206,6 @@ export const StyledHeroSubtitle = styled("div", {
         backgroundImage: "$$gradient",
         animation: `10s linear 0s infinite normal forwards running ${animatedText}`,
       },
-      marketing: {},
       work: {},
     },
   },
@@ -378,6 +387,28 @@ export const HeroButton = styled("button", {
           display: "block",
           $$colorA: "#9A1FB8",
           $$colorB: "#FF0080",
+          backgroundImage: "linear-gradient(165deg, $$colorA , $$colorB)",
+          backgroundImageRepeat: "no-repeat",
+          borderImage: "linear-gradient(165deg, $$colorA , $$colorB)",
+          borderWidth: "12px solid",
+          position: "absolute",
+          width: "calc(100% + 2px)",
+          height: "calc(100% + 2px)",
+          borderRadius: "inherit",
+          zIndex: -1,
+          animation: `4s ease 0s infinite normal none running ${animatedGradient}`,
+        },
+      },
+      marketing: {
+        backgroundColor: "$background",
+        color: "$text",
+        position: "absolute",
+        cursor: "pointer",
+        "&::before": {
+          content: "''",
+          display: "block",
+          $$colorA: "#ff4da8",
+          $$colorB: "#a77bf3",
           backgroundImage: "linear-gradient(165deg, $$colorA , $$colorB)",
           backgroundImageRepeat: "no-repeat",
           borderImage: "linear-gradient(165deg, $$colorA , $$colorB)",

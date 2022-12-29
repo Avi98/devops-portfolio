@@ -41,6 +41,7 @@ interface Props {
     | "web-design"
     | "app-development"
     | "seo"
+    | "marketing"
     | "landing"
     | "default"
     | "legal"

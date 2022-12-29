@@ -1,7 +1,5 @@
 import { Hero } from "./hero"
 
-export type { HeroProps } from "./hero"
-
 export { StyledHero } from "./hero.styles"
 export { StyledHeroImg } from "./hero.styles"
 export { StyledHeroTitle } from "./hero.styles"

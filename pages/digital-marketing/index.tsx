@@ -15,14 +15,14 @@ const Page: NextPage = () => {
         {
           text: "Contact Us",
           link: "/contact",
-          style: "gradient",
+          style: "marketing",
         },
       ]}
       description="We build full stack applications with incredible performance and love for the craft. If you've made it this far, you're ready to unlock your full potential."
-      gradientBorder={true}
+      gradientBorder={false}
       subtitle="Marketing."
-      title="Direct Digital"
-      type="landing"
+      title="Search Engine"
+      type="marketing"
     />
   )
 }

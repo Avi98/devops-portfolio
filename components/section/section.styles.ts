@@ -12,66 +12,126 @@ export const StyledSection = styled("section", {
   variants: {
     border: {
       top: {},
-      bottom: {},
+      bottom: {
+        display: "flex",
+        flexDirection: "row",
+      },
+    },
+    type: {
+      "web-design": {
+        "& .section__styles--top-border": {
+          display: "flex",
+          position: "absolute",
+          justifyContent: "center",
+          zIndex: "1",
+          top: "-400px",
+          left: "50%",
+          transform: "translate3d(-50%,0,0)",
+          width: "100%",
+        },
+        "& .section__styles--top-border-left--web-design": {
+          background: "linear-gradient(180deg, #007cf0, #00dfd8)",
+          opacity: "0.35",
+          filter: "blur(68px)",
+          width: "540px",
+          height: "480px",
+          transform: "translate3d(120px,0,0)",
+        },
+
+        "& .section__styles--top-border-right--web-design": {
+          background: "linear-gradient(180deg, #00dfd8, #007cf0)",
+          opacity: "0.35",
+          filter: "blur(68px)",
+          width: "540px",
+          height: "480px",
+          transform: "translate3d(-120px,0,0)",
+        },
+        "& .section__styles--bottom-border": {
+          display: "flex",
+          position: "absolute",
+          zIndex: "0",
+          top: "unset",
+          left: "50%",
+          transform: "translate3d(-50%,0,0)",
+          width: "100%",
+        },
+        "& .section__styles--bottom-border-left": {
+          background: "linear-gradient(180deg, #007cf0, #00dfd8)",
+          opacity: "0.35",
+          filter: "blur(68px)",
+          width: "540px",
+          height: "480px",
+          transform: "translate3d(120px,0,0)",
+        },
+
+        "& .section__styles--bottom-border-right": {
+          background: "linear-gradient(180deg, #00dfd8, #007cf0)",
+          opacity: "0.35",
+          filter: "blur(68px)",
+          width: "540px",
+          height: "480px",
+          transform: "translate3d(-120px,0,0)",
+        },
+      },
+      "app-development": {
+        "& .section__styles--top-border": {
+          display: "flex",
+          position: "absolute",
+          justifyContent: "center",
+          zIndex: "1",
+          top: "-400px",
+          left: "50%",
+          transform: "translate3d(-50%,0,0)",
+          width: "100%",
+        },
+        "& .section__styles--top-border-left--app-development": {
+          background: "linear-gradient(180deg, #9A1FB8, #FF0080)",
+          opacity: "0.35",
+          filter: "blur(68px)",
+          width: "540px",
+          height: "480px",
+          transform: "translate3d(120px,0,0)",
+        },
+        "& .section__styles--top-border-right--app-development": {
+          background: "linear-gradient(180deg, #FF0080, #9A1FB8)",
+          opacity: "0.35",
+          filter: "blur(68px)",
+          width: "540px",
+          height: "480px",
+          transform: "translate3d(-120px,0,0)",
+        },
+      },
+      seo: {
+        "& .section__styles--top-border": {
+          display: "flex",
+          position: "absolute",
+          justifyContent: "center",
+          zIndex: "1",
+          top: "-400px",
+          left: "50%",
+          transform: "translate3d(-50%,0,0)",
+          width: "100%",
+        },
+        "& .section__styles--top-border-left--seo": {
+          background: "linear-gradient(180deg, #ff4d4d, #f9cb28)",
+          opacity: "0.35",
+          filter: "blur(68px)",
+          width: "540px",
+          height: "480px",
+          transform: "translate3d(120px,0,0)",
+        },
+        "& .section__styles--top-border-right--seo": {
+          background: "linear-gradient(180deg, #f9cb28, #ff4d4d)",
+          opacity: "0.35",
+          filter: "blur(68px)",
+          width: "540px",
+          height: "480px",
+          transform: "translate3d(-120px,0,0)",
+        },
+      },
     },
   },
 
-  "& .section__styles--top-border": {
-    display: "flex",
-    position: "absolute",
-    justifyContent: "center",
-    zIndex: "1",
-    top: "-400px",
-    left: "50%",
-    transform: "translate3d(-50%,0,0)",
-    width: "100%",
-  },
-
-  "& .section__styles--top-border-left": {
-    background: "linear-gradient(180deg, #007cf0, #00dfd8)",
-    opacity: "0.35",
-    filter: "blur(68px)",
-    width: "540px",
-    height: "480px",
-    transform: "translate3d(120px,0,0)",
-  },
-
-  "& .section__styles--top-border-right": {
-    background: "linear-gradient(180deg, #00dfd8, #007cf0)",
-    opacity: "0.35",
-    filter: "blur(68px)",
-    width: "540px",
-    height: "480px",
-    transform: "translate3d(-120px,0,0)",
-  },
-
-  "& .section__styles--bottom-border": {
-    display: "flex",
-    position: "absolute",
-    zIndex: "-1",
-    top: "unset",
-    left: "50%",
-    transform: "translate3d(-50%,0,0)",
-    width: "100%",
-  },
-
-  "& .section__styles--bottom-border-left": {
-    background: "linear-gradient(180deg, #007cf0, #00dfd8)",
-    opacity: "0.35",
-    filter: "blur(68px)",
-    width: "540px",
-    height: "480px",
-    transform: "translate3d(120px,0,0)",
-  },
-
-  "& .section__styles--bottom-border-right": {
-    background: "linear-gradient(180deg, #00dfd8, #007cf0)",
-    opacity: "0.35",
-    filter: "blur(68px)",
-    width: "540px",
-    height: "480px",
-    transform: "translate3d(-120px,0,0)",
-  },
   // bleed through styles from ./the-process/styles.ts
   "& .devops-process__section-header--optimize": {
     marginTop: "-200px",

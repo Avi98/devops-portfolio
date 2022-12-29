@@ -19,6 +19,9 @@ export * from "./collapse"
 export { default as Container } from "./container"
 export * from "./container"
 
+export { default as ContentSection } from "./content-section"
+export * from "./content-section"
+
 export { default as Divider } from "./divider"
 export * from "./divider"
 
@@ -69,6 +72,7 @@ export { default as Spacer } from "./spacer"
 export * from "./spacer"
 
 export { default as TheProcess } from "./the-process"
+export * from "./the-process"
 
 export { default as Text } from "./text"
 export * from "./text"

@@ -72,7 +72,7 @@ const process = [
         title: "Agile Development and Operations (DevOps)",
         description:
           "Agile development focuses on delivering value through rapid iterations with continuous feedback from stakeholders throughout the process. ",
-        icon: "/icons/blue/devops-blue.svg",
+        icon: "/icons/purple/devops.svg",
         image: "/content/monitoring.avif",
       },
       {
@@ -80,7 +80,7 @@ const process = [
         title: "Backend Development",
         description:
           "Building the backend of an application requires a database to store data, a server to handle requests from users, and an API (Application Programming Interface) as the bridge between the two. ",
-        icon: "/icons/blue/backend.svg",
+        icon: "/icons/purple/backend.svg",
         image: "/content/code.svg",
       },
       {
@@ -88,7 +88,7 @@ const process = [
         title: "CI/CD Production Application",
         description:
           "The continuous integration (CI) process allows us to integrate changes asynchronously with our MVP. This enables us to continuously deliver (CD) updates and improvements, allowing for faster iteration cycle. ",
-        icon: "/icons/blue/matrix.svg",
+        icon: "/icons/purple/matrix.svg",
         image: "/content/people.svg",
       },
     ],

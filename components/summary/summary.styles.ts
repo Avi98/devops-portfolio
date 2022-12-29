@@ -7,6 +7,7 @@ export const StyledSummaryList = styled("ul", {
   "@smMax": {
     flexDirection: "column",
     textAlign: "center",
+    alignItems: "center",
   },
 })
 

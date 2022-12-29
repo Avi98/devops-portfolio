@@ -6,6 +6,12 @@ import SEO from "@/interface/Common/SEO"
 
 const Hero = dynamic(() => import("@/components/hero"))
 const Summary = dynamic(() => import("@/components/summary"))
+const WebDesignContent = dynamic(
+  () => import("@/interface/Sections/Web/WebDesignContent")
+)
+const Testimonial = dynamic(
+  () => import("@/components/testimonial/testimonial")
+)
 
 const Page: NextPage = () => {
   return (
@@ -14,27 +20,33 @@ const Page: NextPage = () => {
         buttonGroup={[
           {
             text: "Experience Matters",
-            link: "",
+            link: "#style-and-substance",
             style: "default",
           },
           {
             text: "Style with Substance",
-            link: "/search-engine-optimization#seo-audit",
+            link: "#testimonials",
             style: "web-design",
           },
         ]}
-        description="I design and build websites that are fast, secure, and easy to use."
+        description={webdesign.seo.description}
         image="/content/wdhero.svg"
         subtitle="Designer."
         title="Website"
         type={"web-design"}
       />
-      <Summary item={webdesign.summaryInfo} />
-      <SEO
-        description={webdesign.seo.description}
-        keywords={webdesign.seo.keywords}
-        title={webdesign.seo.title}
+      <Summary
+        id="style-and-substance"
+        item={webdesign.summaryInfo}
+        type="web-design"
       />
+      <WebDesignContent />
+      <Testimonial
+        id="testimonials"
+        item={webdesign.testimonials}
+        type="web-design"
+      />
+      <SEO {...webdesign.seo} />
     </>
   )
 }

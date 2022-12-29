@@ -9,11 +9,18 @@ import { StyledSummaryList } from "./summary.styles"
 
 interface Props {
   item: SummaryItemProps[]
+  type?: "web-design" | "app-development" | "seo"
+  id?: string
 }
 
-const SummarySection: FC<Props> = ({ item }) => {
+const SummarySection: FC<Props> = ({ item, type, id }) => {
   return (
-    <Section border="top" css={{ backgroundColor: "$background" }}>
+    <Section
+      border="top"
+      css={{ backgroundColor: "$background" }}
+      id={id}
+      type={type}
+    >
       <Container css={{ maxWidth: "1248px" }}>
         <StyledSummaryList>
           {item.map(item => (
