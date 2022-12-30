@@ -1,6 +1,7 @@
 import React from "react"
 
 export interface ContentSectionProps {
+  id?: string
   title: string
   description: string
   position?: "left" | "right" | "center"

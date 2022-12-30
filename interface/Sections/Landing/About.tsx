@@ -1,6 +1,6 @@
 import { FC } from "react"
 
-import { StyledSection } from "@/components"
+import StyledSection from "@/components/section"
 import landing from "@/content/landing"
 
 const About: FC = () => {

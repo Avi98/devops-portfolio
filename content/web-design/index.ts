@@ -38,7 +38,7 @@ export default {
   contentInfo: [
     {
       id: "web-design_content-item--1",
-      position: "right",
+      position: "left",
       title: "Rich Experiences",
       description:
         "We build beautiful websites that are fast, secure, and easy to use. Our web design services include custom website design, website development, and website maintenance.",
@@ -51,7 +51,7 @@ export default {
     {
       id: "web-design_content-item--2",
       title: "E-Commerce",
-      position: "left",
+      position: "right",
       description:
         "We build beautiful websites that are fast, secure, and easy to use. Our web design services include custom website design, website development, and website maintenance.",
       image: {

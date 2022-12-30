@@ -4,7 +4,7 @@ import React from "react"
 import menu from "@/content/menu"
 import { CSS } from "@/theme/stitches.config"
 
-import { Logo } from ".."
+import Logo from "../nav/logo"
 import {
   StyledMenuButton,
   StyledMenuExpanded,

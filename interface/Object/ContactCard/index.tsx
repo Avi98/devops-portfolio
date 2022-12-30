@@ -3,7 +3,7 @@ import { FC } from "react"
 
 import clsx from "clsx"
 
-import { At, Link, Phone } from "@/components"
+import Link from "@/components/link"
 import { CSS, VariantProps } from "@/theme/stitches.config"
 
 import { StyledContactCard } from "./contact-card.styles"

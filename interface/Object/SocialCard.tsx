@@ -2,7 +2,7 @@ import { FC } from "react"
 
 import clsx from "clsx"
 
-import { Link } from "@/components"
+import Link from "@/components/link"
 import menu from "@/content/menu"
 import { CSS, styled, VariantProps } from "@/theme/stitches.config"
 

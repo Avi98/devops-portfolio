@@ -1,9 +1,17 @@
+import dynamic from "next/dynamic"
 import { FC } from "react"
 
 import clsx from "clsx"
 
-import { Container, MobileMenu, Nav } from "@/components"
 import { useMediaQuery } from "@/hooks/use-media-query"
+
+const Nav = dynamic(() => import("@/components/nav"), {
+  ssr: false,
+})
+
+const MobileMenu = dynamic(() => import("@/components/mobile"), {
+  ssr: false,
+})
 
 interface Props {
   className?: string

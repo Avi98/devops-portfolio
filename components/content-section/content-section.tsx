@@ -20,53 +20,27 @@ const ContentSection: FC<ContentProps> = ({ children, ...props }) => {
     <StyledContentSection
       className={clsx("content-section")}
       position={props.position}
-      {...props}
     >
-      {props.position === "left" && (
-        <>
-          <StyledContent className={clsx("content-section__content")}>
-            <StyledContentTitle className={clsx("content-section__title")}>
-              {props.title}
-            </StyledContentTitle>
-            <StyledContentText className={clsx("content-section__text")}>
-              {props.description}
-            </StyledContentText>
-          </StyledContent>
-          <StyledContent className={clsx("content-section__content")}>
-            {props.gradient && (
-              <div className={clsx("content-section__gradient")} />
-            )}
-            <StyledContentImage
-              alt={props.image?.alt}
-              className={clsx("content-section__image")}
-              height={305}
-              src={props.image?.src}
-              width={479}
-            />
-          </StyledContent>
-        </>
-      )}
-      {props.position === "right" && (
-        <>
-          <StyledContent className={clsx("content-section__content")}>
-            <StyledContentImage
-              alt={props.image?.alt}
-              className={clsx("content-section__image")}
-              height={305}
-              src={props.image?.src}
-              width={479}
-            />
-          </StyledContent>
-          <StyledContent className={clsx("content-section__content")}>
-            <StyledContentTitle className={clsx("content-section__title")}>
-              {props.title}
-            </StyledContentTitle>
-            <StyledContentText className={clsx("content-section__text")}>
-              {props.description}
-            </StyledContentText>
-          </StyledContent>
-        </>
-      )}
+      <StyledContent className={clsx("content-section__content")}>
+        <StyledContentTitle className={clsx("content-section__title")}>
+          {props.title}
+        </StyledContentTitle>
+        <StyledContentText className={clsx("content-section__text")}>
+          {props.description}
+        </StyledContentText>
+      </StyledContent>
+      <StyledContent className={clsx("content-section__content")}>
+        {props.gradient && (
+          <div className={clsx("content-section__gradient")} />
+        )}
+        <StyledContentImage
+          alt={props.image?.alt}
+          className={clsx("content-section__image")}
+          height={305}
+          src={props.image?.src}
+          width={479}
+        />
+      </StyledContent>
     </StyledContentSection>
   )
 }

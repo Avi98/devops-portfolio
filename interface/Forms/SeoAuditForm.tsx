@@ -10,7 +10,10 @@ import {
 
 import useAxios from "axios-hooks"
 
-import { Button, Grid, Input, Text, Textarea } from "@/components"
+import Button from "@/components/button"
+import Grid from "@/components/grid"
+import Input from "@/components/input"
+import Textarea from "@/components/textarea"
 import useInput from "@/utils/use-input"
 
 interface Props {
@@ -89,130 +92,110 @@ const SeoAuditForm: FC<Props> = ({ type }) => {
     setPageUri(window.location.href)
   })
 
-  const handlePortfolio = () => {
-    router.push("/portfolio")
-  }
-
   return (
     <>
-      {!data?.success ? (
-        <Grid.Container gap={1.5} css={{ mt: "4px" }}>
-          <Grid xs={6}>
-            <Input
-              bordered
-              fullWidth
-              aria-label="First Name"
-              type={"text"}
-              placeholder={"First Name"}
-              value={firstname}
-              onChange={(e: { target: { value: SetStateAction<string> } }) =>
-                setFirstname(e.target.value)
-              }
-            />
-          </Grid>
-          <Grid xs={6}>
-            <Input
-              bordered
-              fullWidth
-              aria-label="Last Name"
-              type={"text"}
-              placeholder={"Last Name"}
-              value={lastname}
-              onChange={(e: { target: { value: SetStateAction<string> } }) =>
-                setLastname(e.target.value)
-              }
-            />
-          </Grid>
-          <Grid xs={12}>
-            <Input
-              {...bindings}
-              bordered
-              fullWidth
-              clearable
-              shadow={false}
-              onClearClick={reset}
-              status={helper?.color as any}
-              color={helper?.color as any}
-              helperColor={helper?.color as any}
-              helperText={helper?.text as any}
-              aria-label="Email"
-              type={"email"}
-              placeholder={"Email"}
-              value={email}
-              onChange={(e: { target: { value: SetStateAction<string> } }) =>
-                setEmail(e.target.value)
-              }
-            />
-          </Grid>
-          <Grid xs={12}>
-            <Input
-              bordered
-              fullWidth
-              aria-label="Phone"
-              type={"tel"}
-              placeholder={"Phone"}
-              value={phone}
-              onChange={(e: { target: { value: SetStateAction<string> } }) =>
-                setPhone(e.target.value)
-              }
-            />
-          </Grid>
-          <Grid xs={12}>
-            <Input
-              bordered
-              fullWidth
-              aria-label="Company"
-              type={"text"}
-              placeholder={"Company"}
-              value={company}
-              onChange={(e: { target: { value: SetStateAction<string> } }) =>
-                setCompany(e.target.value)
-              }
-            />
-          </Grid>
-          <Grid xs={12}>
-            <Textarea
-              bordered
-              minRows={5}
-              fullWidth
-              aria-label="Message"
-              placeholder={"Message"}
-              value={message}
-              onChange={(e: { target: { value: SetStateAction<string> } }) =>
-                setMessage(e.target.value)
-              }
-            />
-          </Grid>
-          <Grid xs={12} sm={12} md={12}>
-            <Button
-              aria-label="Submit"
-              auto
-              flat
-              ghost
-              color={"success"}
-              type={"submit"}
-              disabled={loading}
-              onClick={() => refetch()}
-            >
-              Submit
-            </Button>
-          </Grid>
-        </Grid.Container>
-      ) : (
-        <Fragment>
-          <Grid.Container css={{ mt: "$10" }}>
-            <Grid xs={12}>
-              <Text>
-                Thank you for your interest in our services. We will be in touch
-                shortly.
-              </Text>
-              <Button color="success" auto onClick={handlePortfolio}>
-                Portfolio
-              </Button>
-            </Grid>
-          </Grid.Container>
-        </Fragment>
-      )}
+      <Grid.Container gap={1.5} css={{ mt: "4px" }}>
+        <Grid xs={6}>
+          <Input
+            bordered
+            fullWidth
+            aria-label="First Name"
+            type={"text"}
+            placeholder={"First Name"}
+            value={firstname}
+            onChange={(e: { target: { value: SetStateAction<string> } }) =>
+              setFirstname(e.target.value)
+            }
+          />
+        </Grid>
+        <Grid xs={6}>
+          <Input
+            bordered
+            fullWidth
+            aria-label="Last Name"
+            type={"text"}
+            placeholder={"Last Name"}
+            value={lastname}
+            onChange={(e: { target: { value: SetStateAction<string> } }) =>
+              setLastname(e.target.value)
+            }
+          />
+        </Grid>
+        <Grid xs={12}>
+          <Input
+            {...bindings}
+            bordered
+            fullWidth
+            clearable
+            shadow={false}
+            onClearClick={reset}
+            status={helper?.color as any}
+            color={helper?.color as any}
+            helperColor={helper?.color as any}
+            helperText={helper?.text as any}
+            aria-label="Email"
+            type={"email"}
+            placeholder={"Email"}
+            value={email}
+            onChange={(e: { target: { value: SetStateAction<string> } }) =>
+              setEmail(e.target.value)
+            }
+          />
+        </Grid>
+        <Grid xs={12}>
+          <Input
+            bordered
+            fullWidth
+            aria-label="Phone"
+            type={"tel"}
+            placeholder={"Phone"}
+            value={phone}
+            onChange={(e: { target: { value: SetStateAction<string> } }) =>
+              setPhone(e.target.value)
+            }
+          />
+        </Grid>
+        <Grid xs={12}>
+          <Input
+            bordered
+            fullWidth
+            aria-label="Company"
+            type={"text"}
+            placeholder={"Company"}
+            value={company}
+            onChange={(e: { target: { value: SetStateAction<string> } }) =>
+              setCompany(e.target.value)
+            }
+          />
+        </Grid>
+        <Grid xs={12}>
+          <Textarea
+            bordered
+            minRows={5}
+            fullWidth
+            aria-label="Message"
+            placeholder={"Message"}
+            value={message}
+            onChange={(e: { target: { value: SetStateAction<string> } }) =>
+              setMessage(e.target.value)
+            }
+          />
+        </Grid>
+        <Grid xs={12} sm={12} md={12}>
+          <Button
+            aria-label="Submit"
+            auto
+            flat
+            ghost
+            color={"success"}
+            type={"submit"}
+            disabled={loading}
+            onClick={() => refetch()}
+          >
+            Submit
+          </Button>
+        </Grid>
+      </Grid.Container>
     </>
   )
 }

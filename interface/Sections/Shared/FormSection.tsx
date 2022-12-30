@@ -1,7 +1,8 @@
 import dynamic from "next/dynamic"
 import { FC, PropsWithChildren } from "react"
 
-import { Grid, Section, StyledSectionSubtitle } from "@/components"
+import Grid from "@/components/grid"
+import Section from "@/components/section"
 import menu from "@/content/menu"
 import { useMediaQuery } from "@/hooks/use-media-query"
 
@@ -31,6 +32,7 @@ const FormSection: FC<PropsWithChildren<Props>> = ({
       description={description}
       css={{
         textAlign: "-webkit-center",
+        marginTop: "100px",
       }}
     >
       <Grid.Container

@@ -1,4 +1,4 @@
-import { Github, LinkedIn, Mail, Twitter } from "@/components"
+import { Github, LinkedIn, Mail, Twitter } from "@/components/icons"
 
 export interface NavLinkProps {
   id: string

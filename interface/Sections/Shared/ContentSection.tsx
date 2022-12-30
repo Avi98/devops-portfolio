@@ -2,7 +2,7 @@ import { FC } from "react"
 
 import clsx from "clsx"
 
-import { Section } from "@/components"
+import Section from "@/components/section"
 import { CSS } from "@/theme"
 
 interface Props {

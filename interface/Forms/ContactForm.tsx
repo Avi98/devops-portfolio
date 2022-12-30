@@ -3,7 +3,10 @@ import React from "react"
 
 import useAxios from "axios-hooks"
 
-import { Button, Grid, Input, Mail, Textarea } from "@/components"
+import Button from "@/components/button"
+import Grid from "@/components/grid"
+import Input from "@/components/input"
+import Textarea from "@/components/textarea"
 import { pulse } from "@/utils/animations"
 import useInput from "@/utils/use-input"
 

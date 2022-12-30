@@ -155,6 +155,11 @@ export const defaultColors = {
   seoColorA: "#ff4d4d",
   seoColorB: "#f9cb28",
 
+  codeBackground: "#010101",
+  codeComment: "$accents6",
+  codeCopyIconColor: "$accents7",
+  codeHighlight: "hsl(0, 0%, 15%)",
+
   marketingColorA: "#ff4da8",
   marketingColorB: "#a77bf3",
 

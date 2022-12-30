@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic"
 import { FC } from "react"
 
-import { Container } from "@/components"
+import Container from "@/components/container"
 import appContent from "@/content/app-development"
 
 const ContentSection = dynamic(() => import("@/components/content-section"))

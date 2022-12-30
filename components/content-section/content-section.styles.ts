@@ -4,7 +4,6 @@ import { styled, VariantProps } from "@/theme/stitches.config"
 
 export const StyledContentSection = styled("section", {
   display: "flex",
-  flexDirection: "row",
   textAlign: "left",
   alignItems: "center",
   "@smMax": {
@@ -13,6 +12,7 @@ export const StyledContentSection = styled("section", {
   variants: {
     position: {
       left: {
+        flexDirection: "row",
         marginTop: "143px",
         "& .content-section__image": {
           alignSelf: "flex-end",
@@ -26,9 +26,16 @@ export const StyledContentSection = styled("section", {
       },
       center: {},
       right: {
+        flexDirection: "row-reverse",
         marginTop: "96px",
+        "& .content-section__image": {
+          alignSelf: "flex-start",
+        },
         "@smMax": {
-          flexDirection: "column-reverse",
+          flexDirection: "column",
+          "& .content-section__image": {
+            alignSelf: "center",
+          },
         },
       },
     },

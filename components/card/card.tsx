@@ -5,7 +5,8 @@ import { CSS } from "@/theme/stitches.config"
 import { __DEV__ } from "@/utils/assertion"
 import Drip from "@/utils/drip"
 
-import { Divider, Image } from "../index"
+import Divider from "../divider"
+import Image from "../image"
 import {
   StyledCardBody as CardBody,
   StyledCardFooter as CardFooter,

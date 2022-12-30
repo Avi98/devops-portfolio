@@ -2,7 +2,7 @@ import { FC } from "react"
 
 import process from "@/content/landing/process"
 
-import { ExploreLabel, HeroSpan, HeroTitle } from "./styles"
+import { ExploreLabel, HeroSpan, HeroTitle } from "./process.styles"
 
 const SectionHero: FC = () => {
   return (

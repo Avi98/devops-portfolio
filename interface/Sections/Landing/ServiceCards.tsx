@@ -2,7 +2,9 @@ import { FC } from "react"
 
 import clsx from "clsx"
 
-import { Container, Grid, StyledSection } from "@/components"
+import Container from "@/components/container"
+import Grid from "@/components/grid"
+import StyledSection from "@/components/section"
 import landing from "@/content/landing"
 import { ServiceCard } from "@/interface/Object/ServiceCard"
 

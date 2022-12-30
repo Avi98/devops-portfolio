@@ -2,8 +2,10 @@ import { FC } from "react"
 
 import clsx from "clsx"
 
-import { Badge, Link } from "@/components"
 import { CSS, styled, VariantProps } from "@/theme/stitches.config"
+
+import Badge from "../badge"
+import Link from "../link"
 
 export const StyledAnnouncement = styled("div", {
   display: "flex",

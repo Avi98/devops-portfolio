@@ -21,7 +21,7 @@ import {
   SectionLabel,
   SectionSubTitle,
   SectionTitle,
-} from "./styles"
+} from "./process.styles"
 
 type SectionProps = React.ComponentPropsWithRef<"div"> &
   ProcessProps & { css?: CSS; gradient?: string }
