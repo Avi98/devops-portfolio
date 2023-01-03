@@ -11,26 +11,12 @@ const AppContent = dynamic(() => import("@/interface/Sections/App/AppContent"))
 const Page: NextPage = () => {
   return (
     <>
-      <Hero
-        buttonGroup={[
-          {
-            text: "Learn More",
-            link: "/web-design",
-            style: "default",
-          },
-          {
-            text: "Contact Us",
-            link: "/contact",
-            style: "app-development",
-          },
-        ]}
-        description={appInfo.seo.description}
-        image={"/content/fshero.svg"}
-        subtitle={"Development"}
-        title={"Full Stack App"}
-        type={"app-development"}
+      <Hero {...appInfo.hero} />
+      <Summary
+        id="cutting-edge-tech"
+        item={appInfo.summaryInfo}
+        type="app-development"
       />
-      <Summary item={appInfo.summaryInfo} type="app-development" />
       <AppContent />
       <SEO {...appInfo.seo} />
     </>

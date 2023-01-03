@@ -19,11 +19,6 @@ const ServiceCards: FC = () => {
                 <ServiceCard key={card.title} {...card} />
               </Grid>
             ))}
-            {landing.largeServiceCards.map(card => (
-              <Grid xs={12} sm={6} md={6}>
-                <ServiceCard {...card} />
-              </Grid>
-            ))}
           </Grid.Container>
         </Container>
       </StyledSection>

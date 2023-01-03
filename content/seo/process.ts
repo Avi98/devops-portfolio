@@ -1,54 +1,55 @@
 export default {
   heading: {
     id: "seo-process",
-    title: "The Process of SEO",
+    primaryTitle: "The Process of SEO",
     description: "",
   },
   process: [
     {
-      id: "seo-process-1" as any,
+      id: "technical-seo",
+      number: "1",
+      position: "left" as any,
       title: "Technical SEO",
       description: [
         "Technical search engine optimization (SEO) is an essential part of any successful digital marketing strategy. By optimizing your website for search engines, you can ensure that your business appears prominently in organic search engine results and attract more customers to your site.",
         "Technical SEO involves a range of activities such as improving page loading speed, making sure all pages are indexed by search engines, ensuring the correct use of keywords and meta tags throughout the website content, creating sitemaps to help navigate around the site effectively and ensuring proper redirects are implemented when necessary. Investing in technical SEO optimization will give you a competitive edge over other businesses who fail to optimize their websites properly.",
       ],
       image: {
-        src: "/analytics/seo-audit.avif",
+        src: "/content/seo_technical.avif",
         alt: "Technical SEO Image",
-        prev: "seo-process-6",
-        next: "seo-process-2",
       },
     },
     {
-      id: "seo-process-2" as any,
+      id: "search-engine-audit",
+      number: "2",
+      position: "right" as any,
       title: "Search Engine Audit",
       description: [
         "A search engine optimization audit (SEO Audit) is an essential tool to maximize your website's potential. It allows us to take a comprehensive look at your code, page structure, content and backlink profile in order to identify opportunities for improvement.",
         "By doing so we can set a baseline of performance metrics such as keyword rankings and organic traffic which will be used to measure progress over time. With our help you can make sure that you are getting the most out of your website by taking advantage of all possible optimization opportunities!",
       ],
       image: {
-        src: "/analytics/seo-audit.avif",
+        src: "/content/seo_audit_metrics.avif",
         alt: "Search Engine Audit Image",
-        prev: "seo-process-1",
-        next: "seo-process-3",
       },
     },
     {
-      id: "seo-process-3" as any,
+      id: "keyword-research",
+      number: "3",
+      position: "left" as any,
       title: "Keyword Research",
       description: [
         "Keyword research offers insights for understanding your target audience, popularity of specific terms and how receptive customers are to specific terms. Our team helps you identify the terms that are most relevant to business or products, as well as the volume of searches for those terms. This data can be used to create content that meets their needs and resonates with your customers, helping you drive more traffic to your website or online store. ",
         "Just as importantly, it allows us to understand customers underlying search intent- whether they’re looking for general information or ready to buy - so we can shape our content accordingly and maximize its impact on customer sales. Investing in keyword research will give you a huge advantage in terms of page authority, indexability, and significantly increasing your business or products visibility in the search engine results!",
       ],
       image: {
-        src: "/analytics/seo-audit.avif",
-        alt: "Keyword Research Image",
-        prev: "seo-process-2",
-        next: "seo-process-4",
+        src: "/content/seo_keyword_planning.avif",
+        alt: "Keyword Planning Research Image",
       },
     },
     {
-      id: "seo-process-4",
+      id: "seo-strategy",
+      number: "4",
       position: "right" as any,
       title: "SEO Strategy",
       description: [
@@ -57,38 +58,34 @@ export default {
         "Each business requires unique search engine marketing efforts. Whether it’s through a fully integrated approach or more specific tactics tailored to fit your needs. We'll work with you every step of the way, setting benchmarks and measuring success so that we can ensure our strategies are delivering results.",
       ],
       image: {
-        src: "/analytics/seo-audit.avif",
+        src: "/analytics/deep-learning.avif",
         alt: "SEO Strategy Image",
-        prev: "seo-process-3",
-        next: "seo-process-5",
       },
     },
     {
-      id: "seo-process-5",
+      id: "organic-marketing",
+      number: "5",
       title: "Organic Marketing",
       description: [
         "Organic marketing combined with a strong SEO foundation is the key to success in today's digital world. By taking an organic approach to your search presence, you can ensure that your brand will be found wherever potential customers are looking for it. With an experienced organic marketing expert covering content creation, partner brands, and digital public relation strategies, you can stay ahead of the competition and reach a larger audience than ever before.",
         "Organic marketing creates long-term relationships with customers while also giving them a better customer experience overall - something that is essential in today's competitive digital landscape! Organic marketing pays off big by boosting your brand without the absorbent marketing costs for traditional advertising campaigns.",
       ],
       image: {
-        src: "/analytics/seo-audit.avif",
+        src: "/analytics/merchandising-seo.avif",
         alt: "Organic Marketing Image",
-        prev: "seo-process-4",
-        next: "seo-process-6",
       },
     },
     {
-      id: "seo-process-6",
+      id: "measuring-reporting",
+      number: "6",
       title: "Measurement + Reporting",
       description: [
         "As your SEO partner we provide monthly analytics and metrics giving you insights that show brand lift along with where were making a measurable impact in the search engine results.",
         "We’re extremely transparent so you can see the progress we are making every month. We don't waste time or resources chasing vanity metrics or backlinks, but instead focus our efforts on strategies that will progressively increase brand lift and directly contribute to increased sales. We understand it takes time to see results in SEO, which is why we work hard to ensure each step of the process has tangible benefits for your business.",
       ],
       image: {
-        src: "/analytics/seo-audit.avif",
+        src: "/content/seo_measuring_reporting.avif",
         alt: "SEO Measuring and Reporting Image",
-        prev: "seo-process-5",
-        next: "seo-process-1",
       },
     },
   ],

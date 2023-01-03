@@ -68,7 +68,7 @@ export default {
       description:
         "By bringing together code, content, and context into an effective strategy, businesses can drive discovery and conversions. Not only will this help your website rank higher in organic search results, but it will also give you perpetual growth now and continuously for years to come. ",
       image: {
-        src: "/content/seo.svg",
+        src: "/content/seo_code_content_context.avif",
         alt: "Image of SEO Code, Context, and Content",
       },
       link: {
@@ -76,6 +76,24 @@ export default {
         href: "/services/seo",
       },
       gradient: "seoGradient",
+    },
+  ],
+
+  partners: [
+    {
+      title: "Google Premier Partner",
+      image: "/content/partners/seo/google.svg",
+      type: "image" as any,
+    },
+    {
+      title: "Hubspot Certified Partner",
+      image: "/content/partners/seo/hubspot.svg",
+      type: "image" as any,
+    },
+    {
+      title: "Microsoft Bing Partner",
+      image: "/content/partners/seo/microsoft.svg",
+      type: "image" as any,
     },
   ],
 

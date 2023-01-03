@@ -160,8 +160,8 @@ export const SectionFeature = styled("div", {
   //Process Section Features - Styled for specific content types related to develop section
 
   "& .devops-process__image": {
-    width: "80%",
-    height: "80%",
+    width: "100%",
+    height: "100%",
   },
 
   "& .design-image": {

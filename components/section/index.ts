@@ -11,4 +11,6 @@ export {
   StyledSectionBackground,
 } from "./section.styles"
 
+export { default as GradientHero } from "./gradient-hero"
+
 export default Section

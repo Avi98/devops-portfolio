@@ -1,7 +1,6 @@
 import { FC } from "react"
 
 import Container from "../container"
-import Section from "../section"
 import InfographicItem, { InfographicProps } from "./infographic-item"
 
 interface Props {
@@ -10,15 +9,13 @@ interface Props {
   type?: "web-design" | "app-development" | "seo"
 }
 
-const Infographic: FC<Props> = ({ item, id, type }) => {
+const Infographic: FC<Props> = ({ item }) => {
   return (
-    <Section border="bottom" id={id} type={type}>
-      <Container css={{ maxWidth: "1248px" }}>
-        {item.map(item => (
-          <InfographicItem key={item.title} {...item} />
-        ))}
-      </Container>
-    </Section>
+    <Container css={{ maxWidth: "1248px" }}>
+      {item.map(item => (
+        <InfographicItem key={item.title} {...item} />
+      ))}
+    </Container>
   )
 }
 

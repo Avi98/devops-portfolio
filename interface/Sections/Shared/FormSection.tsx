@@ -33,6 +33,7 @@ const FormSection: FC<PropsWithChildren<Props>> = ({
       css={{
         textAlign: "-webkit-center",
         marginTop: "100px",
+        marginBottom: "100px",
       }}
     >
       <Grid.Container

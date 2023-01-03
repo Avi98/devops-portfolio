@@ -22,6 +22,7 @@ export const StyledTestimonial = styled("div", {
   margin: "20px 20px",
   border: "1px solid $gray300",
   borderRadius: "10px",
+  maxWidth: "600px",
 })
 
 export const StyledTestimonialContent = styled("q", {

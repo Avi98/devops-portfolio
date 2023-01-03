@@ -5,7 +5,5 @@ export interface InfographicProps {
   image: {
     src: string
     alt: string
-    prev: string
-    next: string
   }
 }

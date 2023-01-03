@@ -36,9 +36,9 @@ const ContentSection: FC<ContentProps> = ({ children, ...props }) => {
         <StyledContentImage
           alt={props.image?.alt}
           className={clsx("content-section__image")}
-          height={305}
+          height={400}
           src={props.image?.src}
-          width={479}
+          width={640}
         />
       </StyledContent>
     </StyledContentSection>

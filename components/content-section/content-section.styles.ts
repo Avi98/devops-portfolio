@@ -69,7 +69,7 @@ export const StyledContentText = styled("p", {
 })
 
 export const StyledContentImage = styled(Image, {
-  width: "90%",
+  width: "95%",
   height: "auto",
   objectFit: "cover",
   objectPosition: "center",

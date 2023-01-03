@@ -9,9 +9,10 @@ export type ProcessProps = {
   features?: {
     id?: string
     title: string
-    description: string
+    description?: string
     icon?: string | any
     image?: string
+    type?: "text" | "image"
   }[]
   image?: string[]
   gradientBg: string
@@ -52,7 +53,7 @@ const process = [
         icon: "/icons/blue/status.svg",
       },
     ],
-    image: ["/content/bassnectar-unlimited.avif"],
+    image: ["/content/web_design_story.avif"],
     gradientBg: "/bgk/gradient/highlight.svg",
   },
   {
@@ -81,7 +82,7 @@ const process = [
         description:
           "Building the backend of an application requires a database to store data, a server to handle requests from users, and an API (Application Programming Interface) as the bridge between the two. ",
         icon: "/icons/purple/backend.svg",
-        image: "/content/code.svg",
+        image: "/content/backend_monorepo.avif",
       },
       {
         id: "develop-feature-3",
@@ -89,7 +90,7 @@ const process = [
         description:
           "The continuous integration (CI) process allows us to integrate changes asynchronously with our MVP. This enables us to continuously deliver (CD) updates and improvements, allowing for faster iteration cycle. ",
         icon: "/icons/purple/matrix.svg",
-        image: "/content/people.svg",
+        image: "/content/cicd_production_application.avif",
       },
     ],
   },
@@ -106,58 +107,43 @@ const process = [
     ],
     features: [
       {
-        id: "seo-audit",
-        title: "Target Market Business Analysis Audit",
-        description:
-          "Analysis of your target market and business to determine the best keywords to target and develop a strategy to rank higher in search engines.",
-        lines: "2-21",
-        prev: "merchandising-seo",
-        next: "deep-learning",
+        id: "technical-seo",
+        title: "Technical SEO",
+        image: "/icons/orange/seo-technical.svg",
+        type: "text",
       },
       {
-        id: "deep-learning",
-        title: "Keyword Research and Development",
-        description:
-          "Through deep learning, we will research the optimal keywords for your industry which see the highest Clickthrough rates (CTR).",
-        lines: "23-73",
-        prev: "seo-audit",
-        next: "comprehensive-reporting",
+        id: "search-engine-audit",
+        title: "Search Engine Audit",
+        image: "/icons/orange/seo-audit.svg",
+        type: "text",
       },
       {
-        id: "comprehensive-reporting",
-        title: "Comprehensive Reporting",
-        description:
-          "We provide a comprehensive report of your website’s SEO performance and recommendations for improvement each month based on our analytics.",
-        lines: "69-85",
-        prev: "deep-learning",
-        next: "customer-aquisition",
+        id: "keyword-research",
+        title: "Keyword Research",
+        image: "/icons/orange/seo-keyword.svg",
+        type: "text",
       },
       {
-        id: "customer-aquisition",
-        title: " Customer Acquisition",
-        description:
-          "We will help you acquire new customers through SEO and social media marketing. We will also help you retain your current customers.",
-        lines: "85-118",
-        prev: "comprehensive-reporting",
-        next: "merchandising-seo",
+        id: "seo-strategy",
+        title: "SEO Strategy",
+        image: "/icons/orange/seo-strategy.svg",
+        type: "text",
       },
       {
-        id: "merchandising-seo",
-        title: "Merchandising SEO.",
-        description:
-          "By applying merchandising SEO, we will help you increase your sales and revenue by optimizing your product pages and listings.",
-        lines: "85-118",
-        prev: "customer-aquisition",
-        next: "seo-audit",
+        id: "organic-marketing",
+        title: "Organic Marketing",
+        image: "/icons/orange/seo-organic.svg",
+        type: "text",
+      },
+      {
+        id: "measuring-reporting",
+        title: "Measuring + Reporting",
+        image: "/icons/orange/seo-measuring.svg",
+        type: "text",
       },
     ],
-    image: [
-      "/analytics/comprehensive-reporting.avif",
-      "/analytics/customer-aquisition.avif",
-      "/analytics/deep-learning.avif",
-      "public/analytics/merchandising-seo.avif",
-      "/analytics/seo-audit.avif",
-    ],
+    image: ["/analytics/comprehensive-reporting.avif"],
     gradientBg: "/bgk/gradient/highlight.svg",
   },
 ]

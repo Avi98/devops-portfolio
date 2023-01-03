@@ -5,10 +5,12 @@ import React, { Suspense } from "react"
 import clsx from "clsx"
 
 import { type ProcessProps } from "@/content/landing/process"
+import seo from "@/content/seo"
 import { useMediaQuery } from "@/hooks/use-media-query"
 import { CSS } from "@/theme/stitches.config"
 
 import Container from "../container"
+import GradientGrid from "../gradient-grid"
 import { Box } from "../primitives"
 import {
   PathLine,
@@ -175,7 +177,7 @@ const ProcessSection = React.forwardRef<HTMLDivElement, SectionProps>(
                             className="devops-process__image develop-image"
                             height={400}
                             src={feature.image as string}
-                            width={300}
+                            width={640}
                           />
                         </Suspense>
                       </SectionFeature>
@@ -220,21 +222,10 @@ const ProcessSection = React.forwardRef<HTMLDivElement, SectionProps>(
               </>
             )}
             {props.type === "optimize" && props.features && (
-              <SectionFlex>
-                {props.features.map(feature => (
-                  <SectionFlexItem key={feature.title}>
-                    <SectionFeatures>
-                      <SectionFeature
-                        key={feature.title}
-                        css={{ marginBottom: "$12" }}
-                      >
-                        <h5 key={feature.title}>{feature.title}</h5>
-                        <p key={feature.title}>{feature.description}</p>
-                      </SectionFeature>
-                    </SectionFeatures>
-                  </SectionFlexItem>
-                ))}
-              </SectionFlex>
+              <>
+                <GradientGrid item={props.features} size="small" />
+                <GradientGrid item={seo.partners} size="small" />
+              </>
             )}
           </Container>
         </SectionBody>

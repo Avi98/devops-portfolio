@@ -2,8 +2,13 @@ import { Box } from "@/components/primitives"
 import { styled, VariantProps } from "@/theme/stitches.config"
 
 export const StyledWindow = styled("div", {
-  width: "504px",
+  width: "100%",
   height: "auto",
+  maxHeight: "301px",
+  overflow: "scroll",
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
   "@smMax": {
     width: "100%",
   },

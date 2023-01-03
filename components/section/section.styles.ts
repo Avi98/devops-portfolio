@@ -184,6 +184,7 @@ export const StyledSectionDescription = styled("p", {
   fontSize: "1.25rem",
   lineHeight: "2rem",
   letterSpacing: "-.020625rem",
+  textAlign: "-webkit-center",
 })
 
 export const StyledSectionContent = styled("div", {})

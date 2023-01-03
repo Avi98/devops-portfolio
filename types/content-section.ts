@@ -10,8 +10,8 @@ export interface ContentSectionProps {
     alt: string | any
   }
   link?: {
-    text: string
-    href: string
+    text?: string
+    href?: string
   }
   gradient?:
     | "webGradient"
