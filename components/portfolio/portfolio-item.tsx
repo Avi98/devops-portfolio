@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { FC } from "react"
 
 import { PortfolioItemProps } from "@/types/portfolio-item"
@@ -6,6 +5,7 @@ import { PortfolioItemProps } from "@/types/portfolio-item"
 import Modal from "../modal"
 import useModal from "../modal/use-modal"
 import {
+  StyledModalImage,
   StyledPortfolioImage,
   StyledPortfolioItem,
   StyledPortfolioProps,
@@ -22,7 +22,7 @@ const PortfolioItem: FC<PortfolioProps> = ({ ...props }) => {
         onClick={() => setVisible(true)}
       >
         <div className="portfolio-item__content">
-          <h3 className="portfolio-item__title">{props.title}</h3>
+          <h2 className="portfolio-item__title">{props.title}</h2>
         </div>
         <StyledPortfolioImage
           alt={props.alt}
@@ -33,13 +33,12 @@ const PortfolioItem: FC<PortfolioProps> = ({ ...props }) => {
         />
       </StyledPortfolioItem>
       <Modal
-        blur
         aria-labelledby={props.title}
         width="fit-content"
         {...bindings}
         css={{
           padding: "0px",
-          borderRadius: "0px",
+
           boxShadow: "none",
         }}
       >
@@ -49,7 +48,7 @@ const PortfolioItem: FC<PortfolioProps> = ({ ...props }) => {
             borderRadius: "11px",
           }}
         >
-          <Image
+          <StyledModalImage
             alt={props.alt}
             height={880}
             src={props.image}

@@ -50,7 +50,12 @@ export const StyledPortfolioItem = styled("button", {
 
 export const StyledPortfolioImage = styled(Image, {
   width: "100%",
-  height: "100%",
+  height: "auto",
+})
+
+export const StyledModalImage = styled(Image, {
+  width: "100%",
+  height: "auto",
 })
 
 export type StyledPortfolioProps = VariantProps<typeof StyledPortfolio>
