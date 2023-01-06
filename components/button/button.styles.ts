@@ -11,6 +11,7 @@ export const StyledButton = styled(
     appearance: "none",
     boxSizing: "border-box",
     fontWeight: "$medium",
+    fontFamily: "inter",
     us: "none",
     lineHeight: "$sm",
     ta: "center",

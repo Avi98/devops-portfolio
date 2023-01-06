@@ -56,6 +56,7 @@ export const StyledPortfolioImage = styled(Image, {
 export const StyledModalImage = styled(Image, {
   width: "100%",
   height: "auto",
+  marginBottom: "0px",
 })
 
 export type StyledPortfolioProps = VariantProps<typeof StyledPortfolio>

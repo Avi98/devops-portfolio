@@ -1,6 +1,7 @@
 import { NextPage } from "next"
 import dynamic from "next/dynamic"
 
+import landing from "@/content/landing"
 import SEO from "@/interface/Common/SEO"
 
 const ServiceCards = dynamic(
@@ -14,25 +15,7 @@ const TheProcess = dynamic(() => import("@/components/the-process"))
 const Page: NextPage = () => {
   return (
     <>
-      <Hero
-        buttonGroup={[
-          {
-            text: "DevOps Process",
-            link: "/#the-devops-process",
-            style: "default",
-          },
-          {
-            text: "Contact Us",
-            link: "/contact",
-            style: "gradient",
-          },
-        ]}
-        description="We build websites and apps with an emphasis on search engine optimization (SEO) for clients that range from startups to enterprise companies. "
-        gradientBorder={true}
-        subtitle="Development"
-        title="Web. App. Seo."
-        type="landing"
-      />
+      <Hero {...landing.hero} />
       <ServiceCards />
       <TheProcess />
       <SEO

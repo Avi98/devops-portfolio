@@ -2,6 +2,7 @@ import { FC } from "react"
 
 import { PortfolioItemProps } from "@/types/portfolio-item"
 
+import Button from "../button"
 import Modal from "../modal"
 import useModal from "../modal/use-modal"
 import {
@@ -15,6 +16,11 @@ export type PortfolioProps = StyledPortfolioProps & PortfolioItemProps
 
 const PortfolioItem: FC<PortfolioProps> = ({ ...props }) => {
   const { setVisible, bindings } = useModal()
+
+  const handlePortfolioItem = () => {
+    window.open(props.url, "_blank")
+  }
+
   return (
     <>
       <StyledPortfolioItem
@@ -38,7 +44,6 @@ const PortfolioItem: FC<PortfolioProps> = ({ ...props }) => {
         {...bindings}
         css={{
           padding: "0px",
-
           boxShadow: "none",
         }}
       >
@@ -46,6 +51,7 @@ const PortfolioItem: FC<PortfolioProps> = ({ ...props }) => {
           css={{
             padding: "0px",
             borderRadius: "11px",
+            position: "relative",
           }}
         >
           <StyledModalImage
@@ -56,6 +62,19 @@ const PortfolioItem: FC<PortfolioProps> = ({ ...props }) => {
             onClick={() => setVisible(false)}
           />
         </Modal.Body>
+        <Modal.Footer>
+          <Button.Group
+            css={{
+              width: "100%",
+              zIndex: 1,
+              justifyContent: "center",
+            }}
+          >
+            <Button onClick={() => setVisible(false)}>Previous</Button>
+            <Button onClick={handlePortfolioItem}>{props.url}</Button>
+            <Button onClick={() => setVisible(false)}>Next</Button>
+          </Button.Group>
+        </Modal.Footer>
       </Modal>
     </>
   )

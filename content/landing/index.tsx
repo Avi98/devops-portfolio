@@ -1,4 +1,24 @@
 export default {
+  hero: {
+    buttonGroup: [
+      {
+        text: "DevOps Process",
+        link: "/#the-devops-process",
+        style: "default" as any,
+      },
+      {
+        text: "Contact Us",
+        link: "/contact",
+        style: "gradient" as any,
+      },
+    ],
+    description:
+      "We build websites and apps with an emphasis on search engine optimization (SEO) for clients that range from startups to enterprise companies.",
+    gradientBorder: true,
+    subtitle: "Operations.",
+    title: "Development",
+    type: "landing" as any,
+  },
   serviceCards: [
     {
       title: "Web Design",

@@ -89,7 +89,7 @@ export default {
         "The success of our MetLife Stadium web presence on the day of Super Bowl XLVIII was due in large part to the expertise and hosting knowledge provided by Buchanan DevOps. With their help, we were able to anticipate a massive influx of visitors and keep our site running at an optimal speed throughout the event. The traffic peaked shortly after halftime when nearly 84,000 users were visiting simultaneously - something that would not have been possible without Buchanan DevOps' guidance and solution implementation. We are extremely grateful for their assistance as it allowed us to meet all demands placed upon us during this major sporting event.",
       author: {
         name: "Nicole Fountain",
-        image: "/portfolio/case-studies/metlife/Metlife_Logo.avif",
+        image: "/content/people.svg",
       },
       company: "MetLife Stadium",
     },
