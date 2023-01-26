@@ -6,7 +6,7 @@ export default {
   seo: {
     title: "Web Design",
     description:
-      "Our website development services are tailored to deliver value for your business. We can provide everything from simple platform implementations to complete redesigns, bringing multiple teams together in order to build a solution that works best for you.",
+      "We understand that your brand is more than just a logo or slogan, it's an experience. That's why we focus on the experience when designing user interfaces.",
     keywords:
       "web design, website design, website development, website designer, website development company, website design company, website design services, website development services, website design agency, website development agency, website design firm, website development firm, website design company near me, website development company near me, website design services near me, website development services near me, website design agency near me, website development agency near me, website design firm near me, website development firm near me",
   },
@@ -25,7 +25,7 @@ export default {
       },
     ],
     description:
-      "Our website development services are tailored to deliver value for your business. We can provide everything from simple platform implementations to complete redesigns, bringing multiple teams together in order to build a solution that works best for you.",
+      "We understand that your brand is more than just a logo or slogan, it's an experience. That's why we focus on the experience when designing user interfaces.",
     image: "/content/wdhero.svg",
     subtitle: "Designer.",
     title: "Website",
@@ -36,33 +36,53 @@ export default {
     {
       id: "web-design_summary-item--1",
       icon: "/icons/blue/code-window.svg",
-      title: "Web Design",
+      title: "Discovery + Strategy",
       subtitle:
-        "We build beautiful websites that are fast, secure, and easy to use. Our web design services include custom website design, website development, and website maintenance.",
+        "At the start of any project, we like to take a deep dive into understanding your business goals, technology in use, economics and objectives.",
     },
     {
       id: "web-design_summary-item--2",
       icon: "/icons/blue/cicd.svg",
-      title: "E-Commerce",
+      title: "UI/UX Web Design",
       subtitle:
-        "We build beautiful websites that are fast, secure, and easy to use. Our web design services include custom website design, website development, and website maintenance.",
+        "Once the business insights and requirements are identified, we will use them to design a user interface (UI) that is tailored to enhance brand recognition and user experience.",
     },
     {
       id: "web-design_summary-item--3",
       icon: "/icons/blue/status.svg",
-      title: "Web Development",
+      title: "Minimal Viable Product (MVP)",
       subtitle:
-        "We build beautiful websites that are fast, secure, and easy to use. Our web design services include custom website design, website development, and website maintenance.",
+        "At this stage of the process, we will have a hosted Minimum Viable Product (MVP) for the business to collaborate with us in real time.",
     },
   ],
 
   contentInfo: [
     {
-      id: "web-design_content-item--1",
+      id: "better-converting-website",
       position: "left",
-      title: "Rich Experiences",
+      title: "How to build the best website",
       description:
-        "Increased flexibility in frontend development and a fully composable architecture lets us build sites how you want with best-of-breed tools and deliver the interactive, personalized experience that users expect.",
+        "With thoughtful planning and consideration of each aspect of a website, you can create a site that achieves its desired outcomes – whether sales leads or engagement with customers – successfully. ",
+      list: [
+        {
+          id: "best-website_list-item--1",
+          title: "Design for your users.",
+          description:
+            "Defining the needs of the site’s users first. Once we established the functionality we have a foundation for the user experience (UX Design).",
+        },
+        {
+          id: "best-website_list-item--2",
+          title: "Design with a purpose.",
+          description:
+            "The best website has brains and beauty. We build with a clear view of the business goals and objectives to support the users journey.",
+        },
+        {
+          id: "best-website_list-item--3",
+          title: "Design for discoverability.",
+          description:
+            "We build relvant, discoverable content technically optimized for speed, accessibility, and engaging elements to drive conversions.",
+        },
+      ],
       image: {
         src: "/content/web_design_dashing.avif",
         alt: "Buchanan DevOps Client Dashing's Web Design and User Interface.",
@@ -70,11 +90,11 @@ export default {
       gradient: "webGradient",
     },
     {
-      id: "web-design_content-item--2",
-      title: "Streamlined Design",
+      id: "experience-matters",
+      title: "Experience Matters",
       position: "right",
       description:
-        "Leveraging a combination of style with substance leads to outstanding outcomes that are sure to be noticed by colleagues, clients, and other stakeholders alike.",
+        "We use our 13 years of experience and knowledge to create engaging interfaces that not only looks great but also drive audiences to action, helping you reach and exceed your business goals.",
       image: {
         src: "/content/labelbox-https.avif",
         alt: "Buchanan DevOps Client Labelbox's Web Design and User Interface.",
@@ -104,4 +124,37 @@ export default {
       company: "Company Name",
     },
   ],
+  cta: {
+    title: "Website Design Projects",
+    subtitle:
+      "Buchanan DevOps enables companies to design and develop their digital products and services while your team focuses on what they do best, running your business.",
+    href: "/work-portfolio",
+    hrefTitle: "View Portfolio",
+  },
+  portfolioCta: [
+    {
+      id: "web-design_portfolio-cta--1",
+      title: "Deer Creek Seed",
+      image: "/portfolio/21.avif",
+      alt: "Buchanan DevOps Client Deer Creek Seed's Web Design and User Interface.",
+    },
+    {
+      id: "web-design_portfolio-cta--2",
+      title: "Railworks",
+      image: "/portfolio/14.avif",
+      alt: "Buchanan DevOps Client Railworks's Web Design and User Interface.",
+    },
+    {
+      id: "web-design_portfolio-cta--3",
+      title: "7 Acres",
+      image: "/portfolio/5.avif",
+      alt: "Buchanan DevOps Client 7 Acres's Web Design and User Interface.",
+    },
+  ],
+  form: {
+    id: "website-design-form",
+    title: "Talk to an Expert.",
+    type: "contact" as any,
+    description: "We'll help you find the right soultion for your business.",
+  },
 }

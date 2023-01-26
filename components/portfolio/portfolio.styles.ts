@@ -21,6 +21,9 @@ export const StyledPortfolioItem = styled("button", {
   width: "100%",
   height: "fit-content",
   padding: 0,
+  boxShadow: "0 0 0 1px hsl(0deg 0% 100% / 10%)",
+  borderColor: "#000",
+  borderWidth: "1px",
   "&:hover": {
     "& > div": {
       opacity: 1,

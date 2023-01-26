@@ -4,23 +4,18 @@ import axios from "axios"
 
 const HUBSPOT_API_KEY = process.env.NEXT_PUBLIC_HUBSPOT_TOKEN
 const HUBSPOT_PORTAL_ID = "22662842"
-const HUBSPOT_FORM_GUID = "76100779-4f01-44b4-b64e-c0b72cdeb8fb"
+const HUBSPOT_FORM_GUID = "c92ad719-cccc-489a-8186-2de470729053"
 
 type Response = {
   success: boolean
-  firstname?: string
-  lastname?: string
   email?: string
   domain?: string
-  company?: string
-  message?: string
 }
 
 export default async (req: NextApiRequest, res: NextApiResponse<Response>) => {
-  const { firstname, lastname, email, domain, company, message, pageUri } =
-    req.body
+  const { email, domain, pageUri } = req.body
 
-  if (!firstname || !lastname || !email || !domain || !company || !message) {
+  if (!email || !domain) {
     res.status(400).json({
       success: false,
     })
@@ -34,28 +29,12 @@ export default async (req: NextApiRequest, res: NextApiResponse<Response>) => {
       data: {
         fields: [
           {
-            name: "firstname",
-            value: firstname,
-          },
-          {
-            name: "lastname",
-            value: lastname,
-          },
-          {
             name: "email",
             value: email,
           },
           {
             name: "domain",
             value: domain,
-          },
-          {
-            name: "company",
-            value: company,
-          },
-          {
-            name: "message",
-            value: message,
           },
         ],
         context: { pageUri },
@@ -75,11 +54,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<Response>) => {
   }
   res.status(200).json({
     success: true,
-    firstname,
-    lastname,
     email,
     domain,
-    company,
-    message,
   })
 }

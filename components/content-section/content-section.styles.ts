@@ -13,12 +13,13 @@ export const StyledContentSection = styled("section", {
     position: {
       left: {
         flexDirection: "row",
-        marginTop: "143px",
+        marginTop: "96px",
         "& .content-section__image": {
           alignSelf: "flex-end",
         },
         "@smMax": {
           flexDirection: "column",
+          marginTop: "64px",
           "& .content-section__image": {
             alignSelf: "center",
           },
@@ -33,6 +34,7 @@ export const StyledContentSection = styled("section", {
         },
         "@smMax": {
           flexDirection: "column",
+          marginTop: "64px",
           "& .content-section__image": {
             alignSelf: "center",
           },

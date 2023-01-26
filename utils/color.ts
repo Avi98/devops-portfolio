@@ -78,7 +78,7 @@ export const hexToRgb = (color: string): [number, number, number] => {
   )
   const values = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(full)
   if (!values) {
-    throw new Error(`Next UI: Unsupported ${color} color.`)
+    throw new Error(`Dev UI: Unsupported ${color} color.`)
   }
   return [
     Number.parseInt(values[1], 16),
@@ -110,7 +110,7 @@ export const colorToRgbValues = (colorProp: string) => {
 
   const regArray = safeColor.match(/\((.+)\)/)
   if (!colorType.startsWith("rgb") || !regArray) {
-    throw new Error(`Next UI: Only support ["RGB", "RGBA", "HEX"] color.`)
+    throw new Error(`Dev UI: Only support ["RGB", "RGBA", "HEX"] color.`)
   }
 
   return regArray[1].split(",").map(str => Number.parseFloat(str))

@@ -9,8 +9,9 @@ const Summary = dynamic(() => import("@/components/summary"))
 const WebDesignContent = dynamic(
   () => import("@/interface/Sections/Web/WebDesignContent")
 )
-const Testimonial = dynamic(
-  () => import("@/components/testimonial/testimonial")
+const PortfolioCta = dynamic(() => import("@/components/portfolio-cta"))
+const FormSection = dynamic(
+  () => import("@/interface/Sections/Shared/FormSection")
 )
 
 const Page: NextPage = () => {
@@ -23,11 +24,8 @@ const Page: NextPage = () => {
         type="web-design"
       />
       <WebDesignContent />
-      <Testimonial
-        id="testimonials"
-        item={webdesign.testimonials}
-        type="web-design"
-      />
+      <PortfolioCta item={[...webdesign.portfolioCta]} {...webdesign.cta} />
+      <FormSection {...webdesign.form} />
       <SEO {...webdesign.seo} />
     </>
   )

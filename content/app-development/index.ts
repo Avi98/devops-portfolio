@@ -68,4 +68,37 @@ export default {
       gradient: "webGradient",
     },
   ],
+  cta: {
+    title: "App Development Projects",
+    subtitle:
+      "Buchanan DevOps ensures our design styles match your comanies brand and vision. We work with you to create a unique and memorable experience for your customers.",
+    href: "/work-portfolio",
+    hrefTitle: "View Portfolio",
+  },
+  portfolioCta: [
+    {
+      id: "app-development_portfolio-cta--1",
+      title: "The Pierre",
+      image: "/portfolio/10.avif",
+      alt: "The Pierre",
+    },
+    {
+      id: "app-development_portfolio-cta--2",
+      title: "Baldor Foods",
+      image: "/portfolio/13.avif",
+      alt: "Baldor Foods",
+    },
+    {
+      id: "app-development_portfolio-cta--3",
+      title: "Olistica Group",
+      image: "/portfolio/15.avif",
+      alt: "Olistica Group",
+    },
+  ],
+  form: {
+    id: "app-form",
+    title: "Talk to an Expert.",
+    type: "contact" as any,
+    description: "We'll help you find the right soultion for your business.",
+  },
 }

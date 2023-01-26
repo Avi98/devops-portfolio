@@ -9,6 +9,7 @@ import { useMediaQuery } from "@/hooks/use-media-query"
 const ContactForm = dynamic(() => import("@/interface/Forms/ContactForm"))
 const ContactCard = dynamic(() => import("@/interface/Object/ContactCard"))
 const SocialCard = dynamic(() => import("@/interface/Object/SocialCard"))
+const AuditForm = dynamic(() => import("@/interface/Forms/AuditForm"))
 interface Props {
   id?: string
   title: string
@@ -46,7 +47,7 @@ const FormSection: FC<PropsWithChildren<Props>> = ({
         <Grid md={7} sm={7} xs={12}>
           {type === "contact" && <ContactForm />}
           {type === "request" && <h1>Request Form</h1>}
-          {type === "seo" && <h1>SEO Form</h1>}
+          {type === "seo" && <AuditForm />}
         </Grid>
 
         <Grid

@@ -14,6 +14,7 @@ image.tsx
 card.tsx
 button.tsx
 contact.ts
+seo-audit.ts
 text.tsx
 collapse-context.ts
 collapse.tsx

@@ -27,10 +27,10 @@ export default {
     avatar: "/brand/johnbuchanan.avif",
     name: "John Buchanan",
     title: "Full Stack Developer",
-    email: "buchanandevops@gmail.com",
+    email: "john@buchanandevops.com",
     phone: {
-      number: "(302) 404-0184",
-      href: "+3024040184",
+      number: "(302) 217-3382",
+      href: "+3022173382",
     },
     locale: {
       city: "Middletown",
@@ -54,14 +54,8 @@ export default {
     {
       id: "search-engine-optimization",
       title: "Search Engine Optimization",
-      short: "SEO",
+      short: "Seo",
       href: "/search-engine-optimization",
-    },
-    {
-      id: "digital-marketing",
-      title: "Digital Marketing",
-      short: "Marketing",
-      href: "/digital-marketing",
     },
     {
       id: "work-portfolio",

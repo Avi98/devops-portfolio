@@ -11,7 +11,7 @@ interface Props {
 
 const Portfolio: FC<Props> = ({ item }) => {
   return (
-    <StyledPortfolio>
+    <StyledPortfolio id="our-work">
       {item.map(item => (
         <PortfolioItem key={item.id} {...item} />
       ))}

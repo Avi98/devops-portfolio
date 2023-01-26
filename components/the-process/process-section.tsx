@@ -11,7 +11,6 @@ import { CSS } from "@/theme/stitches.config"
 
 import Container from "../container"
 import GradientGrid from "../gradient-grid"
-import { Box } from "../primitives"
 import {
   PathLine,
   SectionBody,
@@ -108,29 +107,6 @@ const ProcessSection = React.forwardRef<HTMLDivElement, SectionProps>(
                         />
                       ))}
                     </Suspense>
-                    <Box
-                      css={{
-                        position: "absolute",
-                        zIndex: "-$1",
-                        right: 0,
-                        left: "0%",
-                        xsMax: {
-                          top: "15%",
-                          left: "10% !important",
-                        },
-                        "@lg": {
-                          top: "0%",
-                          left: "0% !important",
-                        },
-                      }}
-                    >
-                      <Image
-                        alt={`${title} Gradient`}
-                        height={800}
-                        src={props.gradientBg}
-                        width={800}
-                      />
-                    </Box>
                   </SectionFlexItem>
                 )}
                 {props.features && (
@@ -222,10 +198,7 @@ const ProcessSection = React.forwardRef<HTMLDivElement, SectionProps>(
               </>
             )}
             {props.type === "optimize" && props.features && (
-              <>
-                <GradientGrid item={props.features} size="small" />
-                <GradientGrid item={seo.partners} size="small" />
-              </>
+              <GradientGrid item={seo.partners} size="small" />
             )}
           </Container>
         </SectionBody>

@@ -88,6 +88,7 @@ export const SectionFeatures = styled("div", {
           flexDirection: "column",
         },
       },
+      seo: {},
       pathline: {
         flexDirection: "row",
         justifyContent: "space-evenly",
@@ -131,6 +132,14 @@ export const SectionFeature = styled("div", {
           marginBottom: "50px",
         },
       },
+      tabs: {
+        width: "25%",
+        alignSelf: "center",
+        "@smMax": {
+          width: "100%",
+          marginBottom: "50px",
+        },
+      },
       center: {
         display: "flex",
         paddingTop: "60px",
@@ -143,6 +152,8 @@ export const SectionFeature = styled("div", {
       },
     },
   },
+
+  "& .flex-icon": {},
 
   "& h5": {
     fontSize: "18px",

@@ -68,4 +68,55 @@ export default {
     image: "/brand/johnbuchanan.avif",
     description: [],
   },
+  cta: {
+    title: "Website Design Projects",
+    subtitle:
+      "Buchanan DevOps enables companies to design and develop their digital products and services while your team focuses on what they do best, running your business.",
+    href: "/work-portfolio",
+    hrefTitle: "View Portfolio",
+  },
+  portfolioCta: [
+    {
+      id: "web-design_portfolio-cta--1",
+      title: "Deer Creek Seed",
+      image: "/portfolio/21.avif",
+      alt: "Buchanan DevOps Client Deer Creek Seed's Web Design and User Interface.",
+    },
+    {
+      id: "web-design_portfolio-cta--2",
+      title: "Railworks",
+      image: "/portfolio/14.avif",
+      alt: "Buchanan DevOps Client Railworks's Web Design and User Interface.",
+    },
+    {
+      id: "web-design_portfolio-cta--3",
+      title: "7 Acres",
+      image: "/portfolio/5.avif",
+      alt: "Buchanan DevOps Client 7 Acres's Web Design and User Interface.",
+    },
+    {
+      id: "app-development_portfolio-cta--1",
+      title: "The Pierre",
+      image: "/portfolio/10.avif",
+      alt: "The Pierre",
+    },
+    {
+      id: "app-development_portfolio-cta--2",
+      title: "Baldor Foods",
+      image: "/portfolio/13.avif",
+      alt: "Baldor Foods",
+    },
+    {
+      id: "app-development_portfolio-cta--3",
+      title: "Olistica Group",
+      image: "/portfolio/15.avif",
+      alt: "Olistica Group",
+    },
+  ],
+  form: {
+    id: "website-design-form",
+    title: "Talk to an Expert.",
+    type: "contact" as any,
+    description: "We'll help you find the right soultion for your business.",
+  },
 }
